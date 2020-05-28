@@ -1,15 +1,15 @@
 # screwmycode-ext
 
+> web extension only for firefox
+
 screwmycode.in for YouTube
 
 Variable speed pitch control for YouTube
 
-> only for firefox
-
 ## dependencies
 
 > nodejs [get latest here](https://nodejs.org/en/)
-
+>
 > yarn [get latest here](https://yarnpkg.com/getting-started/install)
 
 ## dev
