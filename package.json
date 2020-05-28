@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "screwmycode functionnality as web extension",
   "scripts": {
-    "dev": "webextension-toolbox dev",
-    "build": "webextension-toolbox build",
+    "dev": "webextension-toolbox dev firefox",
+    "build": "webextension-toolbox build firefox",
     "start": "web-ext run --source-dir dist/firefox"
   },
   "devDependencies": {

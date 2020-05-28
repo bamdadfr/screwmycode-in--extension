@@ -22,6 +22,6 @@ cd screwmycode-ext
 yarn install
 
 # in 2 tabs
-yarn dev firefox
+yarn dev
 yarn start
 ```
