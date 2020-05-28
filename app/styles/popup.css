@@ -1,0 +1,160 @@
+/*
+inspiration:
+https://codepen.io/carolineartz/pen/ogVXZj?editors=1010
+*/
+
+html, body {
+    background-color: #242930;
+    color: #808386;
+    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+    overflow-x: hidden;
+    width: 250px;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    /* background-color: blue; */
+    /* height: 500px; */
+}
+
+/* box */
+
+fieldset {
+    border: 1px solid #343434;
+    padding: 0 10px 5px;
+}
+
+legend {
+    display: block;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    padding-bottom: 5px;
+    color: #63BCF8;
+    text-transform: lowercase;
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+/* slider */
+
+.sliders {
+    text-align: center;
+}
+
+slider {
+    display: inline-block;
+    position: relative;
+    height: 7px;
+    width: 200px;
+    margin: 3px;
+    /* rotate: -90deg; */
+}
+
+slider div.bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    background: #444;
+    /* overflow: hidden; */
+}
+
+slider div {
+    white-space: nowrap;
+    position: absolute;
+}
+
+#slider-bar-color {
+    color: #63BCF8;
+    height: 7px;
+    border-left: 90px solid;
+    border-right: 10px solid;
+    border-radius: 7px;
+    right: 100px;
+}
+
+#slider-bar-handle {
+    /* display: none; */
+    color: #63BCF8;
+    border: 2px solid;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    top: -6px;
+    background-color: #242930;
+    z-index: 2;
+    border-radius: 100%;
+    /* left: 0px; 0 to 185 px */
+}
+
+/* checkbox */
+
+.toggle + .toggle-control {
+    outline: 0;
+    top: 10px;
+    margin-bottom: 8px;
+    width: 52px;
+    position: relative;
+    cursor: poiner;
+    user-select: none;
+    padding: 3px;
+    transition: all 0.3s ease-in-out;
+    background: #242930;
+    border: 1.5px solid #444;
+    border-radius: 2em;
+}
+
+.toggle + .toggle-control::after {
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    background: #343434;
+    border-radius: 50%;
+}
+
+label, .value, .toggle-text {
+    display: inline-block;
+}
+
+.toggle + .toggle-control::after,
+.toggle + .toggle-control::before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+}
+
+/* percent & semitone */
+
+.indicator {
+    font-size: 60%;
+    white-space: nowrap;
+    font-family: 'Source Sans Pro','Avenir Next', AvenirNext;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 3rem;
+    height: 100%;
+}
+
+.indicator .direction {
+    display: inline-block;
+    width: 70px;
+}
+
+.indicator .changes {
+    width: 42px;
+    /* color: #054570;
+    background: #63BCF8; */
+    color: #63BCF8;
+    background: #2F353E;
+    text-transform: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 22px;
+    padding: 0 5px;
+    border-radius: 3px;
+    transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
+}
