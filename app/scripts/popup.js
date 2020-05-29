@@ -79,71 +79,76 @@ const updateIndicator = (type, indicator, value, noAnimation) => {
 
 const updateSlider = (value) => {
 
-    let anchorPos = null
-    let anchorOpposite = null
-    let barSize = null
-    let barHandlePos = null
-    const barHandleOrigin = 92.5 - 1
+    const speed = {
+        'value': value * 100,
+        'min': 50,
+        'max': 150,
+        'origin': 100,
+    }
+
+    const barColor = {
+        'size': null,
+        'anchorPos': null,
+        'anchorOpposite': null,
+        'min': 0, // px
+        'max': 100, // px
+    }
+
+    const barHandle = {
+        'pos': null,
+        'origin': 92.5 - 1, // 1 px is offset to center the handle visually
+        'min': 0, // px
+        'max': 185, // px
+    }
+
+    // https://github.com/processing/p5.js/blob/master/src/math/calculation.js#L450
+    const rangeMap = (n, start1, stop1, start2, stop2) => {
+
+        return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2
+    
+    }
 
     if (value === 1) {
 
         sliderBarColor.style = 'display: none;'
 
-        sliderBarHandle.style = `left: ${barHandleOrigin}px;`
+        sliderBarHandle.style = `left: ${barHandle.origin}px;`
     
     } else {
 
         if (value < 1) {
 
-            anchorPos = 'right'
+            barColor.anchorPos = 'right'
 
-            anchorOpposite = 'left'
+            barColor.anchorOpposite = 'left'
 
-            // returns 0 to 100 px
-            barSize = Math.abs (value * 100 * 2 - 200)
+            barColor.size = rangeMap (speed.value, speed.min, speed.origin, barColor.max, barColor.min)
 
-            // dans les poucentages NEGATIFS
-            // v = valeur d'entrée (vitesse)
-            // r = valeur de sortie (position handle)
-
-            // vmin 50 => rmin 0
-            // vmax 100 => rmax 92.5
-            
-            // returns 0 to 92.5 px
-            barHandlePos = ((value * 100) - 50) * (barHandleOrigin / 50)
+            barHandle.pos = rangeMap (speed.value, speed.min, speed.origin, barHandle.min, barHandle.origin)
         
         } else {
 
-            anchorPos = 'left'
+            barColor.anchorPos = 'left'
 
-            anchorOpposite = 'right'
+            barColor.anchorOpposite = 'right'
 
-            // returns 0 to 100 px
-            barSize = (value * 100 * 2 - 200)
+            barColor.size = rangeMap (speed.value, speed.origin, speed.max, barColor.min, barColor.max)
 
-            // dans les pourcentages POSITIFS
-            // v = valeur d'entrée (vitesse)
-            // r = valeur de sortie (position handle)
-
-            // vmin 100 => rmin 92.5
-            // vmax 150 => rmax 185
-
-            // returns 92.5 to 185 px
-            barHandlePos = (value * 100) * (185 / 100) - barHandleOrigin
+            barHandle.pos = rangeMap (speed.value, speed.origin, speed.max, barHandle.origin, barHandle.max)
         
         }
         
         sliderBarColor.style = `
-            ${anchorPos}: 100px;
-            border-${anchorPos}: 0px solid;
-            border-${anchorOpposite}: ${barSize}px solid;
+            ${barColor.anchorPos}: 100px;
+            border-${barColor.anchorPos}: 0px solid;
+            border-${barColor.anchorOpposite}: ${barColor.size}px solid;
         `
 
         // 50 = 0
         // 150 = 185
 
         sliderBarHandle.style = `
-            left: ${barHandlePos}px;
+            left: ${barHandle.pos}px;
         `
     
     }
