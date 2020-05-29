@@ -144,9 +144,6 @@ const updateSlider = (value) => {
             border-${barColor.anchorOpposite}: ${barColor.size}px solid;
         `
 
-        // 50 = 0
-        // 150 = 185
-
         sliderBarHandle.style = `
             left: ${barHandle.pos}px;
         `
