@@ -45,7 +45,7 @@ const computeToneValue = (speed) => {
 
 }
 
-const animateElement = (element) => {
+const animateIndicator = (element) => {
 
     element.style = 'color: #054570; background: #63BCF8;'
 
@@ -71,7 +71,7 @@ const updateIndicator = (type, indicator, value, noAnimation) => {
 
     if (!noAnimation) {
         
-        animateElement (indicator)
+        animateIndicator (indicator)
     
     }
 
