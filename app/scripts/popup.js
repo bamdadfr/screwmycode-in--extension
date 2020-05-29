@@ -7,7 +7,7 @@ const sliderBarColor = document.getElementById ('slider-bar-color')
 const sliderBarHandle = document.getElementById ('slider-bar-handle')
 
 // prefering 'oninput' instead of 'onchange'
-// because 'onchange' updated only when mouse up
+// because 'onchange' updates only when mouse up
 
 // listen on checkbox input
 checkbox.oninput = async (e) => {
