@@ -2,6 +2,8 @@
   "name": "screwmycode-web-ext",
   "version": "0.0.1",
   "description": "screwmycode functionnality as web extension",
+  "license": "MIT",
+  "author": "Bamdad Sabbagh <hello@bamdadsabbagh.com>",
   "scripts": {
     "dev": "webextension-toolbox dev firefox",
     "build": "webextension-toolbox build firefox",
@@ -11,7 +13,5 @@
     "@bamdadsabbagh/eslint-config": "^1.1.7",
     "webextension-toolbox": "latest"
   },
-  "dependencies": {
-    "webextension-polyfill": "^0.6.0"
-  }
+  "dependencies": {}
 }

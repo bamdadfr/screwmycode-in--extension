@@ -4943,11 +4943,6 @@ webextension-polyfill@0.3.1:
   resolved "https://registry.yarnpkg.com/webextension-polyfill/-/webextension-polyfill-0.3.1.tgz#fab2aed917a713a5d8221e41febad81c5d0b080f"
   integrity sha512-ISB42vlgMyM7xE1u6pREeCqmmXjLsYu/nqAR8Dl/gIAnylb+KpRpvKbVkUYNFePhhXn0Obkkc3jasOII9ztUtg==
 
-webextension-polyfill@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/webextension-polyfill/-/webextension-polyfill-0.6.0.tgz#1afd925f3274a0d4848083579b9c0b649a5c6763"
-  integrity sha512-PlYwiX8e4bNZrEeBFxbFFsLtm0SMPxJliLTGdNCA0Bq2XkWrAn2ejUd+89vZm+8BnfFB1BclJyCz3iKsm2atNg==
-
 webextension-toolbox@latest:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/webextension-toolbox/-/webextension-toolbox-3.0.0.tgz#30f49f4bd9fa9a941210ceeec8688035809c60f5"
