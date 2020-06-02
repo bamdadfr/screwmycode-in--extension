@@ -7,7 +7,7 @@ html, body {
     background-color: #242930;
     color: #808386;
     font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
-    overflow-x: hidden;
+    overflow: hidden;
     width: 220px;
 }
 
