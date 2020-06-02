@@ -5,47 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitch Channels Reverser</title>
     <link rel="stylesheet" href="../styles/popup.css">
+    <link rel="stylesheet" href="../styles/slider.css">
 </head>
 <body>
 
-    <img src="../images/k7.svg" width="30px" />
+    
 
-    <label class="switch">
-        <input id="checkbox" type="checkbox">
-        <input id="fader" type="range" min="0.5" max="1.5" step="0.001" value="0">
-        
-        <span class="slider round"></span>
-    </label>
-    
-    <div id="content" class="control-set">
-        <fieldset>
-            <legend>screwmycode.in</legend>
-            <div class="sliders">
-                <!-- <label>height</label> -->
-                <slider floor="0" ceiling="400" step="10" precision="1" ng-model="dimensions.height" highlight="left" class="ng-pristine ng-untouched ng-valid ng-isolate-scope">
-                    <div class="bar">
-                        <div id="slider-bar-color" />
-                        <!-- <div class="selection"></div> -->
-                    </div>
-                    <div id="slider-bar-handle" />
-                    <!-- <div class="bubble limit low ng-binding">0</div>
-                    <div class="bubble limit high ng-binding" style="left: 406px;">400</div>
-                    <div class="bubble value low ng-binding" style="left: 222px;">220</div> -->
-                </slider>
-                <!-- <div class="value ng-binding">220px</div> -->
-            </div>
-        </fieldset>
-    </div>
-    
     <div>
         <fieldset>
             <legend>screwmycode.in</legend>
-
-            <!-- <input id="toggle-include-margin" type="checkbox" checked="" ng-model="generatedIncludeMargin" ng-change="checkIncludeMargin()" class="toggle ng-pristine ng-untouched ng-valid">
-            <label for="toggle-include-margin" class="toggle-control"></label>
-            <span class="toggle-text">include margin</span> -->
             
-            <div class="indicator">
+            <div class="flex-container">
+
+                <div class="first-col">
+
+                    <div class="first-col first-row">
+
+                        <p>
+                            <img src="../images/k7.svg" width="30px" />
+                        </p>
+
+                        <p>
+                            <label class="switch">
+                                <input id="checkbox" type="checkbox">
+                            </label>
+                        </p>
+                        
+                    </div>
+
+                    <div class="first-col second-row">
+
+                        <div class="indicator">
+                            <span class="direction">percent</span>
+                            <span id="newPercent" class="changes"></span>
+                        </div>
+        
+                        <div class="indicator">
+                            <span class="direction">semitone</span>
+                            <span id="newTone" class="changes"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="second-col">
+                    <div class="second-col first-row">
+                        <input class="slider" type="range" min="0.5" max="1.5" step="0.001" value="1">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <div class="indicator">
                 <span class="direction">percent</span>
                 <span id="newPercent" class="changes"></span>
             </div>
@@ -53,9 +65,21 @@
             <div class="indicator">
                 <span class="direction">semitone</span>
                 <span id="newTone" class="changes"></span>
-            </div>
+            </div> -->
+
         </fieldset>
     </div>
+    
+    <!-- <div>
+        <fieldset>
+            <legend>screwmycode.in</legend>
+
+            <input id="toggle-include-margin" type="checkbox" checked="" ng-model="generatedIncludeMargin" ng-change="checkIncludeMargin()" class="toggle ng-pristine ng-untouched ng-valid">
+            <label for="toggle-include-margin" class="toggle-control"></label>
+            <span class="toggle-text">include margin</span>
+            
+        </fieldset>
+    </div> -->
     
     <script src="../scripts/popup.js"></script>
 </body>

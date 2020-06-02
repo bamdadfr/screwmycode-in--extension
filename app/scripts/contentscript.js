@@ -49,6 +49,7 @@ const init = async () => {
 
 }
 
+// TODO: add real dom element ready
 setTimeout (() => {
 
     init ()

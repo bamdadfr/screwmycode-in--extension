@@ -1,10 +1,8 @@
 /* eslint-disable no-undef */
 const checkbox = document.getElementById ('checkbox')
-const fader = document.getElementById ('fader')
+const slider = document.getElementsByClassName ('slider')[0]
 const newPercent = document.getElementById ('newPercent')
 const newTone = document.getElementById ('newTone')
-const sliderBarColor = document.getElementById ('slider-bar-color')
-const sliderBarHandle = document.getElementById ('slider-bar-handle')
 
 // prefering 'oninput' instead of 'onchange'
 // because 'onchange' updates only when mouse up
@@ -22,7 +20,7 @@ checkbox.oninput = async (e) => {
 }    
 
 // listen on fader input
-fader.oninput = async (e) => {
+slider.oninput = async (e) => {
     
     const storage = await browser.storage.local.get ()
 
@@ -35,13 +33,13 @@ fader.oninput = async (e) => {
 
 const computePercentValue = (speed) => {
 
-    return (speed * 100 - 100).toFixed (0) + ' %'
+    return (speed * 100 - 100).toFixed (0)
 
 }
 
 const computeToneValue = (speed) => {
 
-    return (12 * (Math.log (speed) / Math.log (2))).toFixed (1) + ' st'
+    return (12 * (Math.log (speed) / Math.log (2))).toFixed (1)
 
 }
 
@@ -61,11 +59,11 @@ const updateIndicator = (type, indicator, value, noAnimation) => {
 
     if (type === 'percent') {
 
-        indicator.textContent = computePercentValue (value)
+        indicator.textContent = computePercentValue (value) + ' %'
         
     } else if (type === 'tone') {
         
-        indicator.textContent = computeToneValue (value)
+        indicator.textContent = computeToneValue (value) + ' st'
         
     }
 
@@ -77,76 +75,60 @@ const updateIndicator = (type, indicator, value, noAnimation) => {
 
 }
 
-const updateSlider = (value) => {
+// https://github.com/processing/p5.js/blob/master/src/math/calculation.js#L450
+const rangeMap = (n, start1, stop1, start2, stop2) => {
 
-    const speed = {
-        'value': value * 100,
-        'min': 50,
-        'max': 150,
-        'origin': 100,
-    }
-
-    const barColor = {
-        'size': null,
-        'anchorPos': null,
-        'anchorOpposite': null,
-        'min': 0, // px
-        'max': 100, // px
-    }
-
-    const barHandle = {
-        'pos': null,
-        'origin': 92.5 - 1, // 1 px is offset to center the handle visually
-        'min': 0, // px
-        'max': 185, // px
-    }
-
-    // https://github.com/processing/p5.js/blob/master/src/math/calculation.js#L450
-    const rangeMap = (n, start1, stop1, start2, stop2) => {
-
-        return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2
+    return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2
     
-    }
+}
+
+const updateSlider = (value) => {
 
     if (value === 1) {
 
-        sliderBarColor.style = 'display: none;'
+        slider.value = 1
 
-        sliderBarHandle.style = `left: ${barHandle.origin}px;`
-    
+        slider.disabled = true
+
+        slider.style.setProperty ('--slider-handle-color', '#444')
+
+        slider.style.setProperty ('--slider-fill-padding-right', '0px')
+        
+        slider.style.setProperty ('--slider-fill-border-right', '0px')
+        
+        slider.style.setProperty ('--slider-fill-padding-left', '0px')
+
+        slider.style.setProperty ('--slider-fill-border-left', '0px')
+
     } else {
+
+        slider.value = value
+        
+        slider.removeAttribute ('disabled')
+
+        slider.style.setProperty ('--slider-handle-color', '#63BCF8')
 
         if (value < 1) {
 
-            barColor.anchorPos = 'right'
+            slider.style.setProperty ('--slider-fill-padding-right', '0px')
+            
+            slider.style.setProperty ('--slider-fill-border-right', '0px')
+            
+            slider.style.setProperty ('--slider-fill-padding-left', rangeMap (value, 0.5, 1, 100, 0) + 'px')
 
-            barColor.anchorOpposite = 'left'
-
-            barColor.size = rangeMap (speed.value, speed.min, speed.origin, barColor.max, barColor.min)
-
-            barHandle.pos = rangeMap (speed.value, speed.min, speed.origin, barHandle.min, barHandle.origin)
+            slider.style.setProperty ('--slider-fill-border-left', '7px')
         
         } else {
 
-            barColor.anchorPos = 'left'
+            slider.style.setProperty ('--slider-fill-padding-left', '0px')
 
-            barColor.anchorOpposite = 'right'
+            slider.style.setProperty ('--slider-fill-border-left', '0px')
+        
+            slider.style.setProperty ('--slider-fill-padding-right', rangeMap (value, 1, 1.5, 0, 100) + 'px')
 
-            barColor.size = rangeMap (speed.value, speed.origin, speed.max, barColor.min, barColor.max)
-
-            barHandle.pos = rangeMap (speed.value, speed.origin, speed.max, barHandle.origin, barHandle.max)
+            slider.style.setProperty ('--slider-fill-border-right', '7px')
         
         }
-        
-        sliderBarColor.style = `
-            ${barColor.anchorPos}: 100px;
-            border-${barColor.anchorPos}: 0px solid;
-            border-${barColor.anchorOpposite}: ${barColor.size}px solid;
-        `
-
-        sliderBarHandle.style = `
-            left: ${barHandle.pos}px;
-        `
     
     }
 
@@ -187,26 +169,26 @@ const init = async () => {
     
     checkbox.checked = storage.isActive
 
-    if (storage.isActive) {
+    if (!storage.isActive) {
 
-        fader.value = storage.speed
+        slider.value = 1
+        
+        updateIndicator ('percent', newPercent, 1, true)
+        
+        updateIndicator ('tone', newTone, 1, true)
+            
+        updateSlider (1)
+    
+    } else {
+
+        slider.value = storage.speed
             
         updateIndicator ('percent', newPercent, storage.speed, true)
         
         updateIndicator ('tone', newTone, storage.speed, true)
         
         updateSlider (storage.speed)
-    
-    } else {
-        
-        fader.value = 1
-        
-        updateIndicator ('percent', newPercent, 1, true)
-        
-        updateIndicator ('tone', newTone, 1, true)
-        
-        updateSlider (1)
-    
+
     }
 
 }

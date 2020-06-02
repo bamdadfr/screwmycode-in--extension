@@ -3,14 +3,12 @@ inspiration:
 https://codepen.io/carolineartz/pen/ogVXZj?editors=1010
 */
 
-/* TODO: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
-
 html, body {
     background-color: #242930;
     color: #808386;
     font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
     overflow-x: hidden;
-    width: 250px;
+    width: 220px;
 }
 
 div {
@@ -18,9 +16,6 @@ div {
     padding: 0;
     border: 0;
     font: inherit;
-    vertical-align: baseline;
-    /* background-color: blue; */
-    /* height: 500px; */
 }
 
 /* box */
@@ -41,58 +36,7 @@ legend {
     font-size: 1.3em;
 }
 
-/* slider */
-
-.sliders {
-    text-align: center;
-}
-
-slider {
-    display: inline-block;
-    position: relative;
-    height: 7px;
-    width: 200px;
-    margin: 3px;
-    /* rotate: -90deg; */
-}
-
-slider div.bar {
-    width: 100%;
-    height: 100%;
-    border-radius: 7px;
-    background: #444;
-    /* overflow: hidden; */
-}
-
-slider div {
-    white-space: nowrap;
-    position: absolute;
-}
-
-#slider-bar-color {
-    color: #63BCF8;
-    height: 7px;
-    border-left: 90px solid;
-    border-right: 10px solid;
-    border-radius: 7px;
-    right: 100px;
-}
-
-#slider-bar-handle {
-    /* display: none; */
-    color: #63BCF8;
-    border: 2px solid;
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
-    top: -6px;
-    background-color: #242930;
-    z-index: 2;
-    border-radius: 100%;
-    /* left: 0px; 0 to 185 px */
-}
-
-/* checkbox */
+/* toggle */
 
 .toggle + .toggle-control {
     outline: 0;
@@ -134,11 +78,10 @@ label, .value, .toggle-text {
 .indicator {
     font-size: 60%;
     white-space: nowrap;
-    font-family: 'Source Sans Pro','Avenir Next', AvenirNext;
+    font-family: 'Source Sans Pro', 'Avenir Next', 'AvenirNext';
     letter-spacing: 1.5px;
     text-transform: uppercase;
     line-height: 3rem;
-    height: 100%;
 }
 
 .indicator .direction {
@@ -148,8 +91,6 @@ label, .value, .toggle-text {
 
 .indicator .changes {
     width: 42px;
-    /* color: #054570;
-    background: #63BCF8; */
     color: #63BCF8;
     background: #2F353E;
     text-transform: none;
