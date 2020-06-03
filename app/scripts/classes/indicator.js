@@ -11,7 +11,7 @@ export default class Indicator {
     
     }
 
-    update (value) {
+    updateText (value) {
 
         switch (this.type) {
 
@@ -30,6 +30,10 @@ export default class Indicator {
         
         }
     
+    }
+
+    updateShadow (value) {
+
         if (value === 1) {
     
             this.indicator.style.setProperty ('--indicator-value-color', '#808386')
@@ -51,6 +55,14 @@ export default class Indicator {
             this.indicator.style.setProperty ('--indicator-value-color', '#63BCF8')
         
         }
+
+    }
+
+    update (value) {
+
+        this.updateText (value)
+
+        this.updateShadow (value)
     
     }
 
