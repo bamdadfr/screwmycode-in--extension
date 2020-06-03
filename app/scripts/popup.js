@@ -16,7 +16,7 @@ checkbox.oninput = async (e) => {
         'isActive': e.target.checked,
     })  
     
-    // slider.update (e.target.checked, true)
+    slider.update (e.target.checked, true)
     
 }    
 
