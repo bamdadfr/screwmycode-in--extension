@@ -25,3 +25,9 @@ yarn install
 yarn dev
 yarn start
 ```
+
+## build
+
+```bash
+yarn build
+```
