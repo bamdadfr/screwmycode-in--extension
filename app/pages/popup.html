@@ -8,79 +8,80 @@
     <link rel="stylesheet" href="../styles/slider.css">
 </head>
 <body>
-
     
-
+    
+    
     <div>
         <fieldset>
-            <legend>screwmycode.in</legend>
+            <legend>
+                <!-- <img src="../images/k7.svg" width="30px" /> -->
+                screwmycode.in
+            </legend>
             
             <div class="flex-container">
-
-                <div class="first-col">
-
-                    <div class="first-col first-row">
-
-                        <p>
-                            <img src="../images/k7.svg" width="30px" />
-                        </p>
-
-                        <p>
-                            <label class="switch">
-                                <input id="checkbox" type="checkbox">
-                            </label>
-                        </p>
+                <div class="col">
+                    <div class="first-row">
+                        <label class="switch">
+                            <input id="checkbox" type="checkbox">
+                        </label>
                         
-                    </div>
-
-                    <div class="first-col second-row">
-
-                        <div class="indicator">
-                            <span class="direction">percent</span>
-                            <span id="newPercent" class="changes"></span>
-                        </div>
-        
-                        <div class="indicator">
-                            <span class="direction">semitone</span>
-                            <span id="newTone" class="changes"></span>
-                        </div>
-
-                    </div>
-
+                        <img src="../images/k7.svg" width="30px" />
                 </div>
 
-                <div class="second-col">
-                    <div class="second-col first-row">
-                        <input class="slider" type="range" min="0.5" max="1.5" step="0.001" value="1">
-                    </div>
+                <div class="spacer-1" />
+                
+                <div class="second-row">
+                    <input class="slider" type="range" min="0.5" max="1.5" step="0.001" value="1">
                 </div>
 
-            </div>
-
-            <!-- <div class="indicator">
-                <span class="direction">percent</span>
-                <span id="newPercent" class="changes"></span>
+                <div class="spacer-2" />
+                
+                <div class="third-row">
+                    <div class="indicator">
+                        <span class="indicator-name">percent</span>
+                        <span id="newPercent" class="indicator-value"></span>
+                    </div>
+                    
+                    <div class="indicator">
+                        <span class="indicator-name">semitone</span>
+                        <span id="newTone" class="indicator-value"></span>
+                    </div>
+                </div>
+                
             </div>
             
-            <div class="indicator">
-                <span class="direction">semitone</span>
-                <span id="newTone" class="changes"></span>
+            <!-- <div class="second-col">
+                <div class="second-col first-row">
+                    <input class="slider" type="range" min="0.5" max="1.5" step="0.001" value="1">
+                </div>
             </div> -->
-
-        </fieldset>
-    </div>
-    
-    <!-- <div>
-        <fieldset>
-            <legend>screwmycode.in</legend>
-
-            <input id="toggle-include-margin" type="checkbox" checked="" ng-model="generatedIncludeMargin" ng-change="checkIncludeMargin()" class="toggle ng-pristine ng-untouched ng-valid">
-            <label for="toggle-include-margin" class="toggle-control"></label>
-            <span class="toggle-text">include margin</span>
             
-        </fieldset>
-    </div> -->
-    
-    <script src="../scripts/popup.js"></script>
+        </div>
+        
+        <!-- <div class="indicator">
+            <span class="direction">percent</span>
+            <span id="newPercent" class="changes"></span>
+        </div>
+        
+        <div class="indicator">
+            <span class="direction">semitone</span>
+            <span id="newTone" class="changes"></span>
+        </div> -->
+        
+    </fieldset>
+</div>
+
+<!-- <div>
+    <fieldset>
+        <legend>screwmycode.in</legend>
+        
+        <input id="toggle-include-margin" type="checkbox" checked="" ng-model="generatedIncludeMargin" ng-change="checkIncludeMargin()" class="toggle ng-pristine ng-untouched ng-valid">
+        <label for="toggle-include-margin" class="toggle-control"></label>
+        <span class="toggle-text">include margin</span>
+        
+    </fieldset>
+</div> -->
+
+<script src="../scripts/popup.js"></script>
 </body>
 </html>
