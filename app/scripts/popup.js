@@ -161,11 +161,13 @@ const updateSlider = (value) => {
 
         slider.style.setProperty ('--slider-handle-color', '#63BCF8')
 
-        const rand = Math.floor (rangeMap (value, 0.5, 1.5, 0, GRange.length - 1))
+        const rand = Math.floor (rangeMap (value, 0.5, 1.5, 0, 1))
         const currentColor = GRange[rand]
         const cssCode = 'rgb(' + currentColor.r + ',' + currentColor.g + ',' + currentColor.b + ')'
 
         slider.style.setProperty ('--fill-color', cssCode)
+
+        slider.style.setProperty ('--slider-handle-color', cssCode)
 
         if (value < 1) {
             

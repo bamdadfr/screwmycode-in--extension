@@ -70,7 +70,7 @@
 }
 
 .slider::-moz-range-thumb {
-    color: var(--fill-color);
+    color: var(--slider-handle-color);
     border: 2px solid;
     cursor: pointer;
     width: 15px;
