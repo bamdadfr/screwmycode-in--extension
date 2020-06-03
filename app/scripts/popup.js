@@ -219,6 +219,38 @@ browser.storage.onChanged.addListener ((changes) => {
 
 const init = async () => {
 
+    // html mousewheel
+    document.addEventListener ('wheel', async (e) => {
+
+        const storage = await browser.storage.local.get ()
+        const delta = -1 * e.deltaY / (100 * 8)
+        const newSpeed = parseFloat (storage.speed) + delta
+
+        if (newSpeed < 0.5) {
+
+            await browser.storage.local.set ({
+                ...storage,
+                'speed': 0.5,
+            })     
+    
+        } else if (newSpeed > 1.5) {
+
+            await browser.storage.local.set ({
+                ...storage,
+                'speed': 1.5,
+            }) 
+
+        } else {
+
+            await browser.storage.local.set ({
+                ...storage,
+                'speed': newSpeed,
+            })     
+    
+        }
+    
+    })
+
     // add if not set value (first init)
 
     const storage = await browser.storage.local.get ()
