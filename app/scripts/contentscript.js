@@ -1,7 +1,9 @@
 /* eslint-disable no-undef */
+
+const video = document.querySelector ('video')
+
 const init = async () => {
 
-    const video = document.querySelector ('video')
     const storage = await browser.storage.local.get ()
 
     // init
@@ -49,10 +51,9 @@ const init = async () => {
 
 }
 
-// TODO: add real dom element ready
-setTimeout (() => {
+video.oncanplay = () => {
 
     init ()
 
-}, 1000)
-
+}
+  
