@@ -14,9 +14,17 @@ checkbox.oninput = async (e) => {
     await browser.storage.local.set ({
         ...storage,
         'isActive': e.target.checked,
-    })  
+    })
+
+    if (e.target.checked) {
+
+        slider.enable ()
     
-    slider.update (e.target.checked, true)
+    } else {
+
+        slider.disable ()
+    
+    }
     
 }    
 
@@ -26,11 +34,23 @@ browser.storage.onChanged.addListener ((changes) => {
     const isActive = changes.isActive.newValue
     const valueOrNotActive = () => isActive ? changes.speed.newValue : 1
 
-    percent.update (valueOrNotActive ())
+    if (isActive === false) {
 
-    tone.update (valueOrNotActive ())
+        percent.disable ()
 
-    slider.update (valueOrNotActive ())
+        tone.disable ()
+
+        slider.disable ()
+    
+    } else {
+
+        percent.update (valueOrNotActive ())
+
+        tone.update (valueOrNotActive ())
+
+        slider.update (changes.speed.newValue)
+
+    }
 
 })
 
@@ -48,32 +68,29 @@ const init = async () => {
             await browser.storage.local.set ({
                 ...storage,
                 'speed': 0.5,
-            })     
-    
+            })
+
         } else if (newSpeed > 1.5) {
 
             await browser.storage.local.set ({
                 ...storage,
                 'speed': 1.5,
-            }) 
+            })
 
         } else {
 
             await browser.storage.local.set ({
                 ...storage,
                 'speed': newSpeed,
-            })     
-    
+            })
+
         }
-    
+
     })
 
-    // add if not set value (first init)
-
     const storage = await browser.storage.local.get ()
-    const valueOrActive = () => storage.isActive ? storage.speed : 1
 
-    if (Number.isNaN (storage.speed)) {
+    if (typeof storage.speed === 'undefined') {
 
         await browser.storage.local.set ({
             ...storage,
@@ -81,16 +98,28 @@ const init = async () => {
         })
 
     }
+    
+    if (storage.isActive === false || typeof storage.isActive === 'undefined') {
 
-    checkbox.checked = storage.isActive
-
-    slider.value = valueOrActive ()
+        checkbox.checked = false
         
-    percent.update (valueOrActive ())
+        percent.disable ()
         
-    tone.update (valueOrActive ())
+        tone.disable ()
+        
+        slider.disable ()
+        
+    } else {
+        
+        checkbox.checked = storage.isActive
 
-    slider.update (valueOrActive ())
+        percent.update (storage.speed)
+
+        tone.update (storage.speed)
+
+        slider.update (storage.speed)
+    
+    }
 
 }
 

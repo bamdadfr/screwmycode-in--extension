@@ -10,7 +10,7 @@ export default class Slider {
 
         this.browser = browser
 
-        this.initEvents (element)
+        this.initEvents (this.slider)
 
         this.left = Color (99, 188, 248)
 
@@ -35,72 +35,76 @@ export default class Slider {
     
     }
 
-    update (value, bypass) {
+    enable (value) {
 
-        if (value === 1 && !bypass) {
+        this.slider.value = value
+            
+        this.slider.removeAttribute ('disabled')
+    
+        this.slider.style.setProperty ('--slider-handle-color', '#63BCF8')
+    
+        // const rand = Math.floor (rangeMap (value, 0.5, 1.5, 0, 1))
+        // const currentColor = this.rainbow[rand]
+        // const cssCode = 'rgb(' + currentColor.r + ',' + currentColor.g + ',' + currentColor.b + ')'
+    
+        this.slider.style.setProperty ('--fill-color', '#63BCF8')
+    
+        this.slider.style.setProperty ('--slider-handle-color', '#63BCF8')
+    
+    }
 
-            this.slider.value = 1
+    disable () {
+
+        this.slider.value = 1
     
-            this.slider.disabled = true
+        this.slider.disabled = true
+
+        this.slider.style.setProperty ('--slider-handle-shadow-opacity', 0.2)
+
+        this.slider.style.setProperty ('--slider-handle-color', '#808386')
+
+        this.slider.style.setProperty ('--slider-fill-padding-right', '0px')
+        
+        this.slider.style.setProperty ('--slider-fill-border-right', '0px')
+        
+        this.slider.style.setProperty ('--slider-fill-padding-left', '0px')
+
+        this.slider.style.setProperty ('--slider-fill-border-left', '0px')
+
+    }
+
+    update (value) {
+
+        this.enable (value)
     
-            this.slider.style.setProperty ('--slider-handle-shadow-opacity', 0.2)
+        if (value < 1) {
+
+            // slider handle shadow
+            this.slider.style.setProperty ('--slider-handle-shadow-opacity', rangeMap (value, 1, 0.5, 0.4, 0.8))
     
-            this.slider.style.setProperty ('--slider-handle-color', '#808386')
-    
+            // slider color fill
             this.slider.style.setProperty ('--slider-fill-padding-right', '0px')
-            
+                
             this.slider.style.setProperty ('--slider-fill-border-right', '0px')
+                
+            this.slider.style.setProperty ('--slider-fill-padding-left', rangeMap (value, 1, 0.5, 0, 100) + 'px')
+    
+            this.slider.style.setProperty ('--slider-fill-border-left', '7px')
             
+        } else {
+    
+            // slider handle shadow
+            this.slider.style.setProperty ('--slider-handle-shadow-opacity', rangeMap (value, 1, 1.5, 0.4, 0.8))
+    
+            // slider color fill
             this.slider.style.setProperty ('--slider-fill-padding-left', '0px')
     
             this.slider.style.setProperty ('--slider-fill-border-left', '0px')
-    
-        } else {
-    
-            this.slider.value = value
             
-            this.slider.removeAttribute ('disabled')
+            this.slider.style.setProperty ('--slider-fill-padding-right', rangeMap (value, 1, 1.5, 0, 100) + 'px')
     
-            this.slider.style.setProperty ('--slider-handle-color', '#63BCF8')
-    
-            const rand = Math.floor (rangeMap (value, 0.5, 1.5, 0, 1))
-            const currentColor = this.rainbow[rand]
-            const cssCode = 'rgb(' + currentColor.r + ',' + currentColor.g + ',' + currentColor.b + ')'
-    
-            this.slider.style.setProperty ('--fill-color', '#63BCF8')
-    
-            this.slider.style.setProperty ('--slider-handle-color', '#63BCF8')
-    
-            if (value < 1) {
-
-                // slider handle shadow
-                this.slider.style.setProperty ('--slider-handle-shadow-opacity', rangeMap (value, 1, 0.5, 0.4, 0.8))
-    
-                // slider color fill
-                this.slider.style.setProperty ('--slider-fill-padding-right', '0px')
+            this.slider.style.setProperty ('--slider-fill-border-right', '7px')
                 
-                this.slider.style.setProperty ('--slider-fill-border-right', '0px')
-                
-                this.slider.style.setProperty ('--slider-fill-padding-left', rangeMap (value, 1, 0.5, 0, 100) + 'px')
-    
-                this.slider.style.setProperty ('--slider-fill-border-left', '7px')
-            
-            } else {
-    
-                // slider handle shadow
-                this.slider.style.setProperty ('--slider-handle-shadow-opacity', rangeMap (value, 1, 1.5, 0.4, 0.8))
-    
-                // slider color fill
-                this.slider.style.setProperty ('--slider-fill-padding-left', '0px')
-    
-                this.slider.style.setProperty ('--slider-fill-border-left', '0px')
-            
-                this.slider.style.setProperty ('--slider-fill-padding-right', rangeMap (value, 1, 1.5, 0, 100) + 'px')
-    
-                this.slider.style.setProperty ('--slider-fill-border-right', '7px')
-                
-            }
-            
         }
     
     }

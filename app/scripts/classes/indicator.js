@@ -33,32 +33,38 @@ export default class Indicator {
     }
 
     updateShadow (value) {
-
-        if (value === 1) {
     
-            this.indicator.style.setProperty ('--indicator-value-color', '#808386')
-    
-            this.indicator.style.setProperty ('--indicator-value-shadow-opacity', 0.15)
+        if (value < 1) {
+                
+            this.indicator.style.setProperty ('--indicator-value-shadow-opacity', rangeMap (value, 1, 0.5, 0.3, 0.5))
             
         } else {
     
-            if (value < 1) {
-                
-                this.indicator.style.setProperty ('--indicator-value-shadow-opacity', rangeMap (value, 1, 0.5, 0.3, 0.5))
+            this.indicator.style.setProperty ('--indicator-value-shadow-opacity', rangeMap (value, 1, 1.5, 0.3, 0.5))
             
-            } else {
-    
-                this.indicator.style.setProperty ('--indicator-value-shadow-opacity', rangeMap (value, 1, 1.5, 0.3, 0.5))
-            
-            }
-    
-            this.indicator.style.setProperty ('--indicator-value-color', '#63BCF8')
-        
         }
 
     }
 
+    disable () {
+
+        this.updateText (1)
+
+        this.indicator.style.setProperty ('--indicator-value-color', '#808386')
+    
+        this.indicator.style.setProperty ('--indicator-value-shadow-opacity', 0.15)
+
+    }
+
+    enable () {
+
+        this.indicator.style.setProperty ('--indicator-value-color', '#63BCF8')
+    
+    }
+
     update (value) {
+
+        this.enable ()
 
         this.updateText (value)
 
