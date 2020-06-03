@@ -6,8 +6,8 @@
   "manifest_version": 2,
   "default_locale": "en",
   "icons": {
-    "16": "images/k7.png",
-    "128": "images/k7.png"
+    "16": "images/icon.jpg",
+    "128": "images/icon.jpg"
   },
   "background": {
     "scripts": [
@@ -16,8 +16,8 @@
   },
   "browser_action": {
     "default_icon": {
-      "19": "images/k7.png",
-      "38": "images/k7.png"
+      "19": "images/icon.jpg",
+      "38": "images/icon.jpg"
     },
     "default_title": "__MSG_browserActionTitle__",
     "default_popup": "pages/popup.html"
