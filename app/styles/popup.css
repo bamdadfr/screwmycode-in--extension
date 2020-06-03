@@ -92,13 +92,6 @@ label, .value, .toggle-text {
     font-weight: 500;
 }
 
-:root {
-
-    --indicator-value-color: #63BCF8;
-
-    --indicator-value-shadow-opacity: 0.3; /* oscillates 0.3 - 0.5 */
-}
-
 .indicator-value {
     width: 42px;
     color: var(--indicator-value-color);

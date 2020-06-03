@@ -11,10 +11,50 @@ const newTone = document.getElementById ('newTone')
 const rangeMap = (n, start1, stop1, start2, stop2) => {
 
     return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2
-    
+
 }
 
+const GColor = function GColor (r, g, b) {
+
+    r = (typeof r === 'undefined') ? 0 : r
+
+    g = (typeof g === 'undefined') ? 0 : g
+
+    b = (typeof b === 'undefined') ? 0 : b
+
+    return { r, g, b }
+
+}
+
+const createColorRange = (c1, c2) => {
+
+    const colorList = []
+    let tmpColor = {}
+
+    for (let i = 0; i < 255; i += 1) {
+
+        tmpColor = new GColor ()
+
+        tmpColor.r = c1.r + ((i * (c2.r - c1.r)) / 255)
+
+        tmpColor.g = c1.g + ((i * (c2.g - c1.g)) / 255)
+
+        tmpColor.b = c1.b + ((i * (c2.b - c1.b)) / 255)
+
+        colorList.push (tmpColor)
+    
+    }
+
+    return colorList
+
+}
+
+const GGreen = GColor (99, 188, 248)
+const GRed = GColor (222, 106, 99)
+const GRange = createColorRange (GGreen, GRed)
+
 // listen on checkbox input
+
 checkbox.oninput = async (e) => {
 
     const storage = await browser.storage.local.get ()
@@ -121,6 +161,12 @@ const updateSlider = (value) => {
 
         slider.style.setProperty ('--slider-handle-color', '#63BCF8')
 
+        const rand = Math.floor (rangeMap (value, 0.5, 1.5, 0, GRange.length - 1))
+        const currentColor = GRange[rand]
+        const cssCode = 'rgb(' + currentColor.r + ',' + currentColor.g + ',' + currentColor.b + ')'
+
+        slider.style.setProperty ('--fill-color', cssCode)
+
         if (value < 1) {
             
             // slider handle shadow
@@ -141,7 +187,6 @@ const updateSlider = (value) => {
             slider.style.setProperty ('--slider-handle-shadow-opacity', rangeMap (value, 1, 1.5, 0.4, 0.8))
 
             // slider color fill
-
             slider.style.setProperty ('--slider-fill-padding-left', '0px')
 
             slider.style.setProperty ('--slider-fill-border-left', '0px')
