@@ -17,6 +17,15 @@ const theme = {
     'soft-background': '#2F353E',
 }
 
+// befTheme1
+const befTheme1 = {
+    'background': '#f33041',
+    'color': '#a7293f',
+    'border': '#6b9bd9',
+    'normal-color': '#f2c230',
+    'soft-background': '#f29a2e',
+}
+
 export default colors
 
 const init = () => {
