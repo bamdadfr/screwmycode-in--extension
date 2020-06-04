@@ -9,6 +9,7 @@ html, body {
     font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
     overflow: hidden;
     width: 230px;
+    -moz-user-select: none;
 }
 
 div {

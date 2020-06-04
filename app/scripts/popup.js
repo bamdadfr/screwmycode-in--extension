@@ -50,7 +50,7 @@ const onMouseWheel = () => {
     document.addEventListener ('wheel', async (e) => {
 
         const storage = await getState ()
-        const delta = -1 * e.deltaY / (100 * 8)
+        const delta = -1 * e.deltaY / (100 * 7)
         const newSpeed = parseFloat (storage.speed) + delta
 
         setState ('speed', newSpeed)
