@@ -2,7 +2,6 @@ import Slider from './classes/slider'
 import Indicator from './classes/indicator'
 import Checkbox from './classes/checkbox'
 import { getBrowser, setState, getState } from './functions/browser'
-import { init as colorsInit } from './config/colors'
 
 const checkbox = new Checkbox (document.getElementById ('checkbox'))
 const slider = new Slider (document.getElementsByClassName ('slider')[0])
