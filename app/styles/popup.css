@@ -4,8 +4,8 @@ https://codepen.io/carolineartz/pen/ogVXZj?editors=1010
 */
 
 html, body {
-    background-color: #242930;
-    color: #808386;
+    background-color: var(--background);
+    color: var(--color);
     font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
     overflow: hidden;
     width: 230px;
@@ -21,7 +21,7 @@ div {
 /* box */
 
 fieldset {
-    border: 1px solid #343434;
+    border: 1px solid var(--border);
     padding: 0 10px 5px;
     box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.1);
 }
@@ -31,7 +31,7 @@ legend {
     padding-inline-start: 2px;
     padding-inline-end: 2px;
     padding-bottom: 5px;
-    color: #63BCF8;
+    color: var(--normal-color);
     text-transform: lowercase;
     font-weight: 300;
     font-size: 1.3em;
@@ -95,7 +95,7 @@ label, .value, .toggle-text {
 .indicator-value {
     width: 42px;
     color: var(--indicator-value-color);
-    background: #2F353E;
+    background: var(--soft-background);
     text-transform: none;
     display: inline-block;
     text-align: center;
