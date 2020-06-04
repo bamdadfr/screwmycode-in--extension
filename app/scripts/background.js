@@ -1,36 +1,5 @@
 
-import { getBrowser, setState, getState } from './functions/browser'
-
-getBrowser ().storage.onChanged.addListener ((changes) => {
-
-    // Object.keys (changes).forEach (key => {
-
-    //     console.log (key, changes[key])
-    
-    // })
-
-})
-
-// on page update
-const filter = {
-    'urls': [
-        'https://www.youtube.com/watch?*',
-    ],
-}
- 
-async function handleUpdated (tabId, changeInfo, tabInfo) {
-
-    // console.log (changeInfo, tabInfo)
-
-    if (changeInfo.status === 'complete') {
-
-        setState ('isReady', true)
-    
-    }
-
-}
-
-getBrowser ().tabs.onUpdated.addListener (handleUpdated, filter)
+import { setState, getState } from './functions/browser'
 
 // init
 const init = async () => {

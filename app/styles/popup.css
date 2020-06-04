@@ -102,7 +102,10 @@ label, .value, .toggle-text {
     line-height: 22px;
     padding: 0 5px;
     border-radius: 3px;
-    transition: color 0.25s ease-in-out, background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+
+    /* transition: color 0.25s ease-in-out, background 0.25s ease-in-out, box-shadow 0.25s ease-in-out; */
+
+    transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
     font-weight: 600;
     box-shadow: 0px 1px 10px 1px rgba(0,0,0, var(--indicator-value-shadow-opacity));
 }

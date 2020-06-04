@@ -18,6 +18,32 @@ const updateVideo = async (speed) => {
 
 }
 
+const setEvent = () => {
+
+    getBrowser ().storage.onChanged.addListener ((changes) => {
+
+        // runtime
+        if (changes.isActive.newValue === true) {
+
+            updateVideo (changes.speed.newValue)
+        
+        } else {
+
+            disableVideo ()
+        
+        }
+
+        // first run
+        if (changes.speed.newValue !== changes.speed.oldValue && changes.isActive.newValue === true) {
+
+            updateVideo (changes.speed.newValue)
+        
+        }
+        
+    })
+
+}
+
 const init = async () => {
 
     const storage = await getState ()
@@ -29,59 +55,15 @@ const init = async () => {
     
     }
 
-    getBrowser ().storage.onChanged.addListener ((changes) => {
-
-        // console.log (changes)
-
-        // activate
-        if (changes.isActive.newValue !== changes.isActive.oldValue) {
-
-            if (changes.isActive.newValue === false) {
-
-                disableVideo ()
-            
-            } else {
-
-                updateVideo (changes.speed.newValue)
-            
-            }
-            
-        }
-        
-        // update speed
-        if (changes.speed.newValue !== changes.speed.oldValue && changes.isActive.newValue === true) {
-
-            updateVideo (changes.speed.newValue)
-        
-        }
-        
-    })
+    setEvent ()
 
 }
 
-const test = async () => {
-    
-    const storage = await getState ()
-    
-    if (storage.isReady && typeof video !== 'undefined') {
-        
-        video.oncanplay = () => {
+video.oncanplay = () => {
             
-            // eslint-disable-next-line no-console
-            console.warn ('init')
+    // eslint-disable-next-line no-console
+    console.warn ('init')
             
-            init ()
+    init ()
             
-        }
-        
-    }
-    
-}
-
-test ()
-
-export default test
-
-export {
-    video,
 }
