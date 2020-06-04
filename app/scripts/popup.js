@@ -8,7 +8,7 @@ const slider = new Slider (document.getElementsByClassName ('slider')[0])
 const percent = new Indicator ('percent', document.getElementById ('newPercent'))
 const tone = new Indicator ('tone', document.getElementById ('newTone'))
 
-const initView = (active, speed) => {
+const view = (active, speed) => {
 
     if (active === true) {
 
@@ -39,11 +39,11 @@ getBrowser ().storage.onChanged.addListener ((changes) => {
     const isActive = changes.isActive.newValue
     const speed = changes.speed.newValue
 
-    initView (isActive, speed)
+    view (isActive, speed)
 
 })
 
-const setEventMouseWheel = () => {
+const onMouseWheel = () => {
 
     document.addEventListener ('wheel', async (e) => {
 
@@ -61,9 +61,9 @@ const init = async () => {
 
     const storage = await getState ()
 
-    setEventMouseWheel ()
+    onMouseWheel ()
     
-    initView (storage.isActive, storage.speed)
+    view (storage.isActive, storage.speed)
 
 }
 
