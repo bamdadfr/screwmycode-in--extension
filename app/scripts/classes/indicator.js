@@ -1,5 +1,6 @@
 import rangeMap from '../functions/rangeMap'
 import { computePercentValue, computeToneValue } from '../functions/indicators'
+import colors, { getRainbow } from '../config/colors'
 
 export default class Indicator {
 
@@ -50,21 +51,22 @@ export default class Indicator {
 
         this.updateText (1)
 
-        this.indicator.style.setProperty ('--indicator-value-color', '#808386')
+        this.indicator.style.setProperty ('--indicator-value-color', colors.darker)
     
         this.indicator.style.setProperty ('--indicator-value-shadow-opacity', 0.15)
 
     }
 
-    enable () {
+    updateColor (value) {
 
-        this.indicator.style.setProperty ('--indicator-value-color', '#63BCF8')
+        // this.indicator.style.setProperty ('--indicator-value-color', colors.brightest)
+        this.indicator.style.setProperty ('--indicator-value-color', getRainbow (value))
     
     }
 
     update (value) {
 
-        this.enable ()
+        this.updateColor (value)
 
         this.updateText (value)
 

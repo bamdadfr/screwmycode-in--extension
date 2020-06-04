@@ -17,16 +17,6 @@ class Checkbox {
         dom.oninput = async (e) => {
 
             setState ('isActive', e.target.checked)
-        
-            if (e.target.checked) {
-
-                // slider.enable ()
-            
-            } else {
-        
-                // slider.disable ()
-            
-            }
             
         }    
     
