@@ -1,21 +1,35 @@
-/* eslint-disable no-undef */
+import { getBrowser, getState } from './functions/browser'
 
-const video = document.querySelector ('video')
+const video = document.getElementsByClassName ('video-stream html5-main-video')[0]
+
+const disableVideo = () => {
+
+    video.mozPreservesPitch = true
+                
+    video.playbackRate = 1
+
+}
+
+const updateVideo = async (speed) => {
+
+    video.mozPreservesPitch = false
+
+    video.playbackRate = speed
+
+}
 
 const init = async () => {
 
-    const storage = await browser.storage.local.get ()
+    const storage = await getState ()
 
     // init
     if (storage.isActive) {
 
-        video.mozPreservesPitch = false
-
-        video.playbackRate = storage.speed
+        updateVideo (storage.speed)
     
     }
 
-    browser.storage.onChanged.addListener ((changes) => {
+    getBrowser ().storage.onChanged.addListener ((changes) => {
 
         // console.log (changes)
 
@@ -24,15 +38,11 @@ const init = async () => {
 
             if (changes.isActive.newValue === false) {
 
-                video.mozPreservesPitch = true
-                
-                video.playbackRate = 1
-                
+                disableVideo ()
+            
             } else {
 
-                video.mozPreservesPitch = false
-                
-                video.playbackRate = changes.speed.newValue
+                updateVideo (changes.speed.newValue)
             
             }
             
@@ -41,9 +51,7 @@ const init = async () => {
         // update speed
         if (changes.speed.newValue !== changes.speed.oldValue && changes.isActive.newValue === true) {
 
-            video.mozPreservesPitch = false
-
-            video.playbackRate = changes.speed.newValue
+            updateVideo (changes.speed.newValue)
         
         }
         
@@ -51,9 +59,29 @@ const init = async () => {
 
 }
 
-video.oncanplay = () => {
-
-    init ()
-
+const test = async () => {
+    
+    const storage = await getState ()
+    
+    if (storage.isReady && typeof video !== 'undefined') {
+        
+        video.oncanplay = () => {
+            
+            // eslint-disable-next-line no-console
+            console.warn ('init')
+            
+            init ()
+            
+        }
+        
+    }
+    
 }
-  
+
+test ()
+
+export default test
+
+export {
+    video,
+}

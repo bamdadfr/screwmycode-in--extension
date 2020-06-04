@@ -1,14 +1,15 @@
 
 import { Color, Rainbow } from '../functions/colors'
 import rangeMap from '../functions/rangeMap'
+import { getBrowser } from '../functions/browser'
 
 export default class Slider {
 
-    constructor (element, browser) {
+    constructor (element) {
         
         this.slider = element
 
-        this.browser = browser
+        this.browser = getBrowser ()
 
         this.initEvents (this.slider)
 
@@ -20,7 +21,7 @@ export default class Slider {
     
     }
 
-    async initEvents (dom) {
+    initEvents (dom) {
 
         dom.oninput = async (e) => {
 
@@ -29,7 +30,7 @@ export default class Slider {
             await this.browser.storage.local.set ({
                 ...storage,
                 'speed': e.target.value,
-            })     
+            })
         
         }
     
