@@ -6,6 +6,8 @@ screwmycode.in for YouTube
 
 Variable speed pitch control for YouTube
 
+download [here](https://addons.mozilla.org/en-US/firefox/addon/screwmycode-ext/)
+
 ## dependencies
 
 > nodejs [get latest here](https://nodejs.org/en/)
