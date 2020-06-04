@@ -23,13 +23,15 @@ const setEvent = () => {
     getBrowser ().storage.onChanged.addListener ((changes) => {
 
         // runtime
-        if (changes.isActive.newValue === true) {
+        switch (changes.isActive.newValue) {
 
-            updateVideo (changes.speed.newValue)
-        
-        } else {
+            case true:
+                updateVideo (changes.speed.newValue)
 
-            disableVideo ()
+                break
+
+            default:
+                disableVideo ()
         
         }
 
@@ -49,11 +51,7 @@ const init = async () => {
     const storage = await getState ()
 
     // init
-    if (storage.isActive) {
-
-        updateVideo (storage.speed)
-    
-    }
+    if (storage.isActive) updateVideo (storage.speed)
 
     setEvent ()
 

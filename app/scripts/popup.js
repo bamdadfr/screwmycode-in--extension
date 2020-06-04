@@ -10,26 +10,28 @@ const tone = new Indicator ('tone', document.getElementById ('newTone'))
 
 const view = (active, speed) => {
 
-    if (active === true) {
+    switch (active) {
 
-        checkbox.enable ()
-        
-        percent.update (speed)
+        case true:
+            checkbox.enable ()
 
-        tone.update (speed)
+            percent.update (speed)
 
-        slider.update (speed)
+            tone.update (speed)
 
-    } else {
+            slider.update (speed)
 
-        checkbox.disable ()
+            break
 
-        percent.disable ()
-        
-        tone.disable ()
-        
-        slider.disable ()
+        default:
+            checkbox.disable ()
 
+            percent.disable ()
+
+            tone.disable ()
+
+            slider.disable ()
+    
     }
 
 }
