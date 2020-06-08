@@ -1,9 +1,70 @@
-import { getBrowser, getState } from './functions/browser'
+import { getBrowser, getState, setState } from './functions/browser'
 import Keyboard from './classes/keyboard'
 
 const video = document.getElementsByClassName ('video-stream html5-main-video')[0]
-// eslint-disable-next-line no-unused-vars
 const keyboard = new Keyboard (document)
+// DEV
+const volumeSlider = document.getElementsByClassName ('ytp-time-display notranslate')[0]
+
+const inject = () => {
+
+    const spacer = document.createElement ('span')
+
+    spacer.style = 'margin-right: 5px'
+
+    const div = document.createElement ('div')
+
+    div.classList.add ('ytp-time-display')
+
+    div.classList.add ('notranslate')
+
+    const screw = document.createElement ('span')
+
+    screw.innerHTML = 'screw'
+    
+    const down = document.createElement ('span')
+    
+    down.innerHTML = 'down'
+    
+    down.onclick = async () => {
+
+        const storage = await getState ()
+
+        setState ('speed', storage.speed - keyboard.inc)
+        
+    }
+    
+    const up = document.createElement ('span')
+    
+    up.innerHTML = 'up'
+    
+    up.onclick = async () => {
+
+        const storage = await getState ()
+
+        setState ('speed', storage.speed + keyboard.inc)
+        
+    }
+    
+    // div.appendChild (screw)
+
+    div.appendChild (spacer)
+
+    div.appendChild (down)
+
+    div.appendChild (spacer.cloneNode ())
+
+    div.appendChild (up)
+
+    // add span to document
+    // volumeSlider.parentNode.insertBefore (span, volumeSlider)
+    volumeSlider.parentNode.appendChild (div)
+
+}
+
+inject ()
+
+// END DEV
 
 const disableVideo = () => {
 
