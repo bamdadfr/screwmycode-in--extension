@@ -19,6 +19,8 @@ export default class Keyboard {
             if (e.altKey === true && e.code === 'ArrowDown') this.pitch ('down')
         
             if (e.altKey === true && e.code === 'ArrowUp') this.pitch ('up')
+
+            if (e.altKey === true && e.code === 'Enter') this.pitch ('reset')
         
         })
     
@@ -29,6 +31,11 @@ export default class Keyboard {
         const storage = await getState ()
         
         switch (direction) {
+
+            case 'reset':
+                setState ('speed', 1)
+
+                break
 
             case 'down':
                 setState ('speed', storage.speed - this.inc)
