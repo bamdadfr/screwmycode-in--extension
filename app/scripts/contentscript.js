@@ -1,6 +1,9 @@
 import { getBrowser, getState } from './functions/browser'
+import Keyboard from './classes/keyboard'
 
 const video = document.getElementsByClassName ('video-stream html5-main-video')[0]
+// eslint-disable-next-line no-unused-vars
+const keyboard = new Keyboard (document)
 
 const disableVideo = () => {
 
