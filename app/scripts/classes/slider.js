@@ -11,11 +11,11 @@ export default class Slider {
 
         this.browser = getBrowser ()
 
-        this.initEvents (this.slider)
+        this.setEvents (this.slider)
     
     }
 
-    initEvents (dom) {
+    setEvents (dom) {
 
         dom.oninput = async (e) => {
 

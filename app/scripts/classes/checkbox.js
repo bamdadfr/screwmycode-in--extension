@@ -8,11 +8,11 @@ class Checkbox {
 
         this.browser = getBrowser ()
 
-        this.initEvents (this.checkbox)
+        this.setEvents (this.checkbox)
     
     }
 
-    initEvents (dom) {
+    setEvents (dom) {
 
         dom.oninput = async (e) => {
 
