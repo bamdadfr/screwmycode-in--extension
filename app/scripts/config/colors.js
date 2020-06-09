@@ -1,6 +1,3 @@
-import { Color, Rainbow } from '../functions/colors'
-import rangeMap from '../functions/rangeMap'
-
 const colors = {
     'darkest': 'black',
     'darker': '#808386',
@@ -18,7 +15,7 @@ const theme = {
 }
 
 // befTheme1
-const befTheme1 = {
+const theme2 = {
     'background': '#f33041',
     'color': '#a7293f',
     'border': '#6b9bd9',
@@ -28,34 +25,6 @@ const befTheme1 = {
 
 export default colors
 
-const init = () => {
-
-    const root = document.documentElement
-
-    Object.keys (theme).forEach ((k) => {
-
-        root.style.setProperty ('--' + k, theme[k])
-    
-    })
-
-}
-
-init ()
-
-const color1 = Color (99, 188, 248)
-const color2 = Color (222, 106, 99)
-const rainbow = Rainbow (color1, color2)
-
-const getRainbow = (value) => {
-
-    const rand = Math.floor (rangeMap (value, 0.5, 1.5, 0, 254))
-    const currentColor = rainbow[rand]
-    const cssCode = 'rgb(' + currentColor.r + ',' + currentColor.g + ',' + currentColor.b + ')'
-
-    return cssCode
-
-}
-
 export {
-    getRainbow,
+    theme,
 }

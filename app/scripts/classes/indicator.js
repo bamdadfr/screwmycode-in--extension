@@ -1,6 +1,7 @@
 import rangeMap from '../functions/rangeMap'
 import { computePercentValue, computeToneValue } from '../functions/indicators'
-import colors, { getRainbow } from '../config/colors'
+import colors from '../config/colors'
+import { getRainbow } from '../functions/colors'
 
 export default class Indicator {
 

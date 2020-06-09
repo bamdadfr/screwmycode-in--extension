@@ -1,3 +1,6 @@
+import rangeMap from './rangeMap'
+import { theme } from '../config/colors'
+
 const Color = (r, g, b) => {
 
     r = (typeof r === 'undefined') ? 0 : r
@@ -33,7 +36,36 @@ const Rainbow = (c1, c2) => {
 
 }
 
+const color1 = Color (99, 188, 248)
+const color2 = Color (222, 106, 99)
+const rainbow = Rainbow (color1, color2)
+
+const getRainbow = (value) => {
+
+    const index = Math.floor (rangeMap (value, 0.5, 1.5, 0, 254))
+    const currentColor = rainbow[index]
+    const cssCode = 'rgb(' + currentColor.r + ',' + currentColor.g + ',' + currentColor.b + ')'
+
+    return cssCode
+
+}
+
+const init = () => {
+
+    const root = document.documentElement
+
+    Object.keys (theme).forEach ((k) => {
+
+        root.style.setProperty ('--' + k, theme[k])
+    
+    })
+
+}
+
+init ()
+
 export {
     Color,
     Rainbow,
+    getRainbow,
 }

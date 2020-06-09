@@ -1,4 +1,5 @@
 import { setState, getState } from '../functions/browser'
+import inc from '../config/inc'
 
 export default class Keyboard {
 
@@ -6,7 +7,7 @@ export default class Keyboard {
 
         this.element = el
 
-        this.inc = 0.01
+        this.inc = inc
 
         this.setEvents (this.element)
     

@@ -1,7 +1,8 @@
 
 import rangeMap from '../functions/rangeMap'
 import { getBrowser } from '../functions/browser'
-import colors, { getRainbow } from '../config/colors'
+import colors from '../config/colors'
+import { getRainbow } from '../functions/colors'
 
 export default class Slider {
 
