@@ -5,12 +5,13 @@ import { updateVideo, disableVideo } from './classes/video'
 
 const videoElement = document.getElementsByClassName ('video-stream html5-main-video')[0]
 const keyboard = new Keyboard (document)
-// DEV
+
+keyboard.init ()
+
 const volumeSlider = document.getElementsByClassName ('ytp-time-display notranslate')[0]
-const player = new Player (volumeSlider, keyboard.inc)
+const player = new Player (volumeSlider)
 
 player.init ()
-// END DEV
 
 const setEvents = () => {
 
@@ -21,6 +22,8 @@ const setEvents = () => {
 
             case true:
                 updateVideo (videoElement, changes.speed.newValue)
+
+                player.update (changes.speed.newValue)
 
                 break
 
@@ -33,6 +36,8 @@ const setEvents = () => {
         if (changes.speed.newValue !== changes.speed.oldValue && changes.isActive.newValue === true) {
 
             updateVideo (videoElement, changes.speed.newValue)
+
+            player.update (changes.speed.newValue)
         
         }
         
@@ -45,7 +50,13 @@ const init = async () => {
     const storage = await getState ()
 
     // init
-    if (storage.isActive) updateVideo (videoElement, storage.speed)
+    if (storage.isActive) {
+
+        updateVideo (videoElement, storage.speed)
+
+        player.update (storage.speed)
+
+    }
 
     setEvents ()
 

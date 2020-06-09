@@ -8,8 +8,6 @@ export default class Keyboard {
         this.element = el
 
         this.inc = inc
-
-        this.setEvents (this.element)
     
     }
 
@@ -25,6 +23,12 @@ export default class Keyboard {
         
         })
     
+    }
+
+    init () {
+
+        this.setEvents (this.element)
+
     }
 
     async pitch (direction) {
