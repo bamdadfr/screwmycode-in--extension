@@ -30,14 +30,6 @@ export const setState = async (type, payload) => {
 
     switch (type) {
 
-        case 'id':
-            await getBrowser ().storage.local.set ({
-                ...storage,
-                'id': 'test',
-            })
-
-            break
-
         case 'isReady':
             await getBrowser ().storage.local.set ({
                 ...storage,
