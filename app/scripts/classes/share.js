@@ -1,4 +1,4 @@
-import { getUrl, getState } from '../functions/browser'
+import { getUrl, getState, getBrowser } from '../functions/browser'
 import { parseId } from '../functions/youtube'
 
 export default class Share {
@@ -44,7 +44,10 @@ export default class Share {
         const id = parseId (await getUrl ())
         const url = this.baseUrl + id + '?' + this.speedUrl + speed
 
-        window.open (url, '_blank')
+        // https://bugzilla.mozilla.org/show_bug.cgi?id=1282021
+        getBrowser ().tabs.create ({
+            'url': url,
+        })
     
     }
 
