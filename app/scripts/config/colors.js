@@ -6,7 +6,7 @@ const colors = {
     'brightest': 'rgb(99, 188, 248)',
 }
 
-const theme = {
+export const theme = {
     'background': '#242930',
     'color': '#808386',
     'border': '#343434',
@@ -24,7 +24,3 @@ const theme2 = {
 }
 
 export default colors
-
-export {
-    theme,
-}

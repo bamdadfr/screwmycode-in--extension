@@ -1,7 +1,7 @@
 import rangeMap from './rangeMap'
 import { theme } from '../config/colors'
 
-const Color = (r, g, b) => {
+export const Color = (r, g, b) => {
 
     r = (typeof r === 'undefined') ? 0 : r
 
@@ -13,7 +13,7 @@ const Color = (r, g, b) => {
 
 }
 
-const Rainbow = (c1, c2) => {
+export const Rainbow = (c1, c2) => {
 
     const colorList = []
     let tmpColor = {}
@@ -40,7 +40,7 @@ const color1 = Color (99, 188, 248)
 const color2 = Color (222, 106, 99)
 const rainbow = Rainbow (color1, color2)
 
-const getRainbow = (value) => {
+export const getRainbow = (value) => {
 
     const index = Math.floor (rangeMap (value, 0.5, 1.5, 0, 254))
     const currentColor = rainbow[index]
@@ -63,9 +63,3 @@ const init = () => {
 }
 
 init ()
-
-export {
-    Color,
-    Rainbow,
-    getRainbow,
-}

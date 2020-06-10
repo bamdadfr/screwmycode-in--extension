@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-undef
-const getBrowser = () => browser
+export const getBrowser = () => browser
 
-const getState = async () => {
+export const getState = async () => {
 
     const storage = await getBrowser ().storage.local.get ()
 
@@ -9,11 +9,19 @@ const getState = async () => {
 
 }
 
-const setState = async (type, payload) => {
+export const setState = async (type, payload) => {
 
     const storage = await getBrowser ().storage.local.get ()
 
     switch (type) {
+
+        case 'id':
+            await getBrowser ().storage.local.set ({
+                ...storage,
+                'id': 'test',
+            })
+
+            break
 
         case 'isReady':
             await getBrowser ().storage.local.set ({
@@ -55,10 +63,4 @@ const setState = async (type, payload) => {
             
     }
 
-}
-
-export {
-    getState,
-    setState,
-    getBrowser,
 }

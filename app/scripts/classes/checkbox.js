@@ -1,6 +1,6 @@
 import { getBrowser, setState } from '../functions/browser'
 
-class Checkbox {
+export default class Checkbox {
 
     constructor (element) {
 
@@ -35,5 +35,3 @@ class Checkbox {
     }
 
 }
-
-export default Checkbox
