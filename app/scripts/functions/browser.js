@@ -1,6 +1,21 @@
 // eslint-disable-next-line no-undef
 export const getBrowser = () => browser
 
+export const getUrl = async () => {
+
+    const browser = await getBrowser ()
+
+    const url = browser.tabs
+        .query ({
+            'active': true,
+            'currentWindow': true,
+        })
+        .then (r => r[0].url)
+
+    return url
+
+}
+
 export const getState = async () => {
 
     const storage = await getBrowser ().storage.local.get ()

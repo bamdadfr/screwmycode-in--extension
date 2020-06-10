@@ -2,11 +2,13 @@ import Slider from './classes/slider'
 import Indicator from './classes/indicator'
 import Checkbox from './classes/checkbox'
 import { getBrowser, setState, getState } from './functions/browser'
+import Share from './classes/share'
 
 const checkbox = new Checkbox (document.getElementById ('checkbox'))
 const slider = new Slider (document.getElementsByClassName ('slider')[0])
 const percent = new Indicator ('percent', document.getElementById ('newPercent'))
 const tone = new Indicator ('tone', document.getElementById ('newTone'))
+const share = new Share (document.getElementById ('share-link'))
 
 const view = (active, speed) => {
 
@@ -14,6 +16,8 @@ const view = (active, speed) => {
 
         case true:
             checkbox.enable ()
+
+            share.enable ()
 
             percent.update (speed)
 
@@ -25,6 +29,8 @@ const view = (active, speed) => {
 
         default:
             checkbox.disable ()
+
+            share.disable ()
 
             percent.disable ()
 

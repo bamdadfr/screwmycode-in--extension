@@ -19,6 +19,10 @@ div {
     font: inherit;
 }
 
+#share-link {
+    cursor: pointer;
+}
+
 /* box */
 
 fieldset {
