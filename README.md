@@ -1,6 +1,9 @@
 # screwmycode-ext
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/82ead422808b4629a33f309745959f8f)](https://app.codacy.com/manual/bamdadsabbagh/screwmycode-ext?utm_source=github.com&utm_medium=referral&utm_content=bamdadsabbagh/screwmycode-ext&utm_campaign=Badge_Grade_Dashboard)
+![Mozilla Add-on](https://img.shields.io/amo/users/screwmycode-ext)
+![Mozilla Add-on](https://img.shields.io/amo/stars/screwmycode-ext)
+![Mozilla Add-on](https://img.shields.io/amo/v/screwmycode-ext)
 
 > web extension only for firefox
 
