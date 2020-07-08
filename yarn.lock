@@ -762,12 +762,12 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.2.11":
-  version "1.2.11"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.2.11.tgz#eb4281b0305a1f905fa1892fcf8ca57f48f0e408"
-  integrity sha512-NBXN3aaEzPG44p2uv8uMh/KP8tN4EYi8kKWW71M7RSL0+VA2h2Kqs2hyKMl5bsQiqCDYI2t0qs5pE4LvkpNNzQ==
+"@bamdadsabbagh/eslint-config@^1.2.12":
+  version "1.2.12"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.2.12.tgz#2df0813e03d7526fc226d315afed915aa3b88b8b"
+  integrity sha512-BZ1b4r/0i8t5545uw0M59WnE2v0tJUWFoMZip0MrzBo8X/bqapeb8lBblooIcWfX4Zqm2GxflA09V0PNLqqUnQ==
   dependencies:
-    "@types/node" "^14.0.18"
+    "@types/node" "^14.0.19"
     "@types/react" "^16.9.41"
     "@types/react-dom" "^16.9.8"
     "@typescript-eslint/eslint-plugin" "^3.6.0"
@@ -779,7 +779,7 @@
     eslint-plugin-jsx-a11y "^6.3.1"
     eslint-plugin-prettier "^3.1.2"
     eslint-plugin-react "^7.20.3"
-    eslint-plugin-react-hooks "^4.0.5"
+    eslint-plugin-react-hooks "^4.0.6"
     prettier "^2.0.5"
     snyk "^1.360.0"
     typescript "^3.9.6"
@@ -1161,7 +1161,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
   integrity sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
 
-"@types/node@*", "@types/node@^14.0.18":
+"@types/node@*", "@types/node@^14.0.19":
   version "14.0.19"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.19.tgz#994d99708822bca643a2364f8aeed04a16e0f5a1"
   integrity sha512-yf3BP/NIXF37BjrK5klu//asUWitOEoUP5xE1mhSUjazotwJ/eJDgEmMQNlOeWOVv72j24QQ+3bqXHE++CFGag==
@@ -3003,9 +3003,9 @@ duplexify@^3.4.2, duplexify@^3.5.0, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 electron-to-chromium@^1.3.488:
-  version "1.3.491"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.491.tgz#47aae23ae953c2ecb2298e176844cfd79c29b238"
-  integrity sha512-8pXN6BlIgdggFhgeAw7zYdlWl4dyAA+EYBkbwXZdqShz2SaCGsPwrGTNHsigIR9V9O8ZOswahXSspCsXgDHFrA==
+  version "1.3.492"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.492.tgz#bde16082a05a124266e5ecc9cf0ce53d137f2919"
+  integrity sha512-AD6v9Y2wN0HuoRH4LwCmlSHjkKq51D1U52bTuvM5uPzisbHVm3Hms15c42TBFLewxnSqxAynK/tbeaUi4Rnjqw==
 
 elliptic@^6.0.0, elliptic@^6.5.2:
   version "6.5.3"
@@ -3248,7 +3248,7 @@ eslint-plugin-prettier@^3.1.2:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react-hooks@^4.0.5:
+eslint-plugin-react-hooks@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.6.tgz#4027ae451b5cd219928edd0ff9eab54a8ea82901"
   integrity sha512-RDrsUR/BjwCECcWS+5bc7mWiU/M1IOizKt40Zuei5mn0Eydubiooh87aSCiZ/BGMSUF7P8AqyMEqQL0RsAihmw==
