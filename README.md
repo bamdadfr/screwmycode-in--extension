@@ -1,5 +1,9 @@
 # screwmycode-ext
 
+## ⚠️⚠️⚠️ **ALPHA** ⚠️⚠️⚠️
+
+This project is under heavy development
+
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a8228f4822bf46f1ab6e822b979674e5)](https://www.codacy.com/gh/screwmycode/screwmycode-ext?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=screwmycode/screwmycode-ext&amp;utm_campaign=Badge_Grade)
 ![Mozilla Add-on](https://img.shields.io/amo/users/screwmycode-ext)
 ![Mozilla Add-on](https://img.shields.io/amo/stars/screwmycode-ext)
