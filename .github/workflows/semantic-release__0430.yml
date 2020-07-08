@@ -1,0 +1,29 @@
+name: semantic-release__0430
+
+on:
+  schedule:
+    - cron: '30 4 * * *'
+  repository_dispatch:
+    types:
+      - docker-base-image-check
+      - git-commit-force-release
+
+jobs:
+  semantic-release:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@master
+
+      - uses: actions/setup-node@master
+        with:
+          node-version: '12'
+
+      - run: yarn
+
+      - run: npm install -g semantic-release @semantic-release/github @semantic-release/git
+
+      - run: semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.PAT }} # repo scoped token
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

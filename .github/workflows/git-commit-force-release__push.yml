@@ -1,0 +1,26 @@
+name: git-commit-force-release__push
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@master
+
+      - if: contains(github.event.head_commit.message, '[force-release]')
+        run: |
+          git config --global user.email "asfalte@bamdadsabbagh.com"
+          git config --global user.name "asfalte"
+          git commit --allow-empty -m "🔨 fix: asfalte: git-commit-force-release__push"
+          git push
+
+      - if: contains(github.event.head_commit.message, '[force-release]')
+        uses: peter-evans/repository-dispatch@master
+        with:
+          token: ${{ secrets.PAT }}
+          event-type: git-commit-force-release
