@@ -769,13 +769,13 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.1.tgz#89501358a86b5ec3123ba19198386d01a6157110"
-  integrity sha512-zwvMTL6DfNNQ9F58vuXfb7Rk8g/iFHUowAgFrrrt0SHlW8pfxQklbkhb43w0mFkKn5FGOpLIf0TQHp5dDQ1nNQ==
+"@bamdadsabbagh/eslint-config@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.2.tgz#02e1c0a0395561299b7cb51de4add8f89f9949b4"
+  integrity sha512-p4tUxQ9wy7pOdWnG2XK4zCML5P/nUnDAChjOaB+Ndc2VEOr5EwikTLce5Y8LXSkCJk+7fNe8px+Bdh9v2wu3Gg==
   dependencies:
-    "@types/node" "^14.0.20"
-    "@types/react" "^16.9.41"
+    "@types/node" "^14.0.22"
+    "@types/react" "^16.9.42"
     "@types/react-dom" "^16.9.8"
     "@typescript-eslint/eslint-plugin" "^3.6.0"
     "@typescript-eslint/parser" "^3.6.0"
@@ -787,14 +787,14 @@
     eslint-plugin-jsx-a11y "^6.3.1"
     eslint-plugin-prettier "^3.1.2"
     eslint-plugin-react "^7.20.3"
-    eslint-plugin-react-hooks "^4.0.6"
+    eslint-plugin-react-hooks "^4.0.7"
     prettier "^2.0.5"
     typescript "^3.9.6"
 
-"@bamdadsabbagh/stylelint-config@^1.2.12":
-  version "1.2.12"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.12.tgz#d231d32513bc8d10937235045d3d44351fa9ec06"
-  integrity sha512-KwzK2KCTiazNet9SwTYjk7V9RqoQPx31+kWwFm9EpKDrSrPWYOWf376GBpq91iCUKXKfxEFHXW/CDOcRio+cOw==
+"@bamdadsabbagh/stylelint-config@^1.2.13":
+  version "1.2.13"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.13.tgz#5a684d626a60baeea2cf690974fee4504df790e8"
+  integrity sha512-KYuu08oa1VE5OKV8x1TdL+8tJzQvWSMc6FlTpGVWotE2lvhXVBYJ38QpLrJVfKhkKUbLiMkLQ/RKCXxb54m+pA==
   dependencies:
     snyk "^1.361.3"
     stylelint "^13.5.0"
@@ -1168,7 +1168,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
   integrity sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
 
-"@types/node@*", "@types/node@^14.0.20":
+"@types/node@*", "@types/node@^14.0.22":
   version "14.0.22"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.22.tgz#23ea4d88189cec7d58f9e6b66f786b215eb61bdc"
   integrity sha512-emeGcJvdiZ4Z3ohbmw93E/64jRzUHAItSHt8nF7M4TGgQTiWqFVGB8KNpLGFmUHmHLvjvBgFwVlqNcq+VuGv9g==
@@ -1205,7 +1205,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.41":
+"@types/react@*", "@types/react@^16.9.42":
   version "16.9.42"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.42.tgz#9776508d59c1867bbf9bd7f036dab007fdaa1cb7"
   integrity sha512-iGy6HwfVfotqJ+PfRZ4eqPHPP5NdPZgQlr0lTs8EfkODRBV9cYy8QMKcC9qPCe1JrESC1Im6SrCFR6tQgg74ag==
@@ -3286,7 +3286,7 @@ eslint-plugin-prettier@^3.1.2:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react-hooks@^4.0.6:
+eslint-plugin-react-hooks@^4.0.7:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.7.tgz#19f9e3d07dd3a0fb9e6f0f07153707feedea8108"
   integrity sha512-5PuW2OMHQyMLr/+MqTluYN3/NeJJ1RuvmEp5TR9Xl2gXKxvcusUZuMz8XBUtbELNaiRYWs693LQs0cljKuuHRQ==
@@ -4131,9 +4131,9 @@ http-proxy-agent@^2.1.0:
     debug "3.1.0"
 
 http2-wrapper@^1.0.0-beta.4.8:
-  version "1.0.0-beta.5.1"
-  resolved "https://registry.yarnpkg.com/http2-wrapper/-/http2-wrapper-1.0.0-beta.5.1.tgz#71150c3ea23d992c66d74786296d0aa29b616cc7"
-  integrity sha512-rjEF+kcLAr8UhXwnNDgnAmM5I5JlKiCm6oQyjdFSa+TUBbnHT8UXO1uU8IIzqxes/0CGHmru7r2QnYohburCxg==
+  version "1.0.0-beta.5.2"
+  resolved "https://registry.yarnpkg.com/http2-wrapper/-/http2-wrapper-1.0.0-beta.5.2.tgz#8b923deb90144aea65cf834b016a340fc98556f3"
+  integrity sha512-xYz9goEyBnC8XwXDTuC/MZ6t+MrKVQZOk4s7+PaDkwIsQd8IwqvM+0M6bA/2lvG8GHXcPdf+MejTUeO2LCPCeQ==
   dependencies:
     quick-lru "^5.1.1"
     resolve-alpn "^1.0.0"
