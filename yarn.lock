@@ -762,13 +762,13 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.2.tgz#02e1c0a0395561299b7cb51de4add8f89f9949b4"
-  integrity sha512-p4tUxQ9wy7pOdWnG2XK4zCML5P/nUnDAChjOaB+Ndc2VEOr5EwikTLce5Y8LXSkCJk+7fNe8px+Bdh9v2wu3Gg==
+"@bamdadsabbagh/eslint-config@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.3.tgz#4947841e06a6cba2a223afa545792fdb68876cfc"
+  integrity sha512-B3h50HKZ89XJvLEUlko2X1Y4KZCI6qrEGGZPp+mtTNaKaxgyEpXH+MZgkFLYGyIUka0lOFffAgGOD46tfki+mg==
   dependencies:
     "@types/node" "^14.0.22"
-    "@types/react" "^16.9.42"
+    "@types/react" "^16.9.43"
     "@types/react-dom" "^16.9.8"
     "@typescript-eslint/eslint-plugin" "^3.6.0"
     "@typescript-eslint/parser" "^3.6.0"
@@ -784,10 +784,10 @@
     prettier "^2.0.5"
     typescript "^3.9.6"
 
-"@bamdadsabbagh/stylelint-config@^1.2.14":
-  version "1.2.14"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.14.tgz#80ecbe9accaf877af6f1624974ba60ed46e97b9e"
-  integrity sha512-s6sa0NT+tzLjil7XulFdvGTL40DkXvJVc9lGyx/zgI3PGBwo/KjuGMWMvu+ur2Cyc/1UnkMLTxAOmUBTP9Zs9w==
+"@bamdadsabbagh/stylelint-config@^1.2.15":
+  version "1.2.15"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.15.tgz#e2a708fc3b0acfd5203a9d15c919e3af28865aaf"
+  integrity sha512-zNxEl5YSTpidxr76mvkNj7U08reWRMVyZdyRJHScLIJwBKcM1Sy9r9G8bza8FfwBMu/qeSNkqlFMTUXR+S6J2w==
   dependencies:
     stylelint "^13.5.0"
     stylelint-config-prettier "^8.0.1"
@@ -883,7 +883,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.42":
+"@types/react@*", "@types/react@^16.9.43":
   version "16.9.43"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.43.tgz#c287f23f6189666ee3bebc2eb8d0f84bcb6cdb6b"
   integrity sha512-PxshAFcnJqIWYpJbLPriClH53Z2WlJcVZE+NP2etUtWQs2s7yIMj3/LDKZT/5CHJ/F62iyjVCDu2H3jHEXIxSg==
