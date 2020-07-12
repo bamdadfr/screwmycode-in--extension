@@ -8,6 +8,8 @@ This project is under heavy development
 ![Mozilla Add-on](https://img.shields.io/amo/users/screwmycode-ext)
 ![Mozilla Add-on](https://img.shields.io/amo/stars/screwmycode-ext)
 ![Mozilla Add-on](https://img.shields.io/amo/v/screwmycode-ext)
+![David](https://img.shields.io/david/screwmycode/screwmycode-ext)
+![David](https://img.shields.io/david/dev/screwmycode/screwmycode-ext)
 
 > web extension only for firefox
 
