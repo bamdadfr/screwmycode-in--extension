@@ -1,4 +1,4 @@
-# screwmycode-ext
+# [screwmycode-ext](https://github.com/screwmycode/screwmycode-ext)
 
 ## ⚠️⚠️⚠️ **ALPHA** ⚠️⚠️⚠️
 
