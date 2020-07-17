@@ -760,10 +760,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.3.6":
-  version "1.3.6"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.6.tgz#153a73607253013d4dbcd8e25f2b5cea4e42d9f9"
-  integrity sha512-E2vF4ePcgAVMRv6fYOzhJ0Kcsh3WA5f2jADWoNq/VBQvSVEvFC4f0ZsDiGUUTQFighFhHVe+RUx2yMRN3XfE/Q==
+"@bamdadsabbagh/eslint-config@^1.3.7":
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.7.tgz#3d1423e2a46307e262a40f3aab838fd60b363fe5"
+  integrity sha512-cDQXF96EMAkkfboudAvCTU2vqZTV1jKm2OxwvSr0kbh/KOvzVreEWfcNZoeHAYn/8RNiX96kBa7CwR98pkybLQ==
   dependencies:
     "@types/node" "^14.0.23"
     "@types/react" "^16.9.43"
@@ -780,7 +780,7 @@
     eslint-plugin-react "^7.20.3"
     eslint-plugin-react-hooks "^4.0.8"
     prettier "^2.0.5"
-    typescript "^3.9.6"
+    typescript "^3.9.7"
 
 "@bamdadsabbagh/stylelint-config@^1.2.18":
   version "1.2.18"
@@ -1689,9 +1689,9 @@ camelcase@^6.0.0:
   integrity sha512-8KMDF1Vz2gzOq54ONPJS65IvTUaB1cHJ2DMM7MbPmLZljDH1qpzzLsWdiN9pHh6qvkRVDTi/07+eNGch/oLU4w==
 
 caniuse-lite@^1.0.30001093, caniuse-lite@^1.0.30001097:
-  version "1.0.30001100"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001100.tgz#2a58615e0c01cf716ab349b20ca4d86ef944aa4e"
-  integrity sha512-0eYdp1+wFCnMlCj2oudciuQn2B9xAFq3WpgpcBIZTxk/1HNA/O2YA7rpeYhnOqsqAJq1AHUgx6i1jtafg7m2zA==
+  version "1.0.30001101"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001101.tgz#a65ca4693fc2902645d2358de9e2e50b99f48a53"
+  integrity sha512-RvPcMDBj6CBiDeZDxm6ZpesFbclohG3VL/fInMPcFe9QdCqMumjuyoMeYiGKCdg9c5uGKbB3EKLHyzdhP+WYWg==
 
 case-sensitive-paths-webpack-plugin@^2.1.2:
   version "2.3.0"
@@ -5715,7 +5715,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.9.6:
+typescript@^3.9.7:
   version "3.9.7"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
   integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
