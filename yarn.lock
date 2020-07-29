@@ -760,12 +760,12 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.3.17":
-  version "1.3.17"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.17.tgz#55eed3abbefff72d439a5ef12f7f5211d88c7326"
-  integrity sha512-sHYh8ofYKhI3hYV5e3N6FXjS61DkweBZbl6ZV8hjEMxZR8erlq22zChCjCDMmsJbY69cv+de1+4xEcVjdbK6hQ==
+"@bamdadsabbagh/eslint-config@^1.3.18":
+  version "1.3.18"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.18.tgz#42eacfd31f1982cb2b09b297ce721022b6565294"
+  integrity sha512-Wfw2MM2GYRLjn3JQJSWX+dgqdZywDDoKYescAU8f0e1HVy5oF9XK6VlyFQ9s0cUkziXGEeH/CupEkVxNlHI/dw==
   dependencies:
-    "@types/node" "^14.0.26"
+    "@types/node" "^14.0.27"
     "@types/react" "^16.9.43"
     "@types/react-dom" "^16.9.8"
     "@typescript-eslint/eslint-plugin" "^3.7.1"
@@ -777,15 +777,15 @@
     eslint-plugin-jest "^23.19.0"
     eslint-plugin-jsx-a11y "^6.3.1"
     eslint-plugin-prettier "^3.1.2"
-    eslint-plugin-react "^7.20.4"
+    eslint-plugin-react "^7.20.5"
     eslint-plugin-react-hooks "^4.0.8"
     prettier "^2.0.5"
     typescript "^3.9.7"
 
-"@bamdadsabbagh/stylelint-config@^1.2.29":
-  version "1.2.29"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.29.tgz#8946d0de0729b8a006a6bafc58e1e80b6ef33985"
-  integrity sha512-Mh0B+R16ZoHQdie2ENRrRvResA22dsZLu10JHB3jA2t7PZbbp0V0pHCcL1FhPinNANbgLgugHfEdaji6JfRclQ==
+"@bamdadsabbagh/stylelint-config@^1.2.30":
+  version "1.2.30"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.30.tgz#0abfd8fe054eac76521530bbb0ba7f69a3aebd5f"
+  integrity sha512-nSH1JqopSbznIwR/xHGPD2NKG2br8HjURICOYjHCdfdjr6iDNaXjSjAp8o4XCXSX/Ob58rYxeotKNNtUf/ydaw==
   dependencies:
     stylelint "^13.5.0"
     stylelint-config-prettier "^8.0.1"
@@ -854,7 +854,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
   integrity sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
 
-"@types/node@^14.0.26":
+"@types/node@^14.0.27":
   version "14.0.27"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.27.tgz#a151873af5a5e851b51b3b065c9e63390a9e0eb1"
   integrity sha512-kVrqXhbclHNHGu9ztnAwSncIgJv/FaxmzXJvGXNdcCpV1b8u1/Mi6z6m0vwy0LzKeXFTPLH0NzwmoJ3fNCIq0g==
@@ -2464,7 +2464,7 @@ eslint-plugin-react-hooks@^4.0.8:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.8.tgz#a9b1e3d57475ccd18276882eff3d6cba00da7a56"
   integrity sha512-6SSb5AiMCPd8FDJrzah+Z4F44P2CdOaK026cXFV+o/xSRzfOiV1FNFeLl2z6xm3yqWOQEZ5OfVgiec90qV2xrQ==
 
-eslint-plugin-react@^7.20.4:
+eslint-plugin-react@^7.20.5:
   version "7.20.5"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.20.5.tgz#29480f3071f64a04b2c3d99d9b460ce0f76fb857"
   integrity sha512-ajbJfHuFnpVNJjhyrfq+pH1C0gLc2y94OiCbAXT5O0J0YCKaFEHDV8+3+mDOr+w8WguRX+vSs1bM2BDG0VLvCw==
