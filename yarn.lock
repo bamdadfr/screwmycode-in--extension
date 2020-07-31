@@ -768,10 +768,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.3.19":
-  version "1.3.19"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.19.tgz#f881f8627288b3fe51f1074d4dc0c5bbc552ac2a"
-  integrity sha512-Km24Bzo7q7WI+jWov9V0LHZbPy4JNov5huzd/P2Hwve0eTDD0MRMPt1sDhuX6eOfDAvrjyRMLJVbVEVQw2/xug==
+"@bamdadsabbagh/eslint-config@^1.3.20":
+  version "1.3.20"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.3.20.tgz#6fd4c750dca406ceb84c2b8236f19ddb04904073"
+  integrity sha512-x4jfD//wg+p/SKQaZjnm7a2cHPoEoQg2h9OyeiLeE5PVl8LfgmluBF9wgdspIWIM67tziXNC2RNZ7ZUand4YJA==
   dependencies:
     "@types/node" "^14.0.27"
     "@types/react" "^16.9.43"
@@ -782,7 +782,7 @@
     eslint-config-airbnb "^18.2.0"
     eslint-config-prettier "^6.10.0"
     eslint-plugin-import "^2.22.0"
-    eslint-plugin-jest "^23.19.0"
+    eslint-plugin-jest "^23.20.0"
     eslint-plugin-jsx-a11y "^6.3.1"
     eslint-plugin-prettier "^3.1.2"
     eslint-plugin-react "^7.20.5"
@@ -790,10 +790,10 @@
     prettier "^2.0.5"
     typescript "^3.9.7"
 
-"@bamdadsabbagh/stylelint-config@^1.2.31":
-  version "1.2.31"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.31.tgz#1c1b76b253cf3c6e96278ccd72dc787f92738973"
-  integrity sha512-FcbJM5XLexy88ha4Fit2hvSx+zrhNVoWfavv5HCopgTA1THwv3I8P3JuSmtlAbkxPybP9Q5qWGi7dYELDoWCTw==
+"@bamdadsabbagh/stylelint-config@^1.2.32":
+  version "1.2.32"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.32.tgz#2d3d009e56e8378ba5cb89f8ac14c98aa19ddda6"
+  integrity sha512-l7NaiXivHCxvU4fw5DrEFMIvyopFKHV5JTC0rJ17fTIaT5ZvPJPfxry+ZFZPhy6Wwq9a9wpQrgOZhqmBPYj/Hg==
   dependencies:
     stylelint "^13.5.0"
     stylelint-config-prettier "^8.0.1"
@@ -2436,7 +2436,7 @@ eslint-plugin-import@^2.22.0:
     resolve "^1.17.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-jest@^23.19.0:
+eslint-plugin-jest@^23.20.0:
   version "23.20.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-23.20.0.tgz#e1d69c75f639e99d836642453c4e75ed22da4099"
   integrity sha512-+6BGQt85OREevBDWCvhqj1yYA4+BFK4XnRZSGJionuEYmcglMZYLNNBBemwzbqUAckURaHdJSBcjHPyrtypZOw==
