@@ -6014,9 +6014,9 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1:
     source-map "~0.6.1"
 
 webpack-watched-glob-entries-plugin@^2.1.2:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/webpack-watched-glob-entries-plugin/-/webpack-watched-glob-entries-plugin-2.1.6.tgz#3ef1c7223e6a41c2d75e56fbb7b7b6deca3199b2"
-  integrity sha512-m2ZwvkfFjqMqA7zO9tX4CXufYwPCNe94vPEfzYi1BnUHkLtjJzDurah+M6+31KnSrcuvIvZ/I7/CEprOT6CJWg==
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/webpack-watched-glob-entries-plugin/-/webpack-watched-glob-entries-plugin-2.1.7.tgz#cbcc5c15e515560828473482c875d159bbcd5bdf"
+  integrity sha512-Q5hC97fCuR8NrJ9W928RckV17LbHO/5mwPKhe3gOA7bm+Ki6ZEAnRKuEUPWkw2iC+z/aS4NIhbuSWLRsgx8Z6g==
   dependencies:
     glob "^7.1.6"
     glob-base "^0.3.0"
