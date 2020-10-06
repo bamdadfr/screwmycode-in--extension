@@ -10,7 +10,7 @@
     "start": "web-ext run --source-dir dist/firefox"
   },
   "devDependencies": {
-    "@bamdadsabbagh/eslint-config": "^1.3.65",
+    "@bamdadsabbagh/eslint-config": "^1.3.66",
     "@bamdadsabbagh/stylelint-config": "^1.2.83",
     "webextension-toolbox": "latest"
   },
