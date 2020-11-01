@@ -763,10 +763,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.4.3.tgz#40bce63f5f06ad61512ed736d37aeed47b427c1d"
-  integrity sha512-j1yv/KNYh8fGbqSr3ztA/3nASLstwEnyEMru0369VLU8OvMOa4P311g7uR28hayNtEANeK3Q99RwTRqOmFUItA==
+"@bamdadsabbagh/eslint-config@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.4.4.tgz#d6f4202a64fc220726982ca13883dc9f74c18253"
+  integrity sha512-wHLm8QWl/XvRPIoR/557v1F5tQK60hdFpKAaFsMZeHu8zhOaWQSIr56cRN4ImFYBMcY/YonRHMLFfbgInTw0FA==
   dependencies:
     "@types/node" "^14.0.27"
     "@types/react" "^16.9.46"
