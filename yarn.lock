@@ -763,10 +763,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.4.11":
-  version "1.4.11"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.4.11.tgz#29cd69cce70128538a0e546fd19662d0d30f5d78"
-  integrity sha512-ceadI2tvWfTkQtmnAHwMdZVEofSTySjCzq/Z7LX7hpZS+j44gbigzbEqAtSTWFlJwz4nnIQyoSiWi3UK4R8QAA==
+"@bamdadsabbagh/eslint-config@^1.4.12":
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.4.12.tgz#aa9d711a62230614550084ea15892f3409135497"
+  integrity sha512-AEYVKTQ2XrMdTsLxRiO1mY8XMyiKkYkU95BISbOXFatgjOMw1J6Z6SqAvufQ+h66izM2LvldundmoqQsG+ob+A==
   dependencies:
     "@types/node" "^14.0.27"
     "@types/react" "^16.9.46"
@@ -785,10 +785,10 @@
     prettier "^2.0.5"
     typescript "^4.0.5"
 
-"@bamdadsabbagh/stylelint-config@^1.2.110":
-  version "1.2.110"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.110.tgz#ba2c99521fc406bb1011198b389b3c0f95356c9d"
-  integrity sha512-rjBoLu6wSYa1qGjrwBWM0VVXk2+OwKkG5IcDhgEaVTjvnILqFzlH0v5i54FhtZTn1i3jgKq+QhbK7WZvRMehyQ==
+"@bamdadsabbagh/stylelint-config@^1.2.111":
+  version "1.2.111"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.111.tgz#36a6db11d6ea3089db65cb3685484c6dc53f5d6f"
+  integrity sha512-7hkb7uDLeLjYnnNrjQ1Vtp1QXQBD6L3N1uMVUX/2Uao3ucknhUrtMUemTKgwjbnIefmdbpsucUyss8SwQuefgQ==
   dependencies:
     stylelint "^13.5.0"
     stylelint-config-prettier "^8.0.1"
@@ -2295,9 +2295,9 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 electron-to-chromium@^1.3.591:
-  version "1.3.594"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.594.tgz#e945aaa38f53d7d97ecc983cc85aa3335b0d3893"
-  integrity sha512-mEax1P0CcoZJtXQU7OA0dO5nHiAQWw8gRGWKhnUyPA9bJW0B/JGiaQB+vtK66Ovm6U9qPxe2iXbO1L+f4jJAiw==
+  version "1.3.595"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.595.tgz#e8a9e7c6919963419f892ea981d7b3438ccb834d"
+  integrity sha512-JpaBIhdBkF9FLG7x06ONfe0f5bxPrxRcq0X+Sc8vsCt+OPWIzxOD+qM71NEHLGbDfN9Q6hbtHRv4/dnvcOxo6g==
 
 elliptic@^6.5.3:
   version "6.5.3"
