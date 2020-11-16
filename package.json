@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@bamdadsabbagh/eslint-config": "^1.4.13",
-    "@bamdadsabbagh/stylelint-config": "^1.2.113",
+    "@bamdadsabbagh/stylelint-config": "^1.2.114",
     "webextension-toolbox": "latest"
   },
   "dependencies": {}
