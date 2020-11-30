@@ -1,18 +1,41 @@
-# [screwmycode-ext](https://github.com/screwmycode/screwmycode-ext)
+#
 
-## ⚠️⚠️⚠️ **ALPHA** ⚠️⚠️⚠️
+<p align=center>
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/screwmycode-ext"><img width=100 src="https://raw.githubusercontent.com/screwmycode/screwmycode-www/master/src/components/icons/SCRW_SHARE_TXT.svg"></a>
+</p>
 
-This project is under heavy development
+<p align=center>
+  Variable speed pitch control for <a href="https://www.youtube.com/">YouTube</a> (Web Extension for Firefox)
+  <br>
+  ⚠️ ALPHA ⚠️
+</p>
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/d1a813339cd422a1e584/maintainability)](https://codeclimate.com/github/screwmycode/screwmycode-ext/maintainability)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a8228f4822bf46f1ab6e822b979674e5)](https://www.codacy.com/gh/screwmycode/screwmycode-ext?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=screwmycode/screwmycode-ext&amp;utm_campaign=Badge_Grade)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/screwmycode/screwmycode-ext)
-![David](https://img.shields.io/david/screwmycode/screwmycode-ext)
-![David](https://img.shields.io/david/dev/screwmycode/screwmycode-ext)
+<p align=center>
+  <a href="https://github.com/screwmycode/screwmycode-ext"><img src="https://img.shields.io/github/stars/screwmycode/screwmycode-ext?label=git"></a>
+  <img src="https://img.shields.io/github/license/screwmycode/screwmycode-ext">
+</p>
 
-![Mozilla Add-on](https://img.shields.io/amo/v/screwmycode-ext)
-![Mozilla Add-on](https://img.shields.io/amo/stars/screwmycode-ext)
-![Mozilla Add-on](https://img.shields.io/amo/users/screwmycode-ext)
+<p align=center>
+  <img src="https://img.shields.io/github/languages/count/screwmycode/screwmycode-ext">
+  <img src="https://img.shields.io/github/languages/top/screwmycode/screwmycode-ext">
+</p>
+
+<p align=center>
+  <img src="https://img.shields.io/github/v/release/screwmycode/screwmycode-ext">
+  <img src="https://api.codeclimate.com/v1/badges/d1a813339cd422a1e584/maintainability" />
+</p>
+
+<p align=center>
+  <img src="https://img.shields.io/david/screwmycode/screwmycode-ext">
+  <img src="https://img.shields.io/david/dev/screwmycode/screwmycode-ext">
+  <img src="https://img.shields.io/snyk/vulnerabilities/github/screwmycode/screwmycode-ext">
+</p>
+
+<p align=center>
+  <img src="https://img.shields.io/amo/v/screwmycode-ext">
+  <img src="https://img.shields.io/amo/stars/screwmycode-ext">
+  <img src="https://img.shields.io/amo/users/screwmycode-ext">
+</p>
 
 > web extension only for firefox
 
