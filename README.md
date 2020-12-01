@@ -1,4 +1,4 @@
-#
+# <img width=25 src="https://raw.githubusercontent.com/screwmycode/screwmycode-www/master/src/components/icons/SCRW_SHARE_TXT.svg"> Web Extension
 
 <p align=center>
   <a href="https://addons.mozilla.org/en-US/firefox/addon/screwmycode-ext"><img width=100 src="https://raw.githubusercontent.com/screwmycode/screwmycode-www/master/src/components/icons/SCRW_SHARE_TXT.svg"></a>
@@ -8,6 +8,10 @@
   Variable speed pitch control for <a href="https://www.youtube.com/">YouTube</a> (Web Extension for Firefox)
   <br>
   ⚠️ ALPHA ⚠️
+</p>
+
+<p align=center>
+  <img src="https://img.shields.io/badge/role-lead-blueviolet">
 </p>
 
 <p align=center>
