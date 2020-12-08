@@ -3862,13 +3862,13 @@ md5.js@^1.3.4:
     safe-buffer "^5.1.2"
 
 mdast-util-from-markdown@^0.8.0:
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.3.tgz#39d0f62087bc47b5e63b41a5ef5a6e5366c92361"
-  integrity sha512-BoEfM0H0zQvM2MNf3i4LPWZR7z9gSZb7Zb6p5VTQDmsMB54qusjMwV8SngND5IJ/GCvbTrUk8nSoG/nZ+W7UNg==
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.4.tgz#2882100c1b9fc967d3f83806802f303666682d32"
+  integrity sha512-jj891B5pV2r63n2kBTFh8cRI2uR9LQHsXG1zSDqfhXkIlDzrTcIlbB5+5aaYEkl8vOPIOPLf8VT7Ere1wWTMdw==
   dependencies:
     "@types/mdast" "^3.0.0"
     mdast-util-to-string "^2.0.0"
-    micromark "~2.10.0"
+    micromark "~2.11.0"
     parse-entities "^2.0.0"
     unist-util-stringify-position "^2.0.0"
 
@@ -3927,10 +3927,10 @@ merge2@^1.3.0:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-micromark@~2.10.0:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/micromark/-/micromark-2.10.1.tgz#cd73f54e0656f10e633073db26b663a221a442a7"
-  integrity sha512-fUuVF8sC1X7wsCS29SYQ2ZfIZYbTymp0EYr6sab3idFjigFFjGa5UwoniPlV9tAgntjuapW1t9U+S0yDYeGKHQ==
+micromark@~2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/micromark/-/micromark-2.11.0.tgz#7e2e572d36eae96e13b7d21468cc68f1e15a1543"
+  integrity sha512-dB7wxG0MkGm25xOMUXfHgQy7c4f4Cuuv5PQ7npi5EKc3CvCkaVAZE8AgraqkJT+7YDv1DOQL0NVrZd9WZ0d99A==
   dependencies:
     debug "^4.0.0"
     parse-entities "^2.0.0"
