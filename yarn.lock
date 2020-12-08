@@ -3862,14 +3862,15 @@ md5.js@^1.3.4:
     safe-buffer "^5.1.2"
 
 mdast-util-from-markdown@^0.8.0:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.2.tgz#d9b5c4eae245e742de8542b9a9fe642c400e8f42"
-  integrity sha512-lEiC6zP3sLGJmseGHf33YInftqOs1p4Z3U/mxEtjMkNjWTHBJx5rPjbgTbpHba11/H/TgB0fgiaiQk0lzdgKHg==
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.3.tgz#39d0f62087bc47b5e63b41a5ef5a6e5366c92361"
+  integrity sha512-BoEfM0H0zQvM2MNf3i4LPWZR7z9gSZb7Zb6p5VTQDmsMB54qusjMwV8SngND5IJ/GCvbTrUk8nSoG/nZ+W7UNg==
   dependencies:
     "@types/mdast" "^3.0.0"
     mdast-util-to-string "^2.0.0"
     micromark "~2.10.0"
     parse-entities "^2.0.0"
+    unist-util-stringify-position "^2.0.0"
 
 mdast-util-to-markdown@^0.5.0:
   version "0.5.4"
