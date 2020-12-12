@@ -754,9 +754,9 @@
     to-fast-properties "^2.0.0"
 
 "@bamdadsabbagh/eslint-config@^1.4.27":
-  version "1.4.33"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.4.33.tgz#ecc82c22f844d35a08cafee7a0fdeb02f3561c8d"
-  integrity sha512-zR5WX+oqEo57wfuZBNaP6tfMcgYAa9CoaZK7WfhXqDJQnHuHlve4DNBYUBDIGfzlCz5NHKTsmZMKpcuw9cRk1w==
+  version "1.4.34"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.4.34.tgz#f31dccec29ea306fd984d2caad68ce475178394b"
+  integrity sha512-MsuA2LmwpgfD6b4pwK1p9mEGl5b/3A2IcvfBIeKbhUTmPnWUTFnQ3xBvIhQu+lN3wD1L1FOFzUuo135ae15hvg==
   dependencies:
     "@types/node" "^14.0.27"
     "@types/react" "^16.9.46"
@@ -776,9 +776,9 @@
     typescript "^4.0.5"
 
 "@bamdadsabbagh/stylelint-config@^1.2.126":
-  version "1.2.134"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.134.tgz#a573ce33dd9546a63884f9d8a41dac1b17780cc5"
-  integrity sha512-n1YA78A8emBNv1hjCiHZ24C4ZOWL83J10LEIL5qQrqrMnuJpKaqsMQpfkpeyowCbtscxKXdfRYK47rNM8xEasw==
+  version "1.2.135"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.135.tgz#dffc90419e8959648de83febaaa73b5eff8627b0"
+  integrity sha512-OlPHwE6TXHIW4M0IqzZNWIvNzzPE/QqYIM6/Z+rp2gNE2YQ9jm3XAVRhFzgn6TcdI5M18YBnkzl3auiz78AuaQ==
   dependencies:
     stylelint "^13.5.0"
     stylelint-config-prettier "^8.0.1"
@@ -2281,9 +2281,9 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 electron-to-chromium@^1.3.621:
-  version "1.3.623"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.623.tgz#b61ba1d94b27031554ea2768bb9b823501a918a0"
-  integrity sha512-CgbWTyPmJ4f9pqtqR+HPL3O0ay6BRhnpFD52TqBB2K8kTAcmAar2e93Vo1q651E4vnCHuTDuZDdbj0sTMP2QQw==
+  version "1.3.624"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.624.tgz#0ed5d2930ab37c4ec977ab58def2cda9c446e1c3"
+  integrity sha512-o7j+CRwsXXj3180EeT6fnOOCyhdeBCmcjQLfe0ObpSH1N0PSylrQ3ibBfAZ39Y28YQ+gKKmU2xSSggdARpjuDg==
 
 elliptic@^6.5.3:
   version "6.5.3"
