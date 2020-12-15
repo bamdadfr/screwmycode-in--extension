@@ -754,9 +754,9 @@
     to-fast-properties "^2.0.0"
 
 "@bamdadsabbagh/eslint-config@^1.4.27":
-  version "1.4.36"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.4.36.tgz#40a83746bf3ec73bec5cfab2555999999eab7851"
-  integrity sha512-PotXfT2O1N78lRg50eya2mK59yH0+hHVCWE6ih1jjIOboYHBj7pmQTtiA4JS13c/+rZFWlzhwjWJCCzmvZ+cig==
+  version "1.4.37"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.4.37.tgz#e3a26c2d469192d730f4225d99bf7e17838902b4"
+  integrity sha512-63XipTqRVIpQ1zARYk3LFk/XaSAcE9l+myWytyR4zlCAGS4ST79rj6elmWqnW4lsbG8YKK+X6uSSso/tJn22UQ==
   dependencies:
     "@types/node" "^14.0.27"
     "@types/react" "^16.9.46"
@@ -776,9 +776,9 @@
     typescript "^4.0.5"
 
 "@bamdadsabbagh/stylelint-config@^1.2.126":
-  version "1.2.136"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.136.tgz#7b9446100a2b2ec535341952a589e53d3373ca6b"
-  integrity sha512-rqsSqNavs/Shd7klxM3rjdGNQLV9/Oc1kwuq7AyuuPZu3/Jbm5k4emeJstFKalCz1dhqt/s6MXLWO0l4t/66rg==
+  version "1.2.137"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.137.tgz#687cfc2ccac2319128db438edaf87d2508630dee"
+  integrity sha512-2wy/avpjxLsfbBNlpkYR+4Fkfsx7/wBWWKzE7kWwidrB7K6NeiroKZXn+FLa/f/N9TQCS+j8LHZQlVZTEl0ytQ==
   dependencies:
     stylelint "^13.5.0"
     stylelint-config-prettier "^8.0.1"
