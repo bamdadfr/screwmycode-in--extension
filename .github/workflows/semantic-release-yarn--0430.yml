@@ -1,0 +1,41 @@
+name: semantic-release-yarn--0430
+
+on:
+  schedule:
+    - cron: '30 4 * * *' # at 04H30
+  repository_dispatch:
+    types:
+      - docker-base-image-check
+      - git-commit-force-release
+
+jobs:
+  semantic-release-yarn--0430:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@master
+
+      - uses: actions/setup-node@master
+        with:
+          node-version: '12'
+
+      - run: yarn
+
+      - run: |
+          npm install -g \
+            semantic-release \
+            @semantic-release/github \
+            @semantic-release/git \
+            @semantic-release/exec \
+            @semantic-release/changelog \
+            @semantic-release/npm \
+            semantic-release-chrome \
+            semantic-release-firefox-add-on \
+            aggregate-error
+        
+      - run: semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          FIREFOX_API_KEY: ${{ secrets.FIREFOX_API_KEY }}
+          FIREFOX_SECRET_KEY: ${{ secrets.FIREFOX_SECRET_KEY }}
