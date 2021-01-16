@@ -1,6 +1,6 @@
 {
     "extends": "@bamdadsabbagh/stylelint-config",
     "rules": {
-        "property-no-vendor-prefix": null,
+        "property-no-vendor-prefix": null
     }
 }
