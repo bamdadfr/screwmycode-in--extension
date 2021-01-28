@@ -768,9 +768,9 @@
     typescript "^4.0.5"
 
 "@bamdadsabbagh/stylelint-config@^1.2.126":
-  version "1.2.170"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.170.tgz#81ed4bea9622e8ffcfb2ea367d160c01ab1f36aa"
-  integrity sha512-XqqRAZupb+HVogHlkt+Tp7S3eHhNZNEm8oi4x60wpI4s+P9fh05k75KVwcvs6hGn8VilfcVcHzCR3g2xlvbgUQ==
+  version "1.2.171"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.171.tgz#ca74d727782db9b01a610c20231568d87194a4d1"
+  integrity sha512-rrVlVGPk4XyUeWQzfhqXhQxeXvhDXpgXUK92YCSAZGzZUcWH7tXXSttAhdrp4vHGiaBhGfvfZc6VkPYVvZ+yjw==
   dependencies:
     stylelint "^13.5.0"
     stylelint-config-prettier "^8.0.1"
@@ -2274,9 +2274,9 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 electron-to-chromium@^1.3.634:
-  version "1.3.646"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.646.tgz#a7dc089d6d83b6d6cc01f91de524e91f12e6ccfa"
-  integrity sha512-P+3q8ugIPezulqoBYaLoUsF0fT4YNpe+zEDmdDUDnHZUAeSbBjMbis+JjJp9duU8BdfWV3VXf27NTBcwhRTsAQ==
+  version "1.3.647"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.647.tgz#8f1750ab7a5137f1a9a27f8f4ebdf550e08ae10b"
+  integrity sha512-Or2Nu8TjkmSywY9hk85K/Y6il28hchlonITz30fkC87qvSNupQl29O12BzDDDTnUFlo6kEIFL2QGSpkZDMxH8g==
 
 elliptic@^6.5.3:
   version "6.5.3"
