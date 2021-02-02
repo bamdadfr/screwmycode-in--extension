@@ -3907,9 +3907,9 @@ merge2@^1.3.0:
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
 micromark@~2.11.0:
-  version "2.11.2"
-  resolved "https://registry.yarnpkg.com/micromark/-/micromark-2.11.2.tgz#e8b6a05f54697d2d3d27fc89600c6bc40dd05f35"
-  integrity sha512-IXuP76p2uj8uMg4FQc1cRE7lPCLsfAXuEfdjtdO55VRiFO1asrCSQ5g43NmPqFtRwzEnEhafRVzn2jg0UiKArQ==
+  version "2.11.3"
+  resolved "https://registry.yarnpkg.com/micromark/-/micromark-2.11.3.tgz#648e1e7970ea66a946cc2cbc678093ed814f29ed"
+  integrity sha512-oph5YYkVqR2U9OtWBcXYysZMtrdIvi8dfSeyEdr1wFr3Bk6YwI6THosX2AzKnhdps7mVUbXiqhmosu9DcA+xlQ==
   dependencies:
     debug "^4.0.0"
     parse-entities "^2.0.0"
