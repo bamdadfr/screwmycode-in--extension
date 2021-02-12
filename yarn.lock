@@ -736,9 +736,9 @@
     to-fast-properties "^2.0.0"
 
 "@bamdadsabbagh/eslint-config@^1.5.0":
-  version "1.5.17"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.5.17.tgz#d62b75c71c010a4d4189d559976ad53d27e9d1c6"
-  integrity sha512-CzSHGEIYO8jPM9AjjgXKFAhwRhqGGG+XIFTAJgK561SJF2xJ85viV+5XrPhCbmxnczYzumJt58TofLrbC+t1DA==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.6.0.tgz#b46d3b043cef0cf665e84554fa7ecdb9f5993edf"
+  integrity sha512-iPJHTD91z0b9r63C4orZEtKnke+6AOYgxBbgZz9qAUjd11KsgXS9xI7BLS9sX0qSHJ5dbvJAnqVT8/qdz9vbdQ==
   dependencies:
     "@types/node" "^14.0.27"
     "@types/react" "^17.0.0"
@@ -748,6 +748,7 @@
     eslint "^7.6.0"
     eslint-config-airbnb "^18.2.0"
     eslint-config-prettier "^7.1.0"
+    eslint-import-resolver-alias "^1.1.2"
     eslint-plugin-import "^2.22.0"
     eslint-plugin-jest "^24.1.0"
     eslint-plugin-jsx-a11y "^6.3.1"
@@ -2403,6 +2404,11 @@ eslint-config-prettier@^7.1.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-7.2.0.tgz#f4a4bd2832e810e8cc7c1411ec85b3e85c0c53f9"
   integrity sha512-rV4Qu0C3nfJKPOAhFujFxB7RMP+URFyQqqOZW9DMRD7ZDTFyjaIlETU3xzHELt++4ugC0+Jm084HQYkkJe+Ivg==
+
+eslint-import-resolver-alias@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-import-resolver-alias/-/eslint-import-resolver-alias-1.1.2.tgz#297062890e31e4d6651eb5eba9534e1f6e68fc97"
+  integrity sha512-WdviM1Eu834zsfjHtcGHtGfcu+F30Od3V7I9Fi57uhBEwPkjDcii7/yW8jAT+gOhn4P/vOxxNAXbFAKsrrc15w==
 
 eslint-import-resolver-node@^0.3.4:
   version "0.3.4"
