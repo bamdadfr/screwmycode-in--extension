@@ -766,9 +766,9 @@
     typescript "^4.0.5"
 
 "@bamdadsabbagh/stylelint-config@^1.2.126":
-  version "1.2.184"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.184.tgz#1b60ff4643c9a8c8e1018a7e2ed4217ade2132ca"
-  integrity sha512-gjSRXakFjxBXDu1EeQt1WDve2gFg9++9M9nx0mGLkiJlnK51ra3zhBgPLYIxWT2PQfuX9iLusw5eFqMhNOojzw==
+  version "1.2.185"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/stylelint-config/-/stylelint-config-1.2.185.tgz#8688040a6619b27a9bcb58883d4df0c804473276"
+  integrity sha512-QKKjtKWNkLdlU6YJq3TpEf46dHNNtUhga/ykbEYptQelIeLDA+ugK80B6Gp6Bg2oZDuDwyAgcZIOqMyPHM8ylA==
   dependencies:
     stylelint "^13.5.0"
     stylelint-config-prettier "^8.0.1"
