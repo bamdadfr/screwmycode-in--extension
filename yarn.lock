@@ -766,10 +766,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.5.0":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.8.5.tgz#a44cf0a8236d7e86d5b2080a35b10b769dd5ffa0"
-  integrity sha512-/UXzq5/fN0hCggJFxzpiaIMsD3dm871NA089XSTlkziLFreEVTObyTUhHOZbhAhc6/pyi4KVn2RAZbnJxzbDEg==
+"@bamdadsabbagh/eslint-config@^1.8.6":
+  version "1.8.6"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.8.6.tgz#671c9f7dc98262149172ea99b06550c7aab2113f"
+  integrity sha512-f2VCtZnV4OV3LJGKnZRjUOvh49OLrgSMnN1zn7wFDKDcHCG0Drl4rdyYwzlcZewgkGKxbSH0xXWiius58601QA==
   dependencies:
     eslint "^7.20.0"
     eslint-config-airbnb "^18.2.0"
