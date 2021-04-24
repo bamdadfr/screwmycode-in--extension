@@ -16,7 +16,7 @@ jobs:
         run: |
           git config --global user.email "asfalte@bamdadsabbagh.com"
           git config --global user.name "asfalte"
-          git commit --allow-empty -m "fix(asfalte): 🔨 git-commit-force-release--onPush"
+          git commit --allow-empty -m "chore(asfalte): 🔨 git-commit-force-release--onPush"
           git push
 
       - if: contains(github.event.head_commit.message, '[force-release]')
