@@ -763,10 +763,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bamdadsabbagh/eslint-config@^1.5.0":
-  version "1.9.5"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.9.5.tgz#0c0d9d906b7f6ea52380a6fbe07dbae4ce1aa91b"
-  integrity sha512-4hAG9NPy9/6N6r20tRZVQ7EEVEVU5B+G5DjmIxc2mM4NNO78jTzvz2MWdjNkRoZVMcY1DXj8b2SekTD/uo9esA==
+"@bamdadsabbagh/eslint-config@^1.9.6":
+  version "1.9.6"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.9.6.tgz#707d2b41b649b9df760d4672bc68e9d39c3070a1"
+  integrity sha512-B/NOrQSA70ivZzZsw/DZ7w/Ki/0fNKFVAlyEei/DHJvsyHdp4CL7FTZ/uj1jIPui8H7I91swY4iV2KEuzO9PTw==
   dependencies:
     babel-eslint "^10.1.0"
     eslint "^7.20.0"
