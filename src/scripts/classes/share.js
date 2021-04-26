@@ -12,7 +12,7 @@ export default class Share {
         this.speedUrl = 'speed='
 
         this.setEvents (this.element)
-    
+
     }
 
     setEvents (dom) {
@@ -20,9 +20,9 @@ export default class Share {
         dom.onclick = () => {
 
             this.click ()
-        
+
         }
-    
+
     }
 
     enable () {
@@ -34,7 +34,7 @@ export default class Share {
     disable () {
 
         this.element.style = 'display: none;'
-    
+
     }
 
     async click () {
@@ -48,7 +48,7 @@ export default class Share {
         getBrowser ().tabs.create ({
             'url': url,
         })
-    
+
     }
 
 }

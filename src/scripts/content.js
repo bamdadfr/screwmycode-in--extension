@@ -29,7 +29,7 @@ const setEvents = () => {
 
             default:
                 disableVideo (videoElement)
-        
+
         }
 
         // first run
@@ -38,9 +38,9 @@ const setEvents = () => {
             updateVideo (videoElement, changes.speed.newValue)
 
             player.update (changes.speed.newValue)
-        
+
         }
-        
+
     })
 
 }
@@ -63,10 +63,10 @@ const init = async () => {
 }
 
 videoElement.oncanplay = () => {
-            
+
     // eslint-disable-next-line no-console
     console.warn ('init')
-            
+
     init ()
-            
+
 }

@@ -8,7 +8,7 @@ export default class Keyboard {
         this.element = el
 
         this.inc = inc
-    
+
     }
 
     setEvents (dom) {
@@ -16,13 +16,13 @@ export default class Keyboard {
         dom.addEventListener ('keyup', (e) => {
 
             if (e.altKey === true && e.code === 'ArrowDown') this.pitch ('down')
-        
+
             if (e.altKey === true && e.code === 'ArrowUp') this.pitch ('up')
 
             if (e.altKey === true && e.code === 'Enter') this.pitch ('reset')
-        
+
         })
-    
+
     }
 
     init () {
@@ -34,7 +34,7 @@ export default class Keyboard {
     async pitch (direction) {
 
         const storage = await getState ()
-        
+
         switch (direction) {
 
             case 'reset':
@@ -51,12 +51,12 @@ export default class Keyboard {
                 setState ('speed', storage.speed + this.inc)
 
                 break
-                
+
             default:
                 return null
-                
+
         }
-    
+
     }
 
 }

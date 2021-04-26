@@ -1,5 +1,5 @@
 export const updateVideo = (dom, speed) => {
-
+    
     dom.mozPreservesPitch = false
 
     dom.playbackRate = speed

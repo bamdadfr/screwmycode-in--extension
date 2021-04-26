@@ -5,24 +5,16 @@ export const getUrl = async () => {
 
     const browser = await getBrowser ()
 
-    const url = browser.tabs
+    return browser.tabs
         .query ({
             'active': true,
             'currentWindow': true,
         })
         .then (r => r[0].url)
 
-    return url
-
 }
 
-export const getState = async () => {
-
-    const storage = await getBrowser ().storage.local.get ()
-
-    return storage
-
-}
+export const getState = async () => await getBrowser ().storage.local.get ()
 
 export const setState = async (type, payload) => {
 
@@ -57,7 +49,7 @@ export const setState = async (type, payload) => {
                 payload = 1.5
 
             }
-            
+
             await getBrowser ().storage.local.set ({
                 ...storage,
                 'speed': payload,
@@ -67,7 +59,7 @@ export const setState = async (type, payload) => {
 
         default:
             return null
-            
+
     }
 
 }

@@ -29,7 +29,7 @@ export const Rainbow = (c1, c2) => {
         tmpColor.b = Math.floor (c1.b + ((i * (c2.b - c1.b)) / 255))
 
         colorList.push (tmpColor)
-    
+
     }
 
     return colorList
@@ -44,9 +44,8 @@ export const getRainbow = (value) => {
 
     const index = Math.floor (rangeMap (value, 0.5, 1.5, 0, 254))
     const currentColor = rainbow[index]
-    const cssCode = 'rgb(' + currentColor.r + ',' + currentColor.g + ',' + currentColor.b + ')'
 
-    return cssCode
+    return 'rgb(' + currentColor.r + ',' + currentColor.g + ',' + currentColor.b + ')'
 
 }
 
@@ -57,7 +56,7 @@ const init = () => {
     Object.keys (theme).forEach ((k) => {
 
         root.style.setProperty ('--' + k, theme[k])
-    
+
     })
 
 }

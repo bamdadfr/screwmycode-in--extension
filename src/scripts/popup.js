@@ -37,7 +37,7 @@ const view = (active, speed) => {
             tone.disable ()
 
             slider.disable ()
-    
+
     }
 
 }
@@ -70,7 +70,7 @@ const init = async () => {
     const storage = await getState ()
 
     onMouseWheel ()
-    
+
     view (storage.isActive, storage.speed)
 
 }

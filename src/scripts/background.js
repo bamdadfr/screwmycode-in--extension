@@ -1,4 +1,3 @@
-
 import { setState, getState } from './functions/browser'
 
 // init
@@ -11,7 +10,7 @@ const init = async () => {
     if (typeof storage.isActive === 'undefined') setState ('isActive', false)
 
     if (typeof storage.speed === 'undefined') setState ('speed', 1)
-    
+
 }
 
 init ()

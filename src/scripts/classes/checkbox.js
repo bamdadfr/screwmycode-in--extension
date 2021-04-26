@@ -9,7 +9,7 @@ export default class Checkbox {
         this.browser = getBrowser ()
 
         this.setEvents (this.checkbox)
-    
+
     }
 
     setEvents (dom) {
@@ -17,21 +17,21 @@ export default class Checkbox {
         dom.oninput = async (e) => {
 
             setState ('isActive', e.target.checked)
-            
-        }    
-    
+
+        }
+
     }
 
     enable () {
 
         this.checkbox.checked = true
-    
+
     }
 
     disable () {
 
         this.checkbox.checked = false
-    
+
     }
 
 }

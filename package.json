@@ -1,18 +1,45 @@
 {
-  "name": "screwmycode-web-ext",
-  "version": "0.0.10",
-  "description": "screwmycode functionnality as web extension",
-  "license": "MIT",
-  "author": "Bamdad Sabbagh <hello@bamdadsabbagh.com>",
-  "scripts": {
-    "dev": "webextension-toolbox dev firefox",
-    "build": "webextension-toolbox build firefox",
-    "start": "web-ext run --source-dir dist/firefox"
-  },
-  "devDependencies": {
-    "@bamdadsabbagh/eslint-config": "^1.5.0",
-    "@bamdadsabbagh/stylelint-config": "^1.2.126",
-    "webextension-toolbox": "latest"
-  },
-  "dependencies": {}
+    "name": "screwmycode-web-ext",
+    "version": "0.0.10",
+    "description": "screwmycode functionnality as web extension",
+    "license": "MIT",
+    "author": "Bamdad Sabbagh <hello@bamdadsabbagh.com>",
+    "scripts": {
+        "build": "yarn clean && yarn build:webpack && yarn build:ext",
+        "build:clean": "rimraf packages",
+        "build:ext": "web-ext build --source-dir dist",
+        "build:prepare": "./bin/prepare.sh",
+        "build:webpack": "NODE_ENV=production webpack",
+        "clean": "yarn dev:clean && yarn build:clean",
+        "dev:chrome": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:chrome'",
+        "dev:clean": "rimraf dist",
+        "dev:ext:chrome": "web-ext run -t chromium",
+        "dev:ext:firefox": "web-ext run",
+        "dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
+        "dev:webpack": "webpack",
+        "package:reinstall": "rimraf node_modules && yarn",
+        "package:sort": "npx sort-package-json",
+        "old:dev": "webextension-toolbox dev firefox",
+        "old:dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
+        "old:build": "webextension-toolbox build firefox",
+        "old:start": "web-ext run --source-dir dist/firefox"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@bamdadsabbagh/eslint-config": "^1.9.1",
+        "@bamdadsabbagh/stylelint-config": "^1.2.43",
+        "concurrently": "^6.0.0",
+        "copy-webpack-plugin": "^8.1.0",
+        "node-forge": "^0.10.0",
+        "rimraf": "^3.0.2",
+        "wait-on": "^5.2.0",
+        "web-ext": "^6.1.0",
+        "webextension-toolbox": "latest",
+        "webpack": "^5.35.1",
+        "webpack-cli": "^4.2.0"
+    },
+    "webExt": {
+        "sourceDir": "dist",
+        "artifactsDir": "packages"
+    }
 }

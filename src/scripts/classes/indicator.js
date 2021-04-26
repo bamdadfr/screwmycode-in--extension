@@ -10,7 +10,7 @@ export default class Indicator {
         this.type = type
 
         this.indicator = indicator
-    
+
     }
 
     updateText (value) {
@@ -19,31 +19,31 @@ export default class Indicator {
 
             case 'percent':
                 this.indicator.textContent = computePercentValue (value) + ' %'
-    
+
                 break
-    
+
             case 'tone':
                 this.indicator.textContent = computeToneValue (value) + ' st'
-    
+
                 break
-    
+
             default:
                 return null
-        
+
         }
-    
+
     }
 
     updateShadow (value) {
-    
+
         if (value < 1) {
-                
+
             this.indicator.style.setProperty ('--indicator-value-shadow-opacity', rangeMap (value, 1, 0.5, 0.3, 0.5))
-            
+
         } else {
-    
+
             this.indicator.style.setProperty ('--indicator-value-shadow-opacity', rangeMap (value, 1, 1.5, 0.3, 0.5))
-            
+
         }
 
     }
@@ -53,7 +53,7 @@ export default class Indicator {
         this.updateText (1)
 
         this.indicator.style.setProperty ('--indicator-value-color', colors.darker)
-    
+
         this.indicator.style.setProperty ('--indicator-value-shadow-opacity', 0.15)
 
     }
@@ -62,7 +62,7 @@ export default class Indicator {
 
         // this.indicator.style.setProperty ('--indicator-value-color', colors.brightest)
         this.indicator.style.setProperty ('--indicator-value-color', getRainbow (value))
-    
+
     }
 
     update (value) {
@@ -72,7 +72,7 @@ export default class Indicator {
         this.updateText (value)
 
         this.updateShadow (value)
-    
+
     }
 
 }
