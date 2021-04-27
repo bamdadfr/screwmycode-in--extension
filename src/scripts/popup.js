@@ -1,17 +1,17 @@
-import { setState } from './state/set-state'
-import { getState } from './state/get-state'
+import { State } from './state/state'
 
 const checkbox = document.getElementById ('checkbox')
 
 checkbox.oninput = async (event) => {
 
-    await setState ('isActive', event.target.checked)
+    await State.set ('isActive', event.target.checked)
 
 }
 
-async function init () {
+// init
+(async () => {
 
-    const state = await getState ()
+    const state = await State.get ()
 
     if (state.isActive) {
 
@@ -19,6 +19,4 @@ async function init () {
 
     }
 
-}
-
-init ()
+}) ()

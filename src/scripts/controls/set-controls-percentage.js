@@ -1,6 +1,6 @@
 import speedToPercentage from 'speed-to-percentage'
-import { setState } from '../state/set-state'
-import { getBrowser } from '../browser/get-browser'
+import { Browser } from '../browser/browser'
+import { State } from '../state/state'
 
 export async function setControlsPercentage () {
 
@@ -12,13 +12,15 @@ export async function setControlsPercentage () {
 
     percentage.innerHTML = '%'
 
+    // onClick
     percentage.onclick = async () => {
 
-        await setState ('speed', 1)
+        await State.set ('speed', 1)
 
     }
 
-    const browser = await getBrowser ()
+    // watch state
+    const browser = await Browser.get ()
 
     browser.storage.onChanged.addListener ((changes) => {
 

@@ -1,15 +1,19 @@
-import { initState } from './state/init-state'
-import { getYoutubeControls } from './youtube/get-youtube-controls'
-import { setControls } from './controls/set-controls'
+import { State } from './state/state'
+import { Controls } from './controls/controls'
+import { Youtube } from './youtube/youtube'
 
 window.onload = async () => {
 
-    await initState ()
+    await State.init ()
 
-    // const player = new Player (getYoutubeControls ())
-    //
-    // player.init ()
+    const youtubeControls = document.getElementsByClassName ('ytp-time-display notranslate')[0]
 
-    await setControls (getYoutubeControls ())
+    // await setControls (youtubeControls)
+    await Controls.set (youtubeControls)
+
+    const youtubePlayer = document.getElementsByClassName ('video-stream html5-main-video')[0]
+
+    // await setYoutube (youtubePlayer)
+    await Youtube.set (youtubePlayer)
 
 }

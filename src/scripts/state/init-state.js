@@ -1,6 +1,5 @@
 import { setState } from './set-state'
 import { getState } from './get-state'
-import { setStateEvents } from './set-state-events'
 
 export async function initState () {
 
@@ -15,7 +14,5 @@ export async function initState () {
         await setState ('speed', 1)
 
     }
-
-    await setStateEvents ()
 
 }
