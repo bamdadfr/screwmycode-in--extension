@@ -6,6 +6,7 @@ export async function StateSet (type, payload) {
     const state = await StateGet ()
     const set = await Browser.get ().storage.local.set
 
+    // reducer
     switch (type) {
 
         case 'isReady':
@@ -26,22 +27,26 @@ export async function StateSet (type, payload) {
 
         case 'speed':
 
-            if (payload < 0.5) {
+            if (state.isActive === true) {
 
-                payload = 0.5
+                if (payload < 0.5) {
 
-            } else if (payload > 1.5) {
+                    payload = 0.5
 
-                payload = 1.5
+                } else if (payload > 1.5) {
+
+                    payload = 1.5
+
+                }
+
+                payload = parseFloat (payload.toFixed (3))
+
+                await set ({
+                    ...state,
+                    'speed': payload,
+                })
 
             }
-
-            payload = parseFloat (payload.toFixed (3))
-
-            await set ({
-                ...state,
-                'speed': payload,
-            })
 
             break
 
