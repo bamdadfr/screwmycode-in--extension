@@ -1,9 +1,9 @@
-import { getBrowser } from '../browser/get-browser'
+import { Browser } from '../browser/browser'
 
 export async function setYoutube () {
 
     const player = document.getElementsByClassName ('video-stream html5-main-video')[0]
-    const browser = await getBrowser ()
+    const browser = await Browser.get ()
 
     browser.storage.onChanged.addListener ((changes) => {
 

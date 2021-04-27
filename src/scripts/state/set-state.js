@@ -1,10 +1,10 @@
 import { getState } from './get-state'
-import { getBrowser } from '../browser/get-browser'
+import { Browser } from '../browser/browser'
 
 export async function setState (type, payload) {
 
     const state = await getState ()
-    const set = await getBrowser ().storage.local.set
+    const set = await Browser.get ().storage.local.set
 
     switch (type) {
 

@@ -1,4 +1,4 @@
-export function setControlsSpacer () {
+export function setYoutubeControlsSpacer () {
 
     const spacer = document.createElement ('span')
 

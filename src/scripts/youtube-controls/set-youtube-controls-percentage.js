@@ -2,15 +2,16 @@ import speedToPercentage from 'speed-to-percentage'
 import { Browser } from '../browser/browser'
 import { State } from '../state/state'
 
-export async function setControlsPercentage () {
+export async function setYoutubeControlsPercentage () {
 
     const percentage = document.createElement ('span')
+    const defaultValue = '%'
 
     percentage.id = 'screwmycode-ext__percent'
 
     percentage.style = 'cursor: pointer;'
 
-    percentage.innerHTML = '%'
+    percentage.innerHTML = defaultValue
 
     // onClick
     percentage.onclick = async () => {
@@ -24,7 +25,15 @@ export async function setControlsPercentage () {
 
     browser.storage.onChanged.addListener ((changes) => {
 
-        percentage.innerHTML = `${speedToPercentage (changes.speed.newValue)} %`
+        if (changes.isActive.newValue === true) {
+
+            percentage.innerHTML = `${speedToPercentage (changes.speed.newValue)} %`
+
+            return
+
+        }
+
+        percentage.innerHTML = defaultValue
 
     })
 

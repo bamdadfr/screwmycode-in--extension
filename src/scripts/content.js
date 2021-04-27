@@ -1,5 +1,5 @@
 import { State } from './state/state'
-import { Controls } from './controls/controls'
+import { YoutubeControls } from './youtube-controls/youtube-controls'
 import { Youtube } from './youtube/youtube'
 
 window.onload = async () => {
@@ -9,7 +9,7 @@ window.onload = async () => {
     const youtubeControls = document.getElementsByClassName ('ytp-time-display notranslate')[0]
 
     // await setControls (youtubeControls)
-    await Controls.set (youtubeControls)
+    await YoutubeControls.set (youtubeControls)
 
     const youtubePlayer = document.getElementsByClassName ('video-stream html5-main-video')[0]
 

@@ -1,7 +1,7 @@
-import { getBrowser } from '../browser/get-browser'
+import { Browser } from '../browser/browser'
 
 export async function getState () {
 
-    return await getBrowser ().storage.local.get ()
+    return await Browser.get ().storage.local.get ()
 
 }
