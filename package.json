@@ -11,6 +11,7 @@
         "build:prepare": "./bin/prepare.sh",
         "build:webpack": "NODE_ENV=production webpack",
         "clean": "yarn dev:clean && yarn build:clean",
+        "dev": "yarn dev:firefox",
         "dev:chrome": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:chrome'",
         "dev:clean": "rimraf dist",
         "dev:ext:chrome": "web-ext run -t chromium",
@@ -18,24 +19,22 @@
         "dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
         "dev:webpack": "webpack",
         "package:reinstall": "rimraf node_modules && yarn",
-        "package:sort": "npx sort-package-json",
-        "old:dev": "webextension-toolbox dev firefox",
-        "old:dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
-        "old:build": "webextension-toolbox build firefox",
-        "old:start": "web-ext run --source-dir dist/firefox"
+        "package:sort": "npx sort-package-json"
     },
-    "dependencies": {},
+    "dependencies": {
+        "speed-to-percentage": "^1.1.1",
+        "speed-to-semitones": "^1.2.0"
+    },
     "devDependencies": {
-        "@bamdadsabbagh/eslint-config": "^1.9.1",
-        "@bamdadsabbagh/stylelint-config": "^1.2.43",
+        "@bamdadsabbagh/eslint-config": "^1.9.6",
+        "@bamdadsabbagh/stylelint-config": "^1.3.5",
         "concurrently": "^6.0.0",
         "copy-webpack-plugin": "^8.1.0",
         "node-forge": "^0.10.0",
         "rimraf": "^3.0.2",
         "wait-on": "^5.2.0",
         "web-ext": "^6.1.0",
-        "webextension-toolbox": "latest",
-        "webpack": "^5.35.1",
+        "webpack": "^5.36.0",
         "webpack-cli": "^4.2.0"
     },
     "webExt": {

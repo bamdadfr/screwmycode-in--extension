@@ -9,7 +9,7 @@ module.exports = {
     'mode': isProduction ? 'production' : 'development',
     'devtool': isProduction ? false : 'cheap-source-map',
     'entry': {
-        // 'scripts/background': './src/scripts/background.js',
+        'scripts/background': './src/scripts/background.js',
         'scripts/content': './src/scripts/content.js',
         'scripts/popup': './src/scripts/popup.js',
     },

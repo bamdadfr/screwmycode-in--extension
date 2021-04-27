@@ -4,12 +4,12 @@ https://codepen.io/carolineartz/pen/ogVXZj?editors=1010
 */
 
 html, body {
-    background-color: var(--background);
-    color: var(--color);
-    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
     overflow: hidden;
     width: 230px;
-    -moz-user-select: none;
+    user-select: none;
 }
 
 div {
@@ -26,9 +26,9 @@ div {
 /* box */
 
 fieldset {
-    border: 1px solid var(--border);
+    border: 1px solid var(--color-border);
     padding: 0 10px 5px;
-    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 legend {
@@ -36,7 +36,7 @@ legend {
     padding-inline-start: 2px;
     padding-inline-end: 2px;
     padding-bottom: 5px;
-    color: var(--normal-color);
+    color: var(--color-normal);
     text-transform: lowercase;
     font-weight: 300;
     font-size: 1.3em;
@@ -50,7 +50,7 @@ legend {
     margin-bottom: 8px;
     width: 52px;
     position: relative;
-    cursor: poiner;
+    cursor: pointer;
     user-select: none;
     padding: 3px;
     transition: all 0.3s ease-in-out;
@@ -84,7 +84,7 @@ label, .value, .toggle-text {
 .indicator {
     font-size: 60%;
     white-space: nowrap;
-    font-family: 'Source Sans Pro', 'Avenir Next', 'AvenirNext';
+    font-family: 'Source Sans Pro', 'Avenir Next', 'AvenirNext', sans-serif;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     line-height: 3rem;
@@ -99,8 +99,8 @@ label, .value, .toggle-text {
 
 .indicator-value {
     width: 42px;
-    color: var(--indicator-value-color);
-    background: var(--soft-background);
+    color: var(--color-indicator-value);
+    background: var(--color-background-soft);
     text-transform: none;
     display: inline-block;
     text-align: center;
@@ -112,5 +112,5 @@ label, .value, .toggle-text {
 
     transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
     font-weight: 600;
-    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, var(--indicator-value-shadow-opacity));
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, var(--indicator-value-shadow-opacity));
 }
