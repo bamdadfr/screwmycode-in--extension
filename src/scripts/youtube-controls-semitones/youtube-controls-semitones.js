@@ -1,7 +1,7 @@
 import speedToSemitones from 'speed-to-semitones'
-import { Browser } from '../browser/browser'
 import { State } from '../state/state'
 import { StateSet } from '../state-set/state-set'
+import { StateOnChanged } from '../state-on-changed/state-on-changed'
 
 export async function YoutubeControlsSemitones () {
 
@@ -22,22 +22,16 @@ export async function YoutubeControlsSemitones () {
     }
 
     // init
-    await (async () => {
+    const state = await State ()
 
-        const state = await State ()
+    if (state.isActive) {
 
-        if (state.isActive) {
+        tone.innerHTML = `${speedToSemitones (state.speed)} st`
 
-            tone.innerHTML = `${speedToSemitones (state.speed)} st`
+    }
 
-        }
-
-    }) ()
-
-    // watch state
-    const browser = await Browser ()
-
-    browser.storage.onChanged.addListener ((changes) => {
+    // on state change
+    await StateOnChanged (async (changes) => {
 
         if (changes.isActive.newValue === true) {
 

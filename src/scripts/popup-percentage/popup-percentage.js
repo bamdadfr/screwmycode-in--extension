@@ -1,36 +1,20 @@
 import speedToPercentage from 'speed-to-percentage'
 import { State } from '../state/state'
-import { StateSet } from '../state-set/state-set'
 import { StateOnChanged } from '../state-on-changed/state-on-changed'
 
-export async function YoutubeControlsPercentage () {
+export async function PopupPercentage () {
 
-    const percentage = document.createElement ('span')
-    const defaultValue = '%'
-
-    percentage.id = 'screwmycode-ext__percent'
-
-    percentage.style = 'cursor: pointer;'
-
-    percentage.innerHTML = defaultValue
-
-    // onClick
-    percentage.onclick = async () => {
-
-        await StateSet ('speed', 1)
-
-    }
-
-    // init
+    const percentage = document.getElementById ('newPercent')
     const state = await State ()
 
+    // init
     if (state.isActive) {
 
         percentage.innerHTML = `${speedToPercentage (state.speed)} %`
 
     }
 
-    // on state change
+    // on stage change
     await StateOnChanged ((changes) => {
 
         if (changes.isActive.newValue === true) {
@@ -41,10 +25,8 @@ export async function YoutubeControlsPercentage () {
 
         }
 
-        percentage.innerHTML = defaultValue
+        percentage.innerHTML = 'off'
 
     })
-
-    return percentage
 
 }
