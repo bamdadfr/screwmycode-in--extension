@@ -1,4 +1,4 @@
-export function YoutubeControlsContainer () {
+export function ControlsContainer () {
 
     const container = document.createElement ('div')
 

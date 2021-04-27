@@ -1,7 +1,7 @@
 import { State } from '../state/state'
 import { StateSet } from '../state-set/state-set'
 
-export function YoutubeControlsIncrease () {
+export function ControlsIncrease () {
 
     const up = document.createElement ('span')
 

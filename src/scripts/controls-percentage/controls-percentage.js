@@ -3,7 +3,7 @@ import { State } from '../state/state'
 import { StateSet } from '../state-set/state-set'
 import { StateOnChanged } from '../state-on-changed/state-on-changed'
 
-export async function YoutubeControlsPercentage () {
+export async function ControlsPercentage () {
 
     const percentage = document.createElement ('span')
     const defaultValue = '%'

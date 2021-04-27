@@ -3,7 +3,7 @@ import { State } from '../state/state'
 import { StateSet } from '../state-set/state-set'
 import { StateOnChanged } from '../state-on-changed/state-on-changed'
 
-export async function YoutubeControlsSemitones () {
+export async function ControlsSemitones () {
 
     const tone = document.createElement ('span')
     const defaultValue = 'st'

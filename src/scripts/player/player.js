@@ -1,6 +1,6 @@
 import { Browser } from '../browser/browser'
 
-export async function Youtube () {
+export async function Player () {
 
     const player = document.getElementsByClassName ('video-stream html5-main-video')[0]
     const browser = await Browser ()

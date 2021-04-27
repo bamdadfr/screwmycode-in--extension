@@ -1,13 +1,13 @@
 import { State } from './state/state'
-import { Youtube } from './youtube/youtube'
-import { YoutubeControls } from './youtube-controls/youtube-controls'
+import { Player } from './player/player'
+import { Controls } from './controls/controls'
 
 window.onload = async () => {
 
     await State ()
 
-    await Youtube ()
+    await Player ()
 
-    await YoutubeControls ()
+    await Controls ()
 
 }
