@@ -1,5 +1,5 @@
-import { setYoutube } from './set-youtube'
+import { YoutubeSet } from './youtube-set'
 
 export const Youtube = {
-    'set': setYoutube,
+    'set': YoutubeSet,
 }

@@ -1,9 +1,9 @@
-import { setState } from './set-state'
-import { initState } from './init-state'
-import { getState } from './get-state'
+import { StateGet } from './state-get'
+import { StateSet } from './state-set'
+import { StateInit } from './state-init'
 
 export const State = {
-    'get': getState,
-    'set': setState,
-    'init': initState,
+    'get': StateGet,
+    'set': StateSet,
+    'init': StateInit,
 }

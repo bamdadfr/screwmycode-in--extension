@@ -2,7 +2,7 @@ import speedToPercentage from 'speed-to-percentage'
 import { Browser } from '../browser/browser'
 import { State } from '../state/state'
 
-export async function setYoutubeControlsPercentage () {
+export async function YoutubeControlsSetPercentage () {
 
     const percentage = document.createElement ('span')
     const defaultValue = '%'

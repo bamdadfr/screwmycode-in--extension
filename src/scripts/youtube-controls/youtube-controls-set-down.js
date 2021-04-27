@@ -1,6 +1,6 @@
 import { State } from '../state/state'
 
-export function setYoutubeControlsDown () {
+export function YoutubeControlsSetDown () {
 
     const down = document.createElement ('span')
 

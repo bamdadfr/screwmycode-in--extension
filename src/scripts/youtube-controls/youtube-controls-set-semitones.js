@@ -2,7 +2,7 @@ import speedToSemitones from 'speed-to-semitones'
 import { Browser } from '../browser/browser'
 import { State } from '../state/state'
 
-export async function setYoutubeControlsSemitones () {
+export async function YoutubeControlsSetSemitones () {
 
     const tone = document.createElement ('span')
     const defaultValue = 'st'
@@ -30,7 +30,7 @@ export async function setYoutubeControlsSemitones () {
             tone.innerHTML = `${speedToSemitones (changes.speed.newValue)} st`
 
             return
-        
+
         }
 
         tone.innerHTML = defaultValue

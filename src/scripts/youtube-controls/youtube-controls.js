@@ -1,5 +1,5 @@
-import { setYoutubeControls } from './set-youtube-controls'
+import { YoutubeControlsSet } from './youtube-controls-set'
 
 export const YoutubeControls = {
-    'set': setYoutubeControls,
+    'set': YoutubeControlsSet,
 }

@@ -1,5 +1,5 @@
-import { getBrowser } from './get-browser'
+import { BrowserGet } from './browser-get'
 
 export const Browser = {
-    'get': getBrowser,
+    'get': BrowserGet,
 }
