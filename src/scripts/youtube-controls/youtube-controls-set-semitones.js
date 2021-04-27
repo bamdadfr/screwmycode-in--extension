@@ -20,6 +20,19 @@ export async function YoutubeControlsSetSemitones () {
 
     }
 
+    // init
+    await (async () => {
+
+        const state = await State.get ()
+
+        if (state.isActive) {
+
+            tone.innerHTML = `${speedToSemitones (state.speed)} st`
+        
+        }
+
+    }) ()
+
     // watch state
     const browser = await Browser.get ()
 

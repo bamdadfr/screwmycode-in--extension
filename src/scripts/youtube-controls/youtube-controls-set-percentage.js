@@ -20,6 +20,19 @@ export async function YoutubeControlsSetPercentage () {
 
     }
 
+    // init
+    await (async () => {
+
+        const state = await State.get ()
+
+        if (state.isActive) {
+
+            percentage.innerHTML = `${speedToPercentage (state.speed)} %`
+
+        }
+
+    }) ()
+
     // watch state
     const browser = await Browser.get ()
 
