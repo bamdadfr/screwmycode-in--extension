@@ -1,8 +1,9 @@
 import speedToPercentage from 'speed-to-percentage'
 import { Browser } from '../browser/browser'
 import { State } from '../state/state'
+import { StateSet } from '../state-set/state-set'
 
-export async function YoutubeControlsSetPercentage () {
+export async function YoutubeControlsPercentage () {
 
     const percentage = document.createElement ('span')
     const defaultValue = '%'
@@ -16,14 +17,14 @@ export async function YoutubeControlsSetPercentage () {
     // onClick
     percentage.onclick = async () => {
 
-        await State.set ('speed', 1)
+        await StateSet ('speed', 1)
 
     }
 
     // init
     await (async () => {
 
-        const state = await State.get ()
+        const state = await State ()
 
         if (state.isActive) {
 
@@ -34,7 +35,7 @@ export async function YoutubeControlsSetPercentage () {
     }) ()
 
     // watch state
-    const browser = await Browser.get ()
+    const browser = await Browser ()
 
     browser.storage.onChanged.addListener ((changes) => {
 

@@ -1,6 +1,7 @@
 import { State } from '../state/state'
+import { StateSet } from '../state-set/state-set'
 
-export function YoutubeControlsSetUp () {
+export function YoutubeControlsIncrease () {
 
     const up = document.createElement ('span')
 
@@ -10,9 +11,9 @@ export function YoutubeControlsSetUp () {
 
     up.onclick = async () => {
 
-        const state = await State.get ()
+        const state = await State ()
 
-        await State.set ('speed', state.speed + 0.1)
+        await StateSet ('speed', state.speed + 0.1)
 
     }
 

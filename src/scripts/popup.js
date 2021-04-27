@@ -1,7 +1,7 @@
 import { PopupCheckbox } from './popup-checkbox/popup-checkbox'
 
-(async () => {
+window.onload = async () => {
 
     await PopupCheckbox ()
 
-}) ()
+}

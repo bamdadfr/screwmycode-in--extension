@@ -1,4 +1,5 @@
 import { State } from '../state/state'
+import { StateSet } from '../state-set/state-set'
 
 export async function PopupCheckbox () {
 
@@ -6,11 +7,11 @@ export async function PopupCheckbox () {
 
     checkbox.oninput = async (event) => {
 
-        await State.set ('isActive', event.target.checked)
+        await StateSet ('isActive', event.target.checked)
 
     }
 
-    const state = await State.get ()
+    const state = await State ()
 
     if (state.isActive) {
 

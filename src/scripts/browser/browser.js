@@ -1,5 +1,6 @@
-import { BrowserGet } from './browser-get'
+export function Browser () {
 
-export const Browser = {
-    'get': BrowserGet,
+    // eslint-disable-next-line no-undef
+    return browser
+
 }

@@ -1,10 +1,9 @@
-import { StateGet } from './state-get'
 import { Browser } from '../browser/browser'
 
 export async function StateSet (type, payload) {
 
-    const state = await StateGet ()
-    const set = await Browser.get ().storage.local.set
+    const state = await Browser ().storage.local.get ()
+    const set = await Browser ().storage.local.set
 
     // reducer
     switch (type) {
