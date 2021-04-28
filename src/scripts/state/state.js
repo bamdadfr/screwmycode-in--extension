@@ -5,9 +5,7 @@ export async function State () {
 
     const state = await Browser ().storage.local.get ()
 
-    if (typeof state.isReady === 'undefined') {
-
-        await StateSet ('isReady', false)
+    if (typeof state === 'undefined') {
 
         await StateSet ('isActive', false)
 

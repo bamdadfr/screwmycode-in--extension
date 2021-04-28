@@ -8,14 +8,6 @@ export async function StateSet (type, payload) {
     // reducer
     switch (type) {
 
-        case 'isReady':
-            await set ({
-                ...state,
-                'isReady': payload,
-            })
-
-            break
-
         case 'isActive':
             await set ({
                 ...state,
@@ -39,6 +31,8 @@ export async function StateSet (type, payload) {
                 }
 
                 payload = parseFloat (payload.toFixed (3))
+
+                if (Number.isNaN (payload)) payload = 1
 
                 await set ({
                     ...state,
