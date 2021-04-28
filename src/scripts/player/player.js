@@ -1,33 +1,24 @@
-import { Browser } from '../browser/browser'
+import { StateOnSpeedChange } from '../state-on-speed-change/state-on-speed-change'
 
 export async function Player () {
 
     const player = document.getElementsByClassName ('video-stream html5-main-video')[0]
-    const browser = await Browser ()
 
-    browser.storage.onChanged.addListener ((changes) => {
+    await StateOnSpeedChange (
+        (speed) => {
 
-        if (changes.isActive.newValue === false) {
+            player.mozPreservesPitch = false
+
+            player.playbackRate = speed
+
+        },
+        () => {
 
             player.mozPreservesPitch = true
 
             player.playbackRate = 1
 
-            return
-
-        }
-
-        if (changes.speed.newValue !== changes.speed.oldValue) {
-
-            // update youtube with new speed
-            player.mozPreservesPitch = false
-
-            player.playbackRate = changes.speed.newValue
-
-            // update controls with new speed
-
-        }
-
-    })
+        },
+    )
 
 }

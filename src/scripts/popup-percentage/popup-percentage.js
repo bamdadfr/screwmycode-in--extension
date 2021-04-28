@@ -1,32 +1,21 @@
 import speedToPercentage from 'speed-to-percentage'
-import { State } from '../state/state'
-import { StateOnChanged } from '../state-on-changed/state-on-changed'
+import { StateOnSpeedChange } from '../state-on-speed-change/state-on-speed-change'
 
 export async function PopupPercentage () {
 
     const percentage = document.getElementById ('newPercent')
-    const state = await State ()
 
-    // init
-    if (state.isActive) {
+    await StateOnSpeedChange (
+        (speed) => {
 
-        percentage.innerHTML = `${speedToPercentage (state.speed)} %`
+            percentage.innerHTML = `${speedToPercentage (speed)} %`
 
-    }
+        },
+        () => {
 
-    // on stage change
-    await StateOnChanged ((changes) => {
+            percentage.innerHTML = 'off'
 
-        if (changes.isActive.newValue === true) {
-
-            percentage.innerHTML = `${speedToPercentage (changes.speed.newValue)} %`
-
-            return
-
-        }
-
-        percentage.innerHTML = 'off'
-
-    })
+        },
+    )
 
 }
