@@ -6,6 +6,4 @@ export async function StateOnChanged (callback) {
 
     return browser.storage.onChanged.addListener (callback)
 
-    // todo: add remove listener
-
 }
