@@ -11,16 +11,16 @@ export async function Controls () {
     const container = ControlsContainer ()
     const percentage = await ControlsPercentage ()
     const semitones = await ControlsSemitones ()
-    const up = ControlsIncrease ()
-    const down = ControlsDecrease ()
+    const increase = ControlsIncrease ()
+    const decrease = ControlsDecrease ()
     const spacer = ControlsSpacer ()
 
     // rendering
-    container.appendChild (down)
+    container.appendChild (decrease)
 
     container.appendChild (spacer)
 
-    container.appendChild (up)
+    container.appendChild (increase)
 
     container.appendChild (spacer.cloneNode ())
 
