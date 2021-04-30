@@ -1,11 +1,11 @@
-import { StateOnSpeedChange } from '../state-on-speed-change/state-on-speed-change'
+import { StateOnChange } from '../state-on-change/state-on-change'
 
 export async function Player () {
 
     const player = document.getElementsByClassName ('video-stream html5-main-video')[0]
 
-    await StateOnSpeedChange (
-        (speed) => {
+    await StateOnChange (
+        ({ speed }) => {
 
             player.mozPreservesPitch = false
 
