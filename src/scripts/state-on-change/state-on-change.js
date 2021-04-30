@@ -1,7 +1,7 @@
 import { Browser } from '../browser/browser'
 import { State } from '../state/state'
 
-export async function StateOnSpeedChange (
+export async function StateOnChange (
     onChangeCallback,
     onOffCallback,
 ) {
@@ -9,10 +9,12 @@ export async function StateOnSpeedChange (
     const browser = await Browser ()
     const state = await State ()
 
-    // init
+    // onMount
     if (state.isActive) {
 
-        onChangeCallback (state.speed)
+        onChangeCallback ({
+            'speed': state.speed,
+        })
 
     } else {
 
@@ -25,7 +27,9 @@ export async function StateOnSpeedChange (
 
         if (changes.isActive.newValue === true) {
 
-            onChangeCallback (changes.speed.newValue)
+            onChangeCallback ({
+                'speed': changes.speed.newValue,
+            })
 
             return
 
