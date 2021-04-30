@@ -1,6 +1,6 @@
 import speedToPercentage from 'speed-to-percentage'
 import { StateSet } from '../state-set/state-set'
-import { StateOnSpeedChange } from '../state-on-speed-change/state-on-speed-change'
+import { StateOnChange } from '../state-on-change/state-on-change'
 
 export async function ControlsPercentage () {
 
@@ -16,8 +16,8 @@ export async function ControlsPercentage () {
 
     }
 
-    await StateOnSpeedChange (
-        (speed) => {
+    await StateOnChange (
+        ({ speed }) => {
 
             percentage.innerHTML = `${speedToPercentage (speed)} %`
 

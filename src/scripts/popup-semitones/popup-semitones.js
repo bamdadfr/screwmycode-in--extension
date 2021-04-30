@@ -1,12 +1,12 @@
 import speedToSemitones from 'speed-to-semitones'
-import { StateOnSpeedChange } from '../state-on-speed-change/state-on-speed-change'
+import { StateOnChange } from '../state-on-change/state-on-change'
 
 export async function PopupSemitones () {
 
     const semitones = document.getElementById ('newTone')
 
-    await StateOnSpeedChange (
-        (speed) => {
+    await StateOnChange (
+        ({ speed }) => {
 
             semitones.innerHTML = `${speedToSemitones (speed)} st`
 
