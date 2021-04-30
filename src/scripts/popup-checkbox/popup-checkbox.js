@@ -11,6 +11,7 @@ export async function PopupCheckbox () {
 
     }
 
+    // onMount
     const state = await State ()
 
     if (state.isActive) {
