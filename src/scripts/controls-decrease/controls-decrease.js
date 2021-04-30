@@ -1,6 +1,12 @@
 import { State } from '../state/state'
 import { StateSet } from '../state-set/state-set'
 
+/**
+ * @function
+ * @name ControlsDecrease
+ * @description controls: create the `decrease` sub component
+ * @return {HTMLSpanElement}
+ */
 export function ControlsDecrease () {
 
     const down = document.createElement ('span')

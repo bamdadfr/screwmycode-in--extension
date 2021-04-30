@@ -1,6 +1,12 @@
 import { State } from '../state/state'
 import { StateSet } from '../state-set/state-set'
 
+/**
+ * @function
+ * @name PopupCheckbox
+ * @description popup: handle the `checkbox` element
+ * @return {Promise<void>}
+ */
 export async function PopupCheckbox () {
 
     const checkbox = document.getElementById ('checkbox')

@@ -1,3 +1,9 @@
+/**
+ * @function
+ * @name ControlsContainer
+ * @description controls: create the `div` sub component
+ * @return {HTMLDivElement}
+ */
 export function ControlsContainer () {
 
     const container = document.createElement ('div')

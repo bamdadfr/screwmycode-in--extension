@@ -2,6 +2,12 @@ import speedToSemitones from 'speed-to-semitones'
 import { StateSet } from '../state-set/state-set'
 import { StateOnChange } from '../state-on-change/state-on-change'
 
+/**
+ * @function
+ * @name ControlsSemitones
+ * @description controls: create the `semitones` sub component
+ * @return {Promise<HTMLSpanElement>}
+ */
 export async function ControlsSemitones () {
 
     const tone = document.createElement ('span')

@@ -5,6 +5,12 @@ import { ControlsIncrease } from '../controls-increase/controls-increase'
 import { ControlsDecrease } from '../controls-decrease/controls-decrease'
 import { ControlsSpacer } from '../controls-spacer/controls-spacer'
 
+/**
+ * @function
+ * @name Controls
+ * @description building controls inside the youtube player
+ * @return {Promise<void>}
+ */
 export async function Controls () {
 
     const parent = document.getElementsByClassName ('ytp-time-display notranslate')[0]

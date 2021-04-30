@@ -1,5 +1,13 @@
 import { Browser } from '../browser/browser'
 
+/**
+ * @function
+ * @name StateSet
+ * @description performs mutations in browser state with a reducer approach
+ * @param {String} type - action / mutation to perform
+ * @param {(Boolean, Number)} payload - state
+ * @return {Promise<null>}
+ */
 export async function StateSet (type, payload) {
 
     const state = await Browser ().storage.local.get ()

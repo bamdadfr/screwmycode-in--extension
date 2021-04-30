@@ -2,6 +2,12 @@ import speedToPercentage from 'speed-to-percentage'
 import { StateSet } from '../state-set/state-set'
 import { StateOnChange } from '../state-on-change/state-on-change'
 
+/**
+ * @function
+ * @name ControlsPercentage
+ * @description controls: create the `percentage` sub component
+ * @return {Promise<HTMLSpanElement>}
+ */
 export async function ControlsPercentage () {
 
     const percentage = document.createElement ('span')

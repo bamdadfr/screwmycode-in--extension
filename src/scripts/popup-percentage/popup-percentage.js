@@ -1,6 +1,12 @@
 import speedToPercentage from 'speed-to-percentage'
 import { StateOnChange } from '../state-on-change/state-on-change'
 
+/**
+ * @function
+ * @name PopupPercentage
+ * @description popup: handle the `percentage` element
+ * @return {Promise<void>}
+ */
 export async function PopupPercentage () {
 
     const percentage = document.getElementById ('newPercent')

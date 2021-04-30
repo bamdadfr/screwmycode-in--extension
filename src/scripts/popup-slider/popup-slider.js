@@ -1,6 +1,12 @@
 import { StateOnChange } from '../state-on-change/state-on-change'
 import { StateSet } from '../state-set/state-set'
 
+/**
+ * @function
+ * @name PopupSlider
+ * @description popup: handle the `slider` element
+ * @return {Promise<void>}
+ */
 export async function PopupSlider () {
 
     const slider = document.getElementsByClassName ('slider')[0]
