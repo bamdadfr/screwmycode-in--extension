@@ -5,13 +5,15 @@ export async function State () {
 
     const state = await Browser ().storage.local.get ()
 
-    if (typeof state === 'undefined') {
+    if (typeof state.isActive === 'undefined') {
 
         await StateSet ('isActive', false)
 
-        await StateSet ('speed', 1)
+    }
 
-        return
+    if (typeof state.speed === 'undefined') {
+
+        await StateSet ('speed', 1)
 
     }
 
