@@ -14,7 +14,7 @@ export async function PopupSemitones () {
     await StateOnChange (
         ({ speed }) => {
 
-            semitones.innerHTML = `${speedToSemitones (speed)} st`
+            semitones.innerHTML = `${speedToSemitones (speed, 1)} st`
 
         },
         () => {
