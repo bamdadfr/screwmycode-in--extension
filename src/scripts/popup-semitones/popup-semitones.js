@@ -9,7 +9,7 @@ import { StateOnChange } from '../state-on-change/state-on-change'
  */
 export async function PopupSemitones () {
 
-    const semitones = document.getElementById ('newTone')
+    const semitones = document.getElementsByClassName ('smc-semitones')[0]
 
     await StateOnChange (
         ({ speed }) => {

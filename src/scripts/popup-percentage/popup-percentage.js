@@ -9,7 +9,7 @@ import { StateOnChange } from '../state-on-change/state-on-change'
  */
 export async function PopupPercentage () {
 
-    const percentage = document.getElementById ('newPercent')
+    const percentage = document.getElementsByClassName ('smc-percentage')[0]
 
     await StateOnChange (
         ({ speed }) => {

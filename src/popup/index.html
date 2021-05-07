@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>screwmycode for YouTube</title>
-    <link rel="stylesheet" href="root.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>screwmycode.in for YouTube</title>
+    <link rel="stylesheet" href="vars.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="share.css">
+    <link rel="stylesheet" href="indicators.css">
     <link rel="stylesheet" href="slider.css">
 </head>
 <body>
 
-<div>
+<div class="smc-container">
     <fieldset>
-        <legend>
+        <legend class="smc-title">
             screwmycode.in
         </legend>
 
-        <div class="flex-container">
-            <div class="col">
+        <div class="smc-content">
+            <div class="smc-col">
 
-                <div class="first-row">
+                <div class="smc-row-1">
                     <label class="switch">
-                        <input id="checkbox" type="checkbox">
+                        <input class="smc-checkbox" type="checkbox">
                     </label>
 
                     <img alt="k7" src="../assets/k7.svg" width="30px"/>
 
-                    <span id="share-link">share</span>
+                    <span class="smc-share">share</span>
 
                 </div>
 
-                <div class="spacer-1"></div>
+                <div class="smc-spacer"></div>
 
-                <div class="second-row">
+                <div class="smc-row-2">
                     <input
-                            class="slider"
+                            class="smc-slider"
                             type="range"
                             min="0.5"
                             max="1.5"
@@ -44,17 +46,17 @@
                     />
                 </div>
 
-                <div class="spacer-2"></div>
+                <div class="smc-spacer"></div>
 
-                <div class="third-row">
-                    <div class="indicator">
-                        <span class="indicator-name">percent</span>
-                        <span id="newPercent" class="indicator-value"></span>
+                <div class="smc-row-3">
+                    <div class="smc-indicator">
+                        <span class="smc-indicator__title">percentage</span>
+                        <span class="smc-indicator__value smc-percentage"></span>
                     </div>
 
-                    <div class="indicator">
-                        <span class="indicator-name">semitone</span>
-                        <span id="newTone" class="indicator-value"></span>
+                    <div class="smc-indicator">
+                        <span class="smc-indicator__title">semitones</span>
+                        <span class="smc-indicator__value smc-semitones"></span>
                     </div>
                 </div>
 

@@ -9,7 +9,7 @@ import { StateSet } from '../state-set/state-set'
  */
 export async function PopupSlider () {
 
-    const slider = document.getElementsByClassName ('slider')[0]
+    const slider = document.getElementsByClassName ('smc-slider')[0]
 
     slider.oninput = async (event) => {
 

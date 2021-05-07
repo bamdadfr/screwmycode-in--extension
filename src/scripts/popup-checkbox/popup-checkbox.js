@@ -9,7 +9,7 @@ import { StateSet } from '../state-set/state-set'
  */
 export async function PopupCheckbox () {
 
-    const checkbox = document.getElementById ('checkbox')
+    const checkbox = document.getElementsByClassName ('smc-checkbox')[0]
 
     checkbox.oninput = async (event) => {
 
