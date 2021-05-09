@@ -2,6 +2,12 @@ import { State } from '../state/state'
 import { UtilsGetId } from '../utils-get-id/utils-get-id'
 import { Browser } from '../browser/browser'
 
+/**
+ * @function
+ * @name PopupShare
+ * @description popup: handle the `share` element
+ * @return {Promise<void>}
+ */
 export async function PopupShare () {
 
     const share = document.getElementsByClassName ('smc-share')[0]

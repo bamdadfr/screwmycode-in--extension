@@ -1,5 +1,11 @@
 import { Browser } from '../browser/browser'
 
+/**
+ * @function
+ * @name UtilsGetId
+ * @description utils: get youtube id
+ * @return {(Boolean, null)}
+ */
 export async function UtilsGetId () {
 
     const browser = await Browser ()
