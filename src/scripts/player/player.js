@@ -4,7 +4,7 @@ import { StateOnChange } from '../state-on-change/state-on-change'
  * @function
  * @name Player
  * @description content: handle data stream from youtube player
- * @return {Promise<void>}
+ * @return {Promise<Element>}
  */
 export async function Player () {
 
@@ -26,5 +26,7 @@ export async function Player () {
 
         },
     )
+
+    return player
 
 }
