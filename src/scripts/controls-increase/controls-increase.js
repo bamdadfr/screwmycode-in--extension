@@ -1,5 +1,6 @@
 import { State } from '../state/state'
 import { StateSet } from '../state-set/state-set'
+import { ConstantSpeedStep } from '../constant-speed-step/constant-speed-step'
 
 /**
  * @function
@@ -19,7 +20,11 @@ export function ControlsIncrease () {
 
         const state = await State ()
 
-        await StateSet ('speed', state.speed + 0.1)
+        if (state.isActive) {
+
+            await StateSet ('speed', state.speed + ConstantSpeedStep)
+
+        }
 
     }
 

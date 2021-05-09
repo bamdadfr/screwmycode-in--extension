@@ -1,6 +1,7 @@
 import speedToPercentage from 'speed-to-percentage'
 import { StateSet } from '../state-set/state-set'
 import { StateOnChange } from '../state-on-change/state-on-change'
+import { State } from '../state/state'
 
 /**
  * @function
@@ -18,7 +19,13 @@ export async function ControlsPercentage () {
 
     percentage.onclick = async () => {
 
-        await StateSet ('speed', 1)
+        const state = await State ()
+
+        if (state.isActive) {
+
+            await StateSet ('speed', 1)
+
+        }
 
     }
 

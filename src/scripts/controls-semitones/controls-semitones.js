@@ -1,6 +1,7 @@
 import speedToSemitones from 'speed-to-semitones'
 import { StateSet } from '../state-set/state-set'
 import { StateOnChange } from '../state-on-change/state-on-change'
+import { State } from '../state/state'
 
 /**
  * @function
@@ -18,14 +19,20 @@ export async function ControlsSemitones () {
 
     tone.onclick = async () => {
 
-        await StateSet ('speed', 1)
+        const state = await State ()
+
+        if (state.isActive) {
+
+            await StateSet ('speed', 1)
+
+        }
 
     }
 
     await StateOnChange (
         ({ speed }) => {
 
-            tone.innerHTML = `${speedToSemitones (speed)} st`
+            tone.innerHTML = `${speedToSemitones (speed, 1)} st`
 
         },
         () => {
