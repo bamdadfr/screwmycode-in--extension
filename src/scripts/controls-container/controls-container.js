@@ -1,3 +1,5 @@
+import { ConstantControlsContainer } from '../constant-controls-container/constant-controls-container'
+
 /**
  * @function
  * @name ControlsContainer
@@ -10,7 +12,7 @@ export function ControlsContainer () {
 
     container.classList.add ('ytp-time-display', 'notranslate')
 
-    container.id = 'screwmycode-ext__container'
+    container.id = ConstantControlsContainer
 
     container.style = 'user-select: none;'
 

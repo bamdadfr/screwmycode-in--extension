@@ -12,11 +12,9 @@ async function ContentOnLoad () {
 
     await State ()
 
-    const player = await Player ()
+    await Player ()
 
     await Controls ()
-
-    player.addEventListener ('canplay', ContentOnLoad)
 
 }
 
