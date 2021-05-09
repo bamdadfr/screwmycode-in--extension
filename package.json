@@ -1,6 +1,6 @@
 {
-    "name": "screwmycode-web-ext",
-    "version": "0.0.10",
+    "name": "screwmycode-in--extension",
+    "version": "1.0.219",
     "description": "screwmycode functionnality as web extension",
     "license": "MIT",
     "author": {
@@ -16,9 +16,7 @@
         "build:webpack": "NODE_ENV=production webpack",
         "clean": "yarn dev:clean && yarn build:clean",
         "dev": "yarn dev:firefox",
-        "dev:chrome": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:chrome'",
         "dev:clean": "rimraf dist",
-        "dev:ext:chrome": "web-ext run -t chromium",
         "dev:ext:firefox": "web-ext run",
         "dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
         "dev:webpack": "webpack",
