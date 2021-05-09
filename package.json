@@ -3,7 +3,11 @@
     "version": "0.0.10",
     "description": "screwmycode functionnality as web extension",
     "license": "MIT",
-    "author": "Bamdad Sabbagh <hello@bamdadsabbagh.com>",
+    "author": {
+        "url": "https://bamdad.fr",
+        "name": "Bamdad Sabbagh",
+        "email": "hi@bamdad.fr"
+    },
     "scripts": {
         "build": "yarn clean && yarn build:webpack && yarn build:ext",
         "build:clean": "rimraf packages",
@@ -27,7 +31,6 @@
     },
     "devDependencies": {
         "@bamdadsabbagh/eslint-config": "^1.9.7",
-        "@bamdadsabbagh/stylelint-config": "^1.3.6",
         "concurrently": "^6.0.0",
         "copy-webpack-plugin": "^8.1.0",
         "node-forge": "^0.10.0",
