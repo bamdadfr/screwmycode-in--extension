@@ -8,7 +8,7 @@ html, body {
     color: var(--color-primary);
     font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
     overflow: hidden;
-    width: 230px;
+    width: 300px;
     user-select: none;
 }
 
@@ -62,4 +62,7 @@ html, body {
 
 .smc-row-3 {
     height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
