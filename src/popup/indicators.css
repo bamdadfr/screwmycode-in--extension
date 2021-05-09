@@ -1,0 +1,28 @@
+.smc-indicator {
+    font-size: 60%;
+    white-space: nowrap;
+    font-family: 'Source Sans Pro', 'Avenir Next', 'AvenirNext', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+
+.smc-indicator__title {
+    display: inline-block;
+    font-weight: 500;
+    transform: translate3d(5px, 1px, 0);
+}
+
+.smc-indicator__value {
+    width: 52px;
+    color: var(--color-blue);
+    background: var(--color-blue-background);
+    text-transform: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 22px;
+    padding: 0 5px;
+    border-radius: 3px;
+    font-weight: 600;
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.3);
+}

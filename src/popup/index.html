@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screwmycode.in for YouTube</title>
+    <link rel="stylesheet" href="vars.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="share.css">
+    <link rel="stylesheet" href="indicators.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="k7.css">
+</head>
+<body>
+
+<div class="smc-container">
+    <fieldset>
+        <legend class="smc-title">
+            screwmycode.in
+        </legend>
+
+        <div class="smc-content">
+            <div class="smc-col">
+
+                <div class="smc-row-1">
+                    <label class="switch">
+                        <input class="smc-checkbox" type="checkbox">
+                    </label>
+
+                    <span class="smc-share">share</span>
+
+                </div>
+
+                <div class="smc-spacer"></div>
+
+                <div class="smc-row-2">
+                    <input
+                            class="smc-slider"
+                            type="range"
+                            min="0.5"
+                            max="1.5"
+                            step="0.005"
+                            value="1"
+                            aria-label="slider"
+                    />
+                </div>
+
+                <div class="smc-spacer"></div>
+
+                <div class="smc-row-3">
+                    <div>
+                        <div class="smc-indicator">
+                            <span class="smc-indicator__value smc-percentage"></span>
+                            <span class="smc-indicator__title">percentage</span>
+                        </div>
+
+                        <div class="smc-indicator">
+                            <span class="smc-indicator__value smc-semitones"></span>
+                            <span class="smc-indicator__title">semitones</span>
+                        </div>
+                    </div>
+
+                    <div class="smc-k7">
+                        <img alt="k7" src="../assets/k7.svg"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+<script src="../scripts/popup.js"></script>
+</body>
+</html>

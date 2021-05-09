@@ -1,15 +1,15 @@
-name: semantic-release-yarn--onMondays-1030
+name: semantic-release-yarn-with-build--onMondays-1030
 
 on:
   schedule:
-    - cron: '30 10 * * 1' # every monday at 1030
+    - cron: '30 10 * * 1' # every monday at 10:30
   repository_dispatch:
     types:
       - docker-base-image-check
       - git-commit-force-release
 
 jobs:
-  semantic-release-yarn--onMondays-1030:
+  semantic-release-yarn-with-build--onMondays-1030:
     runs-on: ubuntu-latest
     steps:
 
@@ -17,9 +17,11 @@ jobs:
 
       - uses: actions/setup-node@master
         with:
-          node-version: '12'
+          node-version: '14'
 
       - run: yarn
+
+      - run: yarn build
 
       - run: |
           npm install -g \
@@ -31,11 +33,14 @@ jobs:
             @semantic-release/npm \
             semantic-release-chrome \
             semantic-release-firefox-add-on \
-            aggregate-error
-        
+            aggregate-error@3.1.0
+
       - run: semantic-release
         env:
           GH_TOKEN: ${{ secrets.PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           FIREFOX_API_KEY: ${{ secrets.FIREFOX_API_KEY }}
           FIREFOX_SECRET_KEY: ${{ secrets.FIREFOX_SECRET_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
