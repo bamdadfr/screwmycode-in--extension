@@ -8,8 +8,6 @@
 
 <p align=center>
     Variable speed pitch control for <a href="https://www.youtube.com/">YouTube</a> (Web Extension for Firefox)
-    <br>
-    ⚠️ ALPHA ⚠️
 </p>
 
 <p align=center>
@@ -26,7 +24,7 @@
 
 <p align=center>
     <img src="https://img.shields.io/github/v/release/bamdadsabbagh/screwmycode-in--extension">
-    <img src="https://api.codeclimate.com/v1/badges/d1a813339cd422a1e584/maintainability" />
+    <img src="https://api.codeclimate.com/v1/badges/e0f107f8d8791086e985/maintainability" />
 </p>
 
 <p align=center>
