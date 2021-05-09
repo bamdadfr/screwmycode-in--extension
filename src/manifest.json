@@ -2,7 +2,7 @@
   "name": "screwmycode.in for YouTube",
   "short_name": "screwmycode.in",
   "description": "Variable speed pitch control for YouTube",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "manifest_version": 2,
   "icons": {
     "16": "assets/icon.jpg",

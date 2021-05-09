@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.1.0...v1.1.1) (2021-05-09)
+
+
+### Bug Fixes
+
+* **controls:** avoid controls to pop more than once ([ee94739](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/ee94739b10ccccd4318129cd491a22db7ae7b013))
+* **yarn:** yarn.lock ([6fe3085](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/6fe308500ef05d58edd23352945ab55b4ddb9f12))
+
 # [1.1.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.0.219...v1.1.0) (2021-05-09)
 
 
