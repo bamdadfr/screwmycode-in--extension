@@ -4,10 +4,11 @@ import { Controls } from './controls/controls'
 
 /**
  * @function
- * @description content: onLoad
+ * @name ContentOnLoad
+ * @description content: on load
  * @return {Promise<void>}
  */
-window.onload = async () => {
+async function ContentOnLoad () {
 
     await State ()
 
@@ -16,3 +17,5 @@ window.onload = async () => {
     await Controls ()
 
 }
+
+window.addEventListener ('load', ContentOnLoad)

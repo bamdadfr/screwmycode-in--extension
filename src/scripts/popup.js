@@ -6,10 +6,11 @@ import { PopupShare } from './popup-share/popup-share'
 
 /**
  * @function
- * @description popup: onLoad
+ * @name PopupOnLoad
+ * @description popup: on load
  * @return {Promise<void>}
  */
-window.onload = async () => {
+async function PopupOnLoad () {
 
     await PopupCheckbox ()
 
@@ -22,3 +23,5 @@ window.onload = async () => {
     await PopupShare ()
 
 }
+
+window.addEventListener ('load', PopupOnLoad)
