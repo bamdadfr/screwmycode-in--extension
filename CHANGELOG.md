@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.1.1...v1.1.2) (2021-05-10)
+
+
+### Bug Fixes
+
+* **asfalte:** ⚙️ yarn-upgrade--onMondays-1000 ([da2cf2f](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/da2cf2f64db12f8e741ca34296f42022a610ebab))
+
 ## [1.1.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.1.0...v1.1.1) (2021-05-09)
 
 
