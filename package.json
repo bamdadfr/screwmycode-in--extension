@@ -28,7 +28,7 @@
     "speed-to-semitones": "^1.2.0"
   },
   "devDependencies": {
-    "@bamdadsabbagh/eslint-config": "^1.9.7",
+    "@bamdadsabbagh/eslint-config": "^1.10.1",
     "concurrently": "^6.0.0",
     "copy-webpack-plugin": "^9.0.0",
     "node-forge": "^0.10.0",
