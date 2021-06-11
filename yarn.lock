@@ -4117,10 +4117,10 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.9.tgz#8a595135def9592bda69709474f1cbeea7c2467f"
   integrity sha512-Ki212dKK4ogX+xDo4CtOZBVIwhsKBEfsEEcwmJfLQzirgc2jIWdzg40Unxz/HzEUqM1WFzVlQSMF9kZZ2HboLQ==
 
-speed-to-percentage@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/speed-to-percentage/-/speed-to-percentage-1.1.1.tgz#5f0d357bd70d067ca2e8331947ea779e4f7a1ec1"
-  integrity sha512-Z62v+FyVIExeXH6dq2adBXNectyLVEsFBGTnUavSVhm78FGr8PZexrp5xTbrnzD+irCEV4I/uTLNatbsGALXHQ==
+speed-to-percentage@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/speed-to-percentage/-/speed-to-percentage-1.1.2.tgz#e8121040f7d76e0abd2a99ea296187c9882e6405"
+  integrity sha512-KVyFgvhMyQlLK5rTkxL0zf7buqeNyoSVfnZwOwibrIN0UhwCwYhPd7W46tR9JnS5kBGj6aMLHkTQcqfMmwFJ+g==
 
 speed-to-semitones@^1.2.0:
   version "1.2.0"
