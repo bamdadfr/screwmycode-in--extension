@@ -129,22 +129,22 @@
     to-fast-properties "^2.0.0"
 
 "@bamdadsabbagh/eslint-config@^1.9.7":
-  version "1.9.12"
-  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.9.12.tgz#a8a1a4a0d0137dc1fbecaa79dad97376921550dd"
-  integrity sha512-Py6I1cNGah9BWgT6W3WtjSzoIqFYAg1PxbbjCqUC2Ksnoh93LAQ7SZuMCSEuOXZPCD/KPtrmFpVMxqMUg5y3pA==
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/@bamdadsabbagh/eslint-config/-/eslint-config-1.10.1.tgz#b8db0cc9e178c933a622f3bd2201cf9a414dcc9f"
+  integrity sha512-IFv7JmI2/h4WBsK9p1yrLRcazskdJ5sRcZ3oFqtggHeEwGNtNFGfIwv961GKc/FySVQ3ZuXCEkCUSxjlc2rHSQ==
   dependencies:
     babel-eslint "^10.1.0"
-    eslint "^7.20.0"
+    eslint "^7.28.0"
     eslint-config-airbnb "^18.2.0"
-    eslint-config-prettier "^7.1.0"
+    eslint-config-prettier "^8.3.0"
     eslint-import-resolver-alias "^1.1.2"
-    eslint-plugin-import "^2.22.0"
-    eslint-plugin-jest "^24.1.0"
+    eslint-plugin-import "^2.23.4"
+    eslint-plugin-jest "^24.3.6"
     eslint-plugin-jsx-a11y "^6.3.1"
-    eslint-plugin-prettier "^3.1.2"
-    eslint-plugin-react "^7.20.6"
+    eslint-plugin-prettier "^3.4.0"
+    eslint-plugin-react "^7.24.0"
     eslint-plugin-react-hooks "^4.0.8"
-    prettier "^2.0.5"
+    prettier "^2.3.1"
 
 "@devicefarmer/adbkit-logcat@^1.1.0":
   version "1.1.0"
@@ -523,9 +523,9 @@ acorn@^7.4.0:
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
 acorn@^8.2.1:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.3.0.tgz#1193f9b96c4e8232f00b11a9edff81b2c8b98b88"
-  integrity sha512-tqPKHZ5CaBJw0Xmy0ZZvLs1qTV+BNFSyvn77ASXkpBNfIRk8ev26fKrD9iLGwGA9zedPao52GSHzq8lyZG0NUw==
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.4.0.tgz#af53266e698d7cffa416714b503066a82221be60"
+  integrity sha512-ULr0LDaEqQrMFGyQ3bhJkLsbtrQ8QibAseGZeaSUiT/6zb9IvIkomWHJIvgvwad+hinRAgsI51JcWk2yvwyL+w==
 
 addons-linter@3.2.0:
   version "3.2.0"
@@ -939,9 +939,9 @@ camelcase@6.2.0, camelcase@^6.2.0:
   integrity sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==
 
 caniuse-lite@^1.0.30001219:
-  version "1.0.30001236"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001236.tgz#0a80de4cdf62e1770bb46a30d884fc8d633e3958"
-  integrity sha512-o0PRQSrSCGJKCPZcgMzl5fUaj5xHe8qA2m4QRvnyY4e1lITqoNkr7q/Oh1NcpGSy0Th97UZ35yoKcINPoq7YOQ==
+  version "1.0.30001237"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001237.tgz#4b7783661515b8e7151fc6376cfd97f0e427b9e5"
+  integrity sha512-pDHgRndit6p1NR2GhzMbQ6CkRrp4VKuSsqbcLeOQppYPKOYkKT/6ZvZDvKJUqcmtyWIAHuZq3SVS2vc1egCZzw==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1578,10 +1578,10 @@ eslint-config-airbnb@^18.2.0:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-prettier@^7.1.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-7.2.0.tgz#f4a4bd2832e810e8cc7c1411ec85b3e85c0c53f9"
-  integrity sha512-rV4Qu0C3nfJKPOAhFujFxB7RMP+URFyQqqOZW9DMRD7ZDTFyjaIlETU3xzHELt++4ugC0+Jm084HQYkkJe+Ivg==
+eslint-config-prettier@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
+  integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
 
 eslint-import-resolver-alias@^1.1.2:
   version "1.1.2"
@@ -1604,7 +1604,7 @@ eslint-module-utils@^2.6.1:
     debug "^3.2.7"
     pkg-dir "^2.0.0"
 
-eslint-plugin-import@^2.22.0:
+eslint-plugin-import@^2.23.4:
   version "2.23.4"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.23.4.tgz#8dceb1ed6b73e46e50ec9a5bb2411b645e7d3d97"
   integrity sha512-6/wP8zZRsnQFiR3iaPFgh5ImVRM1WN5NUWfTIRqwOdeiGJlBcSk82o1FEVq8yXmy4lkIzTo7YhHCIxlU/2HyEQ==
@@ -1625,7 +1625,7 @@ eslint-plugin-import@^2.22.0:
     resolve "^1.20.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-jest@^24.1.0:
+eslint-plugin-jest@^24.3.6:
   version "24.3.6"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-24.3.6.tgz#5f0ca019183c3188c5ad3af8e80b41de6c8e9173"
   integrity sha512-WOVH4TIaBLIeCX576rLcOgjNXqP+jNlCiEmRgFTfQtJ52DpwnIQKAVGlGPAN7CZ33bW6eNfHD6s8ZbEUTQubJg==
@@ -1654,7 +1654,7 @@ eslint-plugin-no-unsanitized@3.1.4:
   resolved "https://registry.yarnpkg.com/eslint-plugin-no-unsanitized/-/eslint-plugin-no-unsanitized-3.1.4.tgz#21d9f3cb5cbed91ac45cb30eec9195c387b918c7"
   integrity sha512-WF1+eZo2Sh+bQNjZuVNwT0dA61zuJORsLh+1Sww7+O6GOPw+WPWIIRfTWNqrmaXaDMhM4SXAqYPcNlhRMiH13g==
 
-eslint-plugin-prettier@^3.1.2:
+eslint-plugin-prettier@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.4.0.tgz#cdbad3bf1dbd2b177e9825737fe63b476a08f0c7"
   integrity sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==
@@ -1666,7 +1666,7 @@ eslint-plugin-react-hooks@^4.0.8:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
   integrity sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
 
-eslint-plugin-react@^7.20.6:
+eslint-plugin-react@^7.24.0:
   version "7.24.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.24.0.tgz#eadedfa351a6f36b490aa17f4fa9b14e842b9eb4"
   integrity sha512-KJJIx2SYx7PBx3ONe/mEeMz4YE0Lcr7feJTCMyyKb/341NcjuAgim3Acgan89GfPv7nxXK2+0slu0CWXYM4x+Q==
@@ -1764,7 +1764,7 @@ eslint@7.24.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-eslint@^7.20.0:
+eslint@^7.28.0:
   version "7.28.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.28.0.tgz#435aa17a0b82c13bb2be9d51408b617e49c1e820"
   integrity sha512-UMfH0VSjP0G4p3EWirscJEQ/cHqnT/iuH6oNZOB94nBjWbMnhGEPxsZm1eyIW0C/9jLI0Fow4W5DXLjEI7mn1g==
@@ -3592,7 +3592,7 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.0.5:
+prettier@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.1.tgz#76903c3f8c4449bc9ac597acefa24dc5ad4cbea6"
   integrity sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==
@@ -4118,14 +4118,14 @@ spdx-license-ids@^3.0.0:
   integrity sha512-Ki212dKK4ogX+xDo4CtOZBVIwhsKBEfsEEcwmJfLQzirgc2jIWdzg40Unxz/HzEUqM1WFzVlQSMF9kZZ2HboLQ==
 
 speed-to-percentage@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/speed-to-percentage/-/speed-to-percentage-1.1.1.tgz#5f0d357bd70d067ca2e8331947ea779e4f7a1ec1"
-  integrity sha512-Z62v+FyVIExeXH6dq2adBXNectyLVEsFBGTnUavSVhm78FGr8PZexrp5xTbrnzD+irCEV4I/uTLNatbsGALXHQ==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/speed-to-percentage/-/speed-to-percentage-1.1.2.tgz#e8121040f7d76e0abd2a99ea296187c9882e6405"
+  integrity sha512-KVyFgvhMyQlLK5rTkxL0zf7buqeNyoSVfnZwOwibrIN0UhwCwYhPd7W46tR9JnS5kBGj6aMLHkTQcqfMmwFJ+g==
 
 speed-to-semitones@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/speed-to-semitones/-/speed-to-semitones-1.2.0.tgz#8a450a04dbe6cf6cd95473d32ae7d12a0a5e0aa6"
-  integrity sha512-+9hEPcVeyF+YTrgGdnHWzbA9KZyyfzMDhggN2W9EC72UW8zMZVNmFUZMcSEUOah2x6COQMn6XcmZ+QAlgOjsvQ==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/speed-to-semitones/-/speed-to-semitones-1.2.1.tgz#d8b44882a9efc38e0a394d40793faac5754e3481"
+  integrity sha512-sb8JxbM1lg4m8t/fYAKzN1k0NN5tdZQWCpVFWL2WJVUfpNQ5RT90ihyBtM1qqOrzDMudNlWI4m2zTqhS2QjRyg==
 
 split@~0.3.3:
   version "0.3.3"
