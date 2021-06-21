@@ -34,7 +34,7 @@
     "node-forge": "^0.10.0",
     "rimraf": "^3.0.2",
     "wait-on": "^5.2.0",
-    "web-ext": "^6.1.0",
+    "web-ext": "^6.2.0",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.7.2"
   },
