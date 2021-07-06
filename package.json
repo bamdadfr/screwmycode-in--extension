@@ -1,46 +1,46 @@
 {
-    "name": "screwmycode-in--extension",
-    "version": "1.1.10",
-    "description": "screwmycode functionnality as web extension",
-    "license": "MIT",
-    "author": {
-        "url": "https://bamdad.fr",
-        "name": "Bamdad Sabbagh",
-        "email": "hi@bamdad.fr"
-    },
-    "scripts": {
-        "build": "yarn clean && yarn build:webpack && yarn build:ext",
-        "build:clean": "rimraf packages",
-        "build:ext": "web-ext build --source-dir dist",
-        "build:prepare": "./bin/prepare.sh",
-        "build:webpack": "NODE_ENV=production webpack",
-        "clean": "yarn dev:clean && yarn build:clean",
-        "dev": "yarn dev:firefox",
-        "dev:clean": "rimraf dist",
-        "dev:ext:firefox": "web-ext run",
-        "dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
-        "dev:webpack": "webpack",
-        "lint": "eslint src --ext .js --fix",
-        "package:reinstall": "rimraf node_modules && yarn",
-        "package:sort": "npx sort-package-json"
-    },
-    "dependencies": {
-        "speed-to-percentage": "^1.1.1",
-        "speed-to-semitones": "^1.2.0"
-    },
-    "devDependencies": {
-        "@bamdadsabbagh/eslint-config": "^1.11.0",
-        "concurrently": "^6.0.0",
-        "copy-webpack-plugin": "^9.0.0",
-        "node-forge": "^0.10.0",
-        "rimraf": "^3.0.2",
-        "wait-on": "^6.0.0",
-        "web-ext": "^6.1.0",
-        "webpack": "^5.42.1",
-        "webpack-cli": "^4.7.2"
-    },
-    "webExt": {
-        "sourceDir": "dist",
-        "artifactsDir": "packages"
-    }
+  "name": "screwmycode-in--extension",
+  "version": "1.1.11",
+  "description": "screwmycode functionnality as web extension",
+  "license": "MIT",
+  "author": {
+    "url": "https://bamdad.fr",
+    "name": "Bamdad Sabbagh",
+    "email": "hi@bamdad.fr"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn build:webpack && yarn build:ext",
+    "build:clean": "rimraf packages",
+    "build:ext": "web-ext build --source-dir dist",
+    "build:prepare": "./bin/prepare.sh",
+    "build:webpack": "NODE_ENV=production webpack",
+    "clean": "yarn dev:clean && yarn build:clean",
+    "dev": "yarn dev:firefox",
+    "dev:clean": "rimraf dist",
+    "dev:ext:firefox": "web-ext run",
+    "dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
+    "dev:webpack": "webpack",
+    "lint": "eslint src --ext .js --fix",
+    "package:reinstall": "rimraf node_modules && yarn",
+    "package:sort": "npx sort-package-json"
+  },
+  "dependencies": {
+    "speed-to-percentage": "^1.1.1",
+    "speed-to-semitones": "^1.2.0"
+  },
+  "devDependencies": {
+    "@bamdadsabbagh/eslint-config": "^1.11.0",
+    "concurrently": "^6.0.0",
+    "copy-webpack-plugin": "^9.0.0",
+    "node-forge": "^0.10.0",
+    "rimraf": "^3.0.2",
+    "wait-on": "^6.0.0",
+    "web-ext": "^6.1.0",
+    "webpack": "^5.42.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "webExt": {
+    "sourceDir": "dist",
+    "artifactsDir": "packages"
+  }
 }

@@ -1,3 +1,11 @@
+## [1.1.11](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.1.10...v1.1.11) (2021-07-06)
+
+
+### Bug Fixes
+
+* **deps:** upgraded dependencies to latest ([d76b2f1](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/d76b2f17480c2cf7b8d71b9fb30037050b7747e2))
+* **doc:** better jsdoc ([3320961](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/332096125beed0a758179097dc8c6ca42aef5e59))
+
 ## [1.1.10](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.1.9...v1.1.10) (2021-07-05)
 
 
