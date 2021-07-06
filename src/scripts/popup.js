@@ -8,7 +8,7 @@ import { PopupShare } from './popup-share/popup-share'
  * @function
  * @name PopupOnLoad
  * @description popup: on load
- * @return {Promise<void>}
+ * @returns {Promise<void>}
  */
 async function PopupOnLoad () {
 

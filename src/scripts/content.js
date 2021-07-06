@@ -6,7 +6,7 @@ import { Controls } from './controls/controls'
  * @function
  * @name ContentOnLoad
  * @description content: on load
- * @return {Promise<void>}
+ * @returns {Promise<void>}
  */
 async function ContentOnLoad () {
 

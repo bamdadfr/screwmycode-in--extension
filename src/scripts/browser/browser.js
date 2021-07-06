@@ -2,7 +2,7 @@
  * @function
  * @name Browser
  * @description get the firefox browser instance
- * @return {browser}
+ * @returns {*} - browser
  */
 export function Browser () {
 

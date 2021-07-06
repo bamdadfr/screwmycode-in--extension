@@ -4,9 +4,9 @@ import { Browser } from '../browser/browser'
  * @function
  * @name StateSet
  * @description performs mutations in browser state with a reducer approach
- * @param {String} type - action / mutation to perform
- * @param {(Boolean, Number)} payload - state
- * @return {Promise<null>}
+ * @param {string} type - action / mutation to perform
+ * @param {(boolean | number)} payload - state
+ * @returns {Promise<void>}
  */
 export async function StateSet (type, payload) {
 
@@ -48,7 +48,7 @@ export async function StateSet (type, payload) {
             break
 
         default:
-            return null
+            throw new Error ('state error')
 
     }
 

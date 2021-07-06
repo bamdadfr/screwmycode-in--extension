@@ -7,7 +7,7 @@ import { State } from '../state/state'
  * @function
  * @name ControlsPercentage
  * @description controls: create the `percentage` sub component
- * @return {Promise<HTMLSpanElement>}
+ * @returns {Promise<HTMLSpanElement>} - percentage HTML span element
  */
 export async function ControlsPercentage () {
 

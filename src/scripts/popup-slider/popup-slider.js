@@ -5,7 +5,7 @@ import { StateSet } from '../state-set/state-set'
  * @function
  * @name PopupSlider
  * @description popup: handle the `slider` element
- * @return {Promise<void>}
+ * @returns {Promise<void>}
  */
 export async function PopupSlider () {
 

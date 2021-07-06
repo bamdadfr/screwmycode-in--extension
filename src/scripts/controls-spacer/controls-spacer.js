@@ -2,7 +2,7 @@
  * @function
  * @name ControlsSpacer
  * @description controls: create the `spacer` sub component
- * @return {HTMLSpanElement}
+ * @returns {HTMLSpanElement} - spacer HTML span element
  */
 export function ControlsSpacer () {
 

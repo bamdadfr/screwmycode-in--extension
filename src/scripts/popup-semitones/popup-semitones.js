@@ -5,7 +5,7 @@ import { StateOnChange } from '../state-on-change/state-on-change'
  * @function
  * @name PopupSemitones
  * @description popup: handle the `semitones` element
- * @return {Promise<void>}
+ * @returns {Promise<void>}
  */
 export async function PopupSemitones () {
 

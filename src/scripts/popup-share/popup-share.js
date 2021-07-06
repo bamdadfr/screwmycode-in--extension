@@ -6,7 +6,7 @@ import { Browser } from '../browser/browser'
  * @function
  * @name PopupShare
  * @description popup: handle the `share` element
- * @return {Promise<void>}
+ * @returns {Promise<void>}
  */
 export async function PopupShare () {
 

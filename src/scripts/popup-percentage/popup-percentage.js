@@ -5,7 +5,7 @@ import { StateOnChange } from '../state-on-change/state-on-change'
  * @function
  * @name PopupPercentage
  * @description popup: handle the `percentage` element
- * @return {Promise<void>}
+ * @returns {Promise<void>}
  */
 export async function PopupPercentage () {
 

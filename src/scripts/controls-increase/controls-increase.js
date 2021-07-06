@@ -6,7 +6,7 @@ import { ConstantSpeedStep } from '../constant-speed-step/constant-speed-step'
  * @function
  * @name ControlsIncrease
  * @description controls: create the `increase` sub component
- * @return {HTMLSpanElement}
+ * @returns {HTMLSpanElement} - increase HTML span element
  */
 export function ControlsIncrease () {
 

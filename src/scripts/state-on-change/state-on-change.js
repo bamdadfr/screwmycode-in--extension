@@ -7,7 +7,7 @@ import { State } from '../state/state'
  * @description event listener wrapper around state for `onChange` and `onOff` callbacks
  * @param {Function} onChangeCallback - triggers on browser state change
  * @param {Function} onOffCallback - triggers on isActive === false
- * @return {Promise<void>}
+ * @returns {Promise<void>}
  */
 export async function StateOnChange (
     onChangeCallback,

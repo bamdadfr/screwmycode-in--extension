@@ -4,7 +4,7 @@ import { Browser } from '../browser/browser'
  * @function
  * @name UtilsGetId
  * @description utils: get youtube id
- * @return {(Boolean, null)}
+ * @returns {(string | null)} - get id or null
  */
 export async function UtilsGetId () {
 

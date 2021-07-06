@@ -5,7 +5,7 @@ import { Browser } from '../browser/browser'
  * @function
  * @name State
  * @description return browser state and mount if needed
- * @return {Promise<*>}
+ * @returns {Promise<*>} - state
  */
 export async function State () {
 

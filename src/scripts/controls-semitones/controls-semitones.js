@@ -7,7 +7,7 @@ import { State } from '../state/state'
  * @function
  * @name ControlsSemitones
  * @description controls: create the `semitones` sub component
- * @return {Promise<HTMLSpanElement>}
+ * @returns {Promise<HTMLSpanElement>} - semitones HTML span element
  */
 export async function ControlsSemitones () {
 

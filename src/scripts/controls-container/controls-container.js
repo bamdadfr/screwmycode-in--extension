@@ -4,7 +4,7 @@ import { ConstantControlsContainer } from '../constant-controls-container/consta
  * @function
  * @name ControlsContainer
  * @description controls: create the `div` sub component
- * @return {HTMLDivElement}
+ * @returns {HTMLDivElement} - container HTML div element
  */
 export function ControlsContainer () {
 

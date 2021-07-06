@@ -10,7 +10,7 @@ import { ConstantControlsContainer } from '../constant-controls-container/consta
  * @function
  * @name Controls
  * @description building controls inside the youtube player
- * @return {Promise<void>}
+ * @returns {Promise<void>}
  */
 export async function Controls () {
 
