@@ -1,6 +1,10 @@
 /**
  * @name ConstantSpeedStep
  * @description step for increasing / decreasing speed
- * @type {number}
+ * @type {object}
  */
-export const ConstantSpeedStep = 0.005
+export const ConstantSpeedStep = {
+    'init': 0.01,
+    'min': 0.01,
+    'max': 0.25,
+}
