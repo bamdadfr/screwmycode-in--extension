@@ -24,12 +24,16 @@ export async function PopupSlider () {
 
             slider.value = speed
 
+            slider.classList.add ('smc-hoverable')
+
             slider.disabled = false
 
         },
         () => {
 
             slider.value = 1
+
+            slider.classList.remove ('smc-hoverable')
 
             slider.disabled = true
 
