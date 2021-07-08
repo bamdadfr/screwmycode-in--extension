@@ -29,14 +29,14 @@
     "speed-to-semitones": "^1.2.0"
   },
   "devDependencies": {
-    "@bamdadsabbagh/eslint-config": "^1.11.0",
+    "@bamdadsabbagh/eslint-config": "^1.12.0",
     "concurrently": "^6.0.0",
     "copy-webpack-plugin": "^9.0.0",
     "node-forge": "^0.10.0",
     "rimraf": "^3.0.2",
     "wait-on": "^6.0.0",
     "web-ext": "^6.1.0",
-    "webpack": "^5.42.1",
+    "webpack": "^5.43.0",
     "webpack-cli": "^4.7.2"
   },
   "webExt": {
