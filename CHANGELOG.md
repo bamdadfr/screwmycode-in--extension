@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.2.0...v1.2.1) (2021-07-08)
+
+
+### Bug Fixes
+
+* **popup-share:** `speed` value was fetched onMount and not onClick ([35e123d](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/35e123d741973fddfa1db572257400dad78f46d5))
+
 # [1.2.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.1.11...v1.2.0) (2021-07-08)
 
 
