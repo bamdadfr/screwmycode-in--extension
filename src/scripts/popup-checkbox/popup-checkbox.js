@@ -11,9 +11,54 @@ export async function PopupCheckbox () {
 
     const checkbox = document.getElementsByClassName ('smc-checkbox')[0]
 
-    checkbox.oninput = async (event) => {
+    const value = {
+        'on': 'yes',
+        'off': 'no',
+    }
 
-        await StateSet ('isActive', event.target.checked)
+    /**
+     * @function
+     * @name disable
+     * @description HTML manipulation when disabling the 'checkbox'
+     * @returns {void}
+     */
+    function disable () {
+
+        checkbox.innerHTML = value.off
+
+        checkbox.classList.remove ('smc-checkbox-active')
+
+    }
+
+    /**
+     * @function
+     * @name enable
+     * @description HTML manipulation when enabling the 'checkbox'
+     * @returns {void}
+     */
+    function enable () {
+
+        checkbox.innerHTML = value.on
+
+        checkbox.classList.add ('smc-checkbox-active')
+
+    }
+
+    checkbox.onclick = async () => {
+
+        if (checkbox.innerHTML === value.on) {
+
+            disable ()
+
+            await StateSet ('isActive', false)
+
+            return
+
+        }
+
+        enable ()
+
+        await StateSet ('isActive', true)
 
     }
 
@@ -22,7 +67,11 @@ export async function PopupCheckbox () {
 
     if (state.isActive) {
 
-        checkbox.checked = true
+        enable ()
+
+    } else {
+
+        disable ()
 
     }
 
