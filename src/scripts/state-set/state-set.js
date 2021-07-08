@@ -1,4 +1,5 @@
 import { Browser } from '../browser/browser'
+import { ConstantSpeedStep } from '../constant-speed-step/constant-speed-step'
 
 /**
  * @function
@@ -43,6 +44,29 @@ export async function StateSet (type, payload) {
             await set ({
                 ...state,
                 'speed': payload,
+            })
+
+            break
+
+        case 'step':
+
+            if (payload < ConstantSpeedStep.min) {
+
+                payload = ConstantSpeedStep.min
+
+            } else if (payload > ConstantSpeedStep.max) {
+
+                payload = ConstantSpeedStep.max
+
+            }
+
+            payload = parseFloat (payload)
+
+            if (Number.isNaN (payload)) payload = ConstantSpeedStep.init
+
+            await set ({
+                ...state,
+                'step': payload,
             })
 
             break
