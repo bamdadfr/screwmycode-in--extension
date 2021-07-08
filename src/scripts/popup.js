@@ -3,14 +3,9 @@ import { PopupSlider } from './popup-slider/popup-slider'
 import { PopupPercentage } from './popup-percentage/popup-percentage'
 import { PopupSemitones } from './popup-semitones/popup-semitones'
 import { PopupShare } from './popup-share/popup-share'
+import { PopupStep } from './popup-step/popup-step'
 
-/**
- * @function
- * @name PopupOnLoad
- * @description popup: on load
- * @returns {Promise<void>}
- */
-async function PopupOnLoad () {
+window.onload = async () => {
 
     await PopupCheckbox ()
 
@@ -22,6 +17,6 @@ async function PopupOnLoad () {
 
     await PopupShare ()
 
-}
+    await PopupStep ()
 
-window.addEventListener ('load', PopupOnLoad)
+}
