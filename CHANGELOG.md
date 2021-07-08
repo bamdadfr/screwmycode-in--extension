@@ -1,3 +1,25 @@
+# [1.2.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.1.11...v1.2.0) (2021-07-08)
+
+
+### Bug Fixes
+
+* **content:** easier syntax ([b9f6b96](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/b9f6b96bc7518862a39c702d13d03d0dc2ebda5d))
+* **deps:** updated deps to latest ([a7a6a00](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/a7a6a0097d099518c4aa36e71f17ddaaf7d9c363))
+* **popup-slider:** toggle hoverable class (cursor) ([1cdf8de](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/1cdf8de2be0caf86fb0806f6f660807159b0b64e))
+* **state:** added 'step' + easier syntax ([0851eba](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/0851eba6332bf025a5106f3e505e85a3665e06cf))
+
+
+### Features
+
+* **app:** added babel + config + webpack config ([de28ac8](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/de28ac8b5b740f79f0a2285a25aa5feb7b4ff5e5))
+* **constant-speed-step:** new default values ([d22070a](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/d22070ac9f6f46c597c36209d29dde45df797df8))
+* **controls-increase/decrease:** now uses `state.step` ([7b43702](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/7b437026ced5ea7d58389b15bfc32c7ea2860103))
+* **popup:** added 'step' call ([ca9e867](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/ca9e86757f96bbb0613086ad1905e4f454675ae3))
+* **popup:** new interface with better design and added 'step' input ([09dfa7d](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/09dfa7d1553c697e4dc8531ade1adff8e18029b3))
+* **popup-checkbox:** adapted logic to 'checkbox' input being a span element now ([21b3831](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/21b38310d9af7faca933dda25976fdd6c870e627))
+* **popup-step:** added logic behind 'step' input ([75e2e61](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/75e2e61c93727192a0bf0825023dc053c7a69eca))
+* **state-set:** added 'step' ([4157e43](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/4157e43672332f1313a64af8dbab4c942bd5ba01))
+
 ## [1.1.11](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.1.10...v1.1.11) (2021-07-06)
 
 
