@@ -1,0 +1,9 @@
+.smc-checkbox {
+    transition: color 200ms ease-in-out,
+    background-color 200ms ease-in-out;
+}
+
+.smc-checkbox-active {
+    color: var(--color-blue-background);
+    background: var(--color-blue);
+}

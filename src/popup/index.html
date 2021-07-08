@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>screwmycode.in for YouTube</title>
-    <link rel="stylesheet" href="vars.css">
+    <link rel="stylesheet" href="colors.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="share.css">
     <link rel="stylesheet" href="indicators.css">
     <link rel="stylesheet" href="slider.css">
     <link rel="stylesheet" href="k7.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <link rel="stylesheet" href="step.css">
 </head>
 <body>
 
@@ -20,14 +22,30 @@
         </legend>
 
         <div class="smc-content">
+
             <div class="smc-col">
 
                 <div class="smc-row-1">
-                    <label class="switch">
-                        <input class="smc-checkbox" type="checkbox">
-                    </label>
 
-                    <span class="smc-share">share</span>
+                    <div>
+
+                        <div class="smc-indicator">
+                            <span class="smc-indicator__value smc-checkbox smc-hoverable"></span>
+                            <span class="smc-indicator__title">active</span>
+                        </div>
+
+                        <div class="smc-indicator">
+                            <label about="step">
+                                <input class="smc-indicator__value smc-step" type="number"/>
+                            </label>
+                            <span class="smc-indicator__title">step</span>
+                        </div>
+
+                    </div>
+
+                    <div class="smc-share__container">
+                        <span class="smc-share">share</span>
+                    </div>
 
                 </div>
 

@@ -1,3 +1,12 @@
 .smc-share {
     cursor: pointer;
 }
+
+.smc-share:hover {
+    color: var(--color-blue);
+    transition: color 200ms ease-in-out;
+}
+
+.smc-share__container {
+    padding-right: 40px;
+}
