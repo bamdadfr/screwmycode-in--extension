@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.2.1...v1.2.2) (2021-07-11)
+
+
+### Bug Fixes
+
+* **popup-share:** update new app target url ([5150f12](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/5150f122373fead1995126f8f37197f856c467af))
+
 ## [1.2.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.2.0...v1.2.1) (2021-07-08)
 
 
