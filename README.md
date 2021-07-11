@@ -1,8 +1,9 @@
-# <img width=25 src="https://raw.githubusercontent.com/screwmycode/screwmycode-www/master/src/assets/icons/SCRW_SHARE_TXT.svg"> Web Extension
+# <img width=25 src="https://raw.githubusercontent.com/bamdadsabbagh/screwmycode-in--www/master/public/icons/SCRW_SHARE_TXT.svg"> Web Extension
 
+<!--suppress HtmlDeprecatedAttribute, HtmlRequiredAltAttribute -->
 <p align=center>
     <a href="https://addons.mozilla.org/en-US/firefox/addon/screwmycode-in--extension">
-        <img width=100 src="https://raw.githubusercontent.com/screwmycode/screwmycode-www/master/src/assets/icons/SCRW_SHARE_TXT.svg">
+        <img width=100 src="https://raw.githubusercontent.com/bamdadsabbagh/screwmycode-in--www/master/public/icons/SCRW_SHARE_TXT.svg">
     </a>
 </p>
 
