@@ -13,14 +13,13 @@ export async function PopupShare () {
     const share = document.getElementsByClassName ('smc-share')[0]
     const browser = await Browser ()
     const id = await UtilsGetId ()
-    const baseUrl = `https://screwmycode.in/youtube/${id}?speed=`
 
     share.onclick = async () => {
 
         const { speed } = await State ()
 
         browser.tabs.create ({
-            'url': baseUrl + speed,
+            'url': `https://screwmycode.in/youtube/${id}/${speed}`,
         })
 
     }
