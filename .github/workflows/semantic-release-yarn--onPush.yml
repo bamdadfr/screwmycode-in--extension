@@ -1,8 +1,9 @@
-name: semantic-release-yarn-with-build--onMondays-1030
+name: semantic-release-yarn-with-build--onPush
 
 on:
-  schedule:
-    - cron: '30 10 * * 1' # every monday at 10:30
+  push:
+    branches:
+      - master
 
 jobs:
   semantic-release-yarn-with-build--onMondays-1030:
