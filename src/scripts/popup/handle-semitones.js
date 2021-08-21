@@ -1,17 +1,14 @@
 import speedToSemitones from 'speed-to-semitones'
-import { StateOnChange } from '../state-on-change/state-on-change'
+import { onNewState } from '../state/on-new-state'
 
 /**
- * @function
- * @name PopupSemitones
- * @description popup: handle the `semitones` element
- * @returns {Promise<void>}
+ * @description handle the `semitones` element
  */
-export async function PopupSemitones () {
+export async function handleSemitones () {
 
     const semitones = document.getElementsByClassName ('smc-semitones')[0]
 
-    await StateOnChange (
+    await onNewState (
         ({ speed }) => {
 
             semitones.innerHTML = `${speedToSemitones (speed, 1)} st`

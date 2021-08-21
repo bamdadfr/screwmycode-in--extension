@@ -1,22 +1,22 @@
-import { PopupCheckbox } from './popup-checkbox/popup-checkbox'
-import { PopupSlider } from './popup-slider/popup-slider'
-import { PopupPercentage } from './popup-percentage/popup-percentage'
-import { PopupSemitones } from './popup-semitones/popup-semitones'
-import { PopupShare } from './popup-share/popup-share'
-import { PopupStep } from './popup-step/popup-step'
+import { handleCheckbox } from './popup/handle-checkbox'
+import { handleSlider } from './popup/handle-slider'
+import { handlePercentage } from './popup/handle-percentage'
+import { handleSemitones } from './popup/handle-semitones'
+import { handleShare } from './popup/handle-share'
+import { handleStep } from './popup/handle-step'
 
-window.onload = async () => {
+window.addEventListener ('load', async () => {
 
-    await PopupCheckbox ()
+    await handleCheckbox ()
 
-    await PopupSlider ()
+    await handleSlider ()
 
-    await PopupPercentage ()
+    await handlePercentage ()
 
-    await PopupSemitones ()
+    await handleSemitones ()
 
-    await PopupShare ()
+    await handleShare ()
 
-    await PopupStep ()
+    await handleStep ()
 
-}
+})

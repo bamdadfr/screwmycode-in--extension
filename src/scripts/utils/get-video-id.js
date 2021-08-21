@@ -1,14 +1,11 @@
-import { Browser } from '../browser/browser'
+import { getBrowser } from '../browser/get-browser'
 
 /**
- * @function
- * @name UtilsGetId
- * @description utils: get youtube id
- * @returns {(string | null)} - get id or null
+ * @returns {string|null} get id or null
  */
-export async function UtilsGetId () {
+export async function getVideoId () {
 
-    const browser = await Browser ()
+    const browser = await getBrowser ()
 
     const currentTab = await browser.tabs.query ({
         'active': true,

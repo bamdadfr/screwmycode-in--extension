@@ -1,10 +1,8 @@
 /**
- * @function
- * @name Browser
  * @description get the firefox browser instance
- * @returns {*} - browser
+ * @returns {*} browser
  */
-export function Browser () {
+export function getBrowser () {
 
     // eslint-disable-next-line no-undef
     return browser

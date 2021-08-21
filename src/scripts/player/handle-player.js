@@ -1,16 +1,14 @@
-import { StateOnChange } from '../state-on-change/state-on-change'
+import { onNewState } from '../state/on-new-state'
 
 /**
- * @function
- * @name Player
- * @description content: handle data stream from youtube player
- * @returns {Promise<HTMLVideoElement>} - youtube HTML video player
+ * @description handle data stream from youtube player
  */
-export async function Player () {
+export async function handlePlayer () {
 
     const player = document.getElementsByClassName ('video-stream html5-main-video')[0]
 
-    await StateOnChange (
+    // todo overwrite old listener when player changes
+    await onNewState (
         ({ speed }) => {
 
             player.mozPreservesPitch = false
@@ -26,7 +24,5 @@ export async function Player () {
 
         },
     )
-
-    return player
 
 }

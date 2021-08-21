@@ -1,1 +1,0 @@
-export const ConstantControlsContainer = 'smc-controls__container'

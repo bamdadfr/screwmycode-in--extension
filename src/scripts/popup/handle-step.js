@@ -1,25 +1,22 @@
-import { ConstantSpeedStep } from '../constant-speed-step/constant-speed-step'
-import { StateSet } from '../state-set/state-set'
-import { State } from '../state/state'
+import { STEP } from '../constants'
+import { setState } from '../state/set-state'
+import { getState } from '../state/get-state'
 
 /**
- * @function
- * @name PopupStep
- * @description popup: handle the 'step' element
- * @returns {Promise<void>}
+ * @description handle the 'step' element
  */
-export async function PopupStep () {
+export async function handleStep () {
 
     const step = document.getElementsByClassName ('smc-step')[0]
-    const state = await State ()
+    const state = await getState ()
 
     step.value = state.step
 
-    step.step = ConstantSpeedStep.init
+    step.step = STEP.init
 
-    step.min = ConstantSpeedStep.min
+    step.min = STEP.min
 
-    step.max = ConstantSpeedStep.max
+    step.max = STEP.max
 
     step.onchange = async (e) => {
 
@@ -44,7 +41,7 @@ export async function PopupStep () {
 
         step.value = finalValue
 
-        await StateSet ('step', finalValue)
+        await setState ('step', finalValue)
 
     }
 
