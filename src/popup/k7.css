@@ -1,7 +1,11 @@
 .smc-k7 {
-    padding-right: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 8em;
 }
 
 .smc-k7 > img {
-    width: 50px;
+    width: 3em;
 }
