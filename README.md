@@ -58,14 +58,9 @@ download [here](https://addons.mozilla.org/en-US/firefox/addon/screwmycode-in/)
 
 ```bash
 git clone https://github.com/bamdadsabbagh/screwmycode-in--extension.git
-
 cd screwmycode-in--extension
-
-yarn install
-
-# in 2 tabs
+yarn
 yarn dev
-yarn start
 ```
 
 ## build
