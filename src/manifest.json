@@ -1,38 +1,38 @@
 {
-    "name": "screwmycode.in for YouTube",
-    "short_name": "screwmycode.in",
-    "description": "Variable speed pitch control for YouTube",
-    "version": "1.3.2",
-    "manifest_version": 2,
-    "icons": {
-        "108": "assets/icon.jpg"
+  "name": "screwmycode.in for YouTube",
+  "short_name": "screwmycode.in",
+  "description": "Variable speed pitch control for YouTube",
+  "version": "1.4.0",
+  "manifest_version": 2,
+  "icons": {
+    "108": "assets/icon.jpg"
+  },
+  "browser_action": {
+    "default_icon": {
+      "108": "assets/icon.jpg"
     },
-    "browser_action": {
-        "default_icon": {
-            "108": "assets/icon.jpg"
-        },
-        "default_title": "screwmycode.in for YouTube",
-        "default_popup": "popup/index.html"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*.youtube.com/*"
-            ],
-            "js": [
-                "scripts/content.js"
-            ],
-            "run_at": "document_end",
-            "all_frames": false
-        }
-    ],
-    "background": {
-        "scripts": [
-            "scripts/background.js"
-        ]
-    },
-    "permissions": [
-        "storage",
-        "tabs"
+    "default_title": "screwmycode.in for YouTube",
+    "default_popup": "popup/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "scripts/content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "background": {
+    "scripts": [
+      "scripts/background.js"
     ]
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ]
 }

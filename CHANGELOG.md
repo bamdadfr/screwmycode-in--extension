@@ -1,3 +1,22 @@
+# [1.4.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.3.2...v1.4.0) (2021-08-22)
+
+
+### Bug Fixes
+
+* **code quality:** replace `innerHTML` with `innerText` as it is considered safer by `web-ext lint` ([12cb123](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/12cb1230215fad48a3dc943488f564d5a94ba07e))
+* **controls:** only add controls if parent exists + add todo for android controls ([#30](https://github.com/bamdadsabbagh/screwmycode-in--extension/issues/30)) ([4837611](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/48376113ab46f7c4b8e1b80198ad192df81dac67))
+* **manifest:** set correct expected icon sizes ([2851da1](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/2851da1dc08479a4fcd35b80a362bb63dc4590ee))
+
+
+### Features
+
+* add Firefox for Android support ([#30](https://github.com/bamdadsabbagh/screwmycode-in--extension/issues/30)) + update description + indent with 4 spaces ([c9b6bc4](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/c9b6bc4315e1b6775cf5d6d57e352f0fb323b77c))
+
+
+### Performance Improvements
+
+* **manifest.json:** indent with 4 spaces ([b0594b4](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/b0594b4a3539bb8d9c7f25b48c7ca68600bff7d7))
+
 ## [1.3.2](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.3.1...v1.3.2) (2021-08-22)
 
 

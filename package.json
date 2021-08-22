@@ -1,52 +1,52 @@
 {
-    "name": "screwmycode-in--extension",
-    "version": "1.3.2",
-    "description": "Variable speed pitch control for YouTube (Web Extension for Firefox)",
-    "license": "MIT",
-    "author": {
-        "url": "https://bamdad.fr",
-        "name": "Bamdad Sabbagh",
-        "email": "hi@bamdad.fr"
-    },
-    "scripts": {
-        "build": "yarn clean && yarn build:webpack && yarn build:ext",
-        "build:clean": "rimraf packages",
-        "build:ext": "web-ext build --source-dir dist",
-        "build:prepare": "./bin/prepare.sh",
-        "build:webpack": "NODE_ENV=production webpack",
-        "clean": "yarn dev:clean && yarn build:clean",
-        "dev": "yarn dev:firefox",
-        "dev:clean": "rimraf dist",
-        "dev:android": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:android'",
-        "dev:ext:android": "web-ext run -t firefox-android --adb-device 2de7bd13 --firefox-apk org.mozilla.fenix",
-        "dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
-        "dev:ext:firefox": "web-ext run",
-        "dev:webpack": "webpack",
-        "lint": "eslint src --ext .js --fix",
-        "package:reinstall": "rimraf node_modules && yarn",
-        "package:sort": "npx sort-package-json"
-    },
-    "dependencies": {
-        "speed-to-percentage": "^1.1.1",
-        "speed-to-semitones": "^1.2.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.14.6",
-        "@babel/plugin-transform-runtime": "^7.14.5",
-        "@babel/preset-env": "^7.14.7",
-        "@bamdadsabbagh/eslint-config": "^1.12.0",
-        "babel-loader": "^8.2.2",
-        "concurrently": "^6.0.0",
-        "copy-webpack-plugin": "^9.0.0",
-        "node-forge": "^0.10.0",
-        "rimraf": "^3.0.2",
-        "wait-on": "^6.0.0",
-        "web-ext": "^6.3.0",
-        "webpack": "^5.51.1",
-        "webpack-cli": "^4.7.2"
-    },
-    "webExt": {
-        "sourceDir": "dist",
-        "artifactsDir": "packages"
-    }
+  "name": "screwmycode-in--extension",
+  "version": "1.4.0",
+  "description": "Variable speed pitch control for YouTube (Web Extension for Firefox)",
+  "license": "MIT",
+  "author": {
+    "url": "https://bamdad.fr",
+    "name": "Bamdad Sabbagh",
+    "email": "hi@bamdad.fr"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn build:webpack && yarn build:ext",
+    "build:clean": "rimraf packages",
+    "build:ext": "web-ext build --source-dir dist",
+    "build:prepare": "./bin/prepare.sh",
+    "build:webpack": "NODE_ENV=production webpack",
+    "clean": "yarn dev:clean && yarn build:clean",
+    "dev": "yarn dev:firefox",
+    "dev:clean": "rimraf dist",
+    "dev:android": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:android'",
+    "dev:ext:android": "web-ext run -t firefox-android --adb-device 2de7bd13 --firefox-apk org.mozilla.fenix",
+    "dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
+    "dev:ext:firefox": "web-ext run",
+    "dev:webpack": "webpack",
+    "lint": "eslint src --ext .js --fix",
+    "package:reinstall": "rimraf node_modules && yarn",
+    "package:sort": "npx sort-package-json"
+  },
+  "dependencies": {
+    "speed-to-percentage": "^1.1.1",
+    "speed-to-semitones": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@bamdadsabbagh/eslint-config": "^1.12.0",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.0.0",
+    "copy-webpack-plugin": "^9.0.0",
+    "node-forge": "^0.10.0",
+    "rimraf": "^3.0.2",
+    "wait-on": "^6.0.0",
+    "web-ext": "^6.3.0",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "webExt": {
+    "sourceDir": "dist",
+    "artifactsDir": "packages"
+  }
 }
