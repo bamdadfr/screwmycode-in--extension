@@ -1,3 +1,11 @@
+## [1.3.2](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.3.1...v1.3.2) (2021-08-22)
+
+
+### Performance Improvements
+
+* **player:** clean code ([8bbdb6f](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/8bbdb6f545628dbcc02e0048eb1da8f15cfeec41))
+* remove unnecessary onLoad calls by clearing interval once loaded ([20e8792](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/20e8792c95cf3359fc393884d297e034fcca5447))
+
 ## [1.3.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.3.0...v1.3.1) (2021-08-22)
 
 
