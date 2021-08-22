@@ -1,4 +1,6 @@
 const CopyPlugin = require ('copy-webpack-plugin')
+const HtmlMinimizerPlugin = require ('html-minimizer-webpack-plugin')
+const CssMinimizerPlugin = require ('css-minimizer-webpack-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
 
 // eslint-disable-next-line no-console
@@ -41,6 +43,13 @@ module.exports = {
                     'loader': 'babel-loader',
                 },
             },
+        ],
+    },
+    'optimization': {
+        'minimize': true,
+        'minimizer': [
+            new HtmlMinimizerPlugin (),
+            new CssMinimizerPlugin (),
         ],
     },
 }
