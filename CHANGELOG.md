@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.3.0...v1.3.1) (2021-08-22)
+
+
+### Bug Fixes
+
+* **handlePlayer:** fetch state directly in setter ([59d1160](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/59d11609d39b60629d6ad5c067621a1e9ea0cdec))
+
 # [1.3.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.2.8...v1.3.0) (2021-08-22)
 
 
