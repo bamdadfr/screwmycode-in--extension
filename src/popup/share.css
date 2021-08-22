@@ -8,5 +8,9 @@
 }
 
 .smc-share__container {
-    padding-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 8em;
 }

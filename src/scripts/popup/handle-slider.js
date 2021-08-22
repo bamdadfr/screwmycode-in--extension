@@ -1,25 +1,25 @@
-import { StateOnChange } from '../state-on-change/state-on-change'
-import { StateSet } from '../state-set/state-set'
+import { onNewState } from '../state/on-new-state'
+import { setState } from '../state/set-state'
 
 /**
- * @function
- * @name PopupSlider
- * @description popup: handle the `slider` element
- * @returns {Promise<void>}
+ * @description handle the `slider` element
+ * todo: remove onNewState
  */
-export async function PopupSlider () {
+export async function handleSlider () {
 
     const slider = document.getElementsByClassName ('smc-slider')[0]
 
-    slider.oninput = async (event) => {
+    // on input
+    slider.addEventListener ('input', async (event) => {
 
         const value = parseFloat (event.target.value)
 
-        await StateSet ('speed', value)
+        await setState ('speed', value)
+    
+    })
 
-    }
-
-    await StateOnChange (
+    // on change
+    await onNewState (
         ({ speed }) => {
 
             slider.value = speed

@@ -1,17 +1,14 @@
 import speedToPercentage from 'speed-to-percentage'
-import { StateOnChange } from '../state-on-change/state-on-change'
+import { onNewState } from '../state/on-new-state'
 
 /**
- * @function
- * @name PopupPercentage
- * @description popup: handle the `percentage` element
- * @returns {Promise<void>}
+ * @description handle the `percentage` element
  */
-export async function PopupPercentage () {
+export async function handlePercentage () {
 
     const percentage = document.getElementsByClassName ('smc-percentage')[0]
 
-    await StateOnChange (
+    await onNewState (
         ({ speed }) => {
 
             percentage.innerHTML = `${speedToPercentage (speed)} %`

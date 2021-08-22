@@ -1,13 +1,24 @@
-import { State } from './state/state'
-import { Player } from './player/player'
-import { Controls } from './controls/controls'
+import { handlePlayer } from './player/handle-player'
+import { initializeState } from './state/initialize-state'
+import { onNewHref } from './utils/on-new-href'
+import { isPageWatch } from './utils/is-page-watch'
 
-window.onload = async () => {
+let isLoaded = false
 
-    await State ()
+window.addEventListener ('load', async () => {
 
-    await Player ()
+    await initializeState ()
 
-    await Controls ()
+    onNewHref (async () => {
 
-}
+        if (!isPageWatch (window.location.href)) return
+
+        if (isLoaded) return
+
+        isLoaded = true
+
+        await handlePlayer ()
+    
+    })
+
+}, { 'once': true })
