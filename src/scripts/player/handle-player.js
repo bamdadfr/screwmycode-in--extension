@@ -5,6 +5,7 @@ import { createControls } from '../controls/create-controls'
 
 /**
  * @description handle data stream from youtube player
+ * @returns {undefined}
  */
 export async function handlePlayer () {
 
@@ -12,54 +13,36 @@ export async function handlePlayer () {
     const retry = () => setTimeout (() => handlePlayer (), RETRY)
 
     // retry if player not defined
-    if (!player) {
-
-        retry ()
-
-        return
-    
-    }
+    if (!player) return retry ()
 
     // retry if player not ready
-    if (!player.readyState) {
+    if (!player.readyState) return retry ()
 
-        retry ()
+    const setSpeed = async () => {
 
-        return
-    
-    }
+        const { isActive, speed } = await getState ()
 
-    const setSpeed = (speed = 1) => {
+        player.mozPreservesPitch = !isActive
 
-        player.mozPreservesPitch = speed === 1
-
-        player.playbackRate = speed
+        player.playbackRate = isActive ? speed : SPEED.default
 
     }
 
-    const { isActive, speed } = await getState ()
     const browser = getBrowser ()
 
     // on load
     await createControls ()
 
-    setSpeed (isActive ? speed : SPEED.default)
+    await setSpeed ()
 
     // on play
     player.addEventListener ('play', () => {
 
-        setSpeed (isActive ? speed : SPEED.default)
+        setSpeed ()
 
     })
 
     // on change
-    browser.storage.onChanged.addListener ((changes) => {
-
-        const isActive = changes?.isActive?.newValue
-        const speed = changes?.speed?.newValue
-
-        if (speed) setSpeed (isActive ? speed : SPEED.default)
-
-    })
+    browser.storage.onChanged.addListener (() => setSpeed ())
 
 }
