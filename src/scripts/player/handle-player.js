@@ -36,11 +36,7 @@ export async function handlePlayer () {
     await setSpeed ()
 
     // on play
-    player.addEventListener ('play', () => {
-
-        setSpeed ()
-
-    })
+    player.addEventListener ('play', () => setSpeed ())
 
     // on change
     browser.storage.onChanged.addListener (() => setSpeed ())
