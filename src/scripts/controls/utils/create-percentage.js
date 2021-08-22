@@ -1,7 +1,8 @@
 import speedToPercentage from 'speed-to-percentage'
 import { setState } from '../../state/set-state'
-import { onNewState } from '../../state/on-new-state'
 import { getState } from '../../state/get-state'
+import { SPEED } from '../../constants'
+import { getBrowser } from '../../browser/get-browser'
 
 /**
  * @returns {Promise<HTMLSpanElement>} controls percentage value
@@ -14,26 +15,29 @@ export async function createPercentage () {
 
     percentage.style = 'cursor: pointer;'
 
-    percentage.addEventListener ('click', async () => {
+    const setValue = async () => {
 
-        const { isActive } = await getState ()
+        const { isActive, speed } = await getState ()
 
-        if (isActive) await setState ('speed', 1)
+        percentage.innerHTML = isActive
+            ? `${speedToPercentage (speed, 1)} %`
+            : '%'
 
-    })
+    }
 
-    await onNewState (
-        ({ speed }) => {
+    // on load
+    await setValue ()
 
-            percentage.innerHTML = `${speedToPercentage (speed)} %`
-
-        },
-        () => {
-
-            percentage.innerHTML = '%'
-
-        },
+    // on click, reset value
+    percentage.addEventListener (
+        'click',
+        async () => await setState ('speed', SPEED.default),
     )
+
+    const browser = getBrowser ()
+
+    // on change
+    browser.storage.onChanged.addListener (() => setValue ())
 
     return percentage
 

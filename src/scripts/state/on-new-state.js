@@ -25,18 +25,10 @@ export async function onNewState (onChange, onOff) {
     // change
     browser.storage.onChanged.addListener ((changes) => {
 
-        // todo remove after dev
-        console.log ('run')
+        const isActive = changes?.isActive?.newValue
+        const speed = changes?.speed?.newValue
 
-        const { isActive, speed } = changes
-
-        if (isActive.newValue === true) {
-
-            onChange ({ 'speed': speed.newValue })
-
-            return
-
-        }
+        if (isActive) return onChange ({ speed })
 
         onOff ()
 

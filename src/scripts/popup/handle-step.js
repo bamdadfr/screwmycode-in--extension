@@ -12,7 +12,7 @@ export async function handleStep () {
 
     step.value = state.step
 
-    step.step = STEP.init
+    step.step = STEP.default
 
     step.min = STEP.min
 

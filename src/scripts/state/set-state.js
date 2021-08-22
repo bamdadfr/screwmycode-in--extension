@@ -29,7 +29,7 @@ export async function setState (type, payload) {
 
             payload = parseFloat (payload.toFixed (3))
 
-            if (Number.isNaN (payload)) payload = 1
+            if (Number.isNaN (payload)) payload = SPEED.default
 
             await set ({
                 ...state,
@@ -46,7 +46,7 @@ export async function setState (type, payload) {
 
             payload = parseFloat (payload)
 
-            if (Number.isNaN (payload)) payload = STEP.init
+            if (Number.isNaN (payload)) payload = STEP.default
 
             await set ({
                 ...state,

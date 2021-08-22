@@ -2,7 +2,8 @@ import { handlePlayer } from './player/handle-player'
 import { initializeState } from './state/initialize-state'
 import { onNewHref } from './utils/on-new-href'
 import { isPageWatch } from './utils/is-page-watch'
-import { createControls } from './controls/create-controls'
+
+let isLoaded = false
 
 window.addEventListener ('load', async () => {
 
@@ -12,10 +13,12 @@ window.addEventListener ('load', async () => {
 
         if (!isPageWatch (window.location.href)) return
 
-        await handlePlayer ()
+        if (isLoaded) return
 
-        await createControls ()
+        isLoaded = true
+
+        await handlePlayer ()
     
     })
 
-})
+}, { 'once': true })

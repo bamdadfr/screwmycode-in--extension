@@ -3,11 +3,13 @@ import { setState } from '../state/set-state'
 
 /**
  * @description handle the `slider` element
+ * todo: remove onNewState
  */
 export async function handleSlider () {
 
     const slider = document.getElementsByClassName ('smc-slider')[0]
 
+    // on input
     slider.addEventListener ('input', async (event) => {
 
         const value = parseFloat (event.target.value)
@@ -16,6 +18,7 @@ export async function handleSlider () {
     
     })
 
+    // on change
     await onNewState (
         ({ speed }) => {
 

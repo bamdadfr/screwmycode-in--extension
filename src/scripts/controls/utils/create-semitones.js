@@ -1,7 +1,8 @@
 import speedToSemitones from 'speed-to-semitones'
 import { setState } from '../../state/set-state'
-import { onNewState } from '../../state/on-new-state'
 import { getState } from '../../state/get-state'
+import { SPEED } from '../../constants'
+import { getBrowser } from '../../browser/get-browser'
 
 /**
  * @returns {Promise<HTMLSpanElement>} controls semitones value
@@ -14,26 +15,29 @@ export async function createSemitones () {
 
     tone.style = 'cursor: pointer;'
 
-    tone.addEventListener ('click', async () => {
+    const setValue = async () => {
 
-        const { isActive } = await getState ()
+        const { isActive, speed } = await getState ()
 
-        if (isActive) await setState ('speed', 1)
+        tone.innerHTML = isActive
+            ? `${speedToSemitones (speed, 1)} st`
+            : 'st'
+    
+    }
 
-    })
+    // on load
+    await setValue ()
 
-    await onNewState (
-        ({ speed }) => {
-
-            tone.innerHTML = `${speedToSemitones (speed, 1)} st`
-
-        },
-        () => {
-
-            tone.innerHTML = 'st'
-
-        },
+    // on click, reset value
+    tone.addEventListener (
+        'click',
+        async () => await setState ('speed', SPEED.default),
     )
+
+    const browser = getBrowser ()
+
+    // on change
+    browser.storage.onChanged.addListener (() => setValue ())
 
     return tone
 
