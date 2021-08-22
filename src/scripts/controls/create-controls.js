@@ -36,6 +36,8 @@ export async function createControls () {
 
     container.appendChild (semitones)
 
-    parent.parentNode.appendChild (container)
+    if (parent) parent.parentNode.appendChild (container)
+
+    // todo add android controls
 
 }
