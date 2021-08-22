@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.2.8...v1.3.0) (2021-08-22)
+
+
+### Features
+
+* handle player init properly + ensure player events are attached once + various improvements ([48b2be3](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/48b2be3b9f649e47689b41eb9d52611a67929647))
+* refactor codebase + add remaining tasks as TODOs ([39e183b](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/39e183b42365bc3a8ab21c5b724f88f67faf5b3f))
+* **popup/styles:** replace fixed with relative sizes ([8065838](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/80658385f8ce2064744e9f2ceff0f5c245638820))
+
+
+### Performance Improvements
+
+* **deps:** upgrade to latest dependencies ([e952c75](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/e952c758579bcea308e5cb363a1b5074071d5e7c))
+
 ## [1.2.8](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.2.7...v1.2.8) (2021-08-16)
 
 
