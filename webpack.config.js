@@ -1,4 +1,5 @@
 const CopyPlugin = require ('copy-webpack-plugin')
+const TerserPlugin = require ('terser-webpack-plugin')
 const HtmlMinimizerPlugin = require ('html-minimizer-webpack-plugin')
 const CssMinimizerPlugin = require ('css-minimizer-webpack-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
@@ -48,6 +49,7 @@ module.exports = {
     'optimization': {
         'minimize': true,
         'minimizer': [
+            new TerserPlugin (),
             new HtmlMinimizerPlugin (),
             new CssMinimizerPlugin (),
         ],
