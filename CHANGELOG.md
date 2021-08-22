@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.4.0...v1.4.1) (2021-08-22)
+
+
+### Performance Improvements
+
+* add HTML and CSS minification ([d96e81f](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/d96e81f3ca30609e163b0da344aa6474e8c82423))
+
 # [1.4.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.3.2...v1.4.0) (2021-08-22)
 
 
