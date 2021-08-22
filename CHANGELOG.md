@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.4.1...v1.4.2) (2021-08-22)
+
+
+### Performance Improvements
+
+* **bundling:** keep javascript minified too ([124f326](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/124f3265a136a16e3610f3a42a742776bc34fc43))
+
 ## [1.4.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.4.0...v1.4.1) (2021-08-22)
 
 
