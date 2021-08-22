@@ -19,7 +19,7 @@ export async function createSemitones () {
 
         const { isActive, speed } = await getState ()
 
-        tone.innerHTML = isActive
+        tone.innerText = isActive
             ? `${speedToSemitones (speed, 1)} st`
             : 'st'
     

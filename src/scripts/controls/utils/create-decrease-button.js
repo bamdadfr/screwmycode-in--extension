@@ -8,7 +8,7 @@ export function createDecreaseButton () {
 
     const decrease = document.createElement ('span')
 
-    decrease.innerHTML = 'down'
+    decrease.innerText = 'down'
 
     decrease.style = 'cursor: pointer;'
 

@@ -17,7 +17,7 @@ export async function handleCheckbox () {
     // dom modifiers
     const disable = () => {
 
-        checkbox.innerHTML = value.off
+        checkbox.innerText = value.off
 
         checkbox.classList.remove ('smc-checkbox-active')
 
@@ -25,7 +25,7 @@ export async function handleCheckbox () {
 
     const enable = () => {
 
-        checkbox.innerHTML = value.on
+        checkbox.innerText = value.on
 
         checkbox.classList.add ('smc-checkbox-active')
 
@@ -47,7 +47,7 @@ export async function handleCheckbox () {
     // change
     checkbox.addEventListener ('click', async () => {
 
-        if (checkbox.innerHTML === value.on) {
+        if (checkbox.innerText === value.on) {
 
             disable ()
 

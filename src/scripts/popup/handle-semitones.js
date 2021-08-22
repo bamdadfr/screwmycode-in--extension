@@ -11,12 +11,12 @@ export async function handleSemitones () {
     await onNewState (
         ({ speed }) => {
 
-            semitones.innerHTML = `${speedToSemitones (speed, 1)} st`
+            semitones.innerText = `${speedToSemitones (speed, 1)} st`
 
         },
         () => {
 
-            semitones.innerHTML = 'off'
+            semitones.innerText = 'off'
 
         },
     )

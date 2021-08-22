@@ -11,12 +11,12 @@ export async function handlePercentage () {
     await onNewState (
         ({ speed }) => {
 
-            percentage.innerHTML = `${speedToPercentage (speed)} %`
+            percentage.innerText = `${speedToPercentage (speed)} %`
 
         },
         () => {
 
-            percentage.innerHTML = 'off'
+            percentage.innerText = 'off'
 
         },
     )

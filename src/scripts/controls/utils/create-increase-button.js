@@ -8,7 +8,7 @@ export function createIncreaseButton () {
 
     const increase = document.createElement ('span')
 
-    increase.innerHTML = 'up'
+    increase.innerText = 'up'
 
     increase.style = 'cursor: pointer;'
 

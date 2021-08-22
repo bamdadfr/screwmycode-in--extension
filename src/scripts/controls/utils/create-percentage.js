@@ -19,7 +19,7 @@ export async function createPercentage () {
 
         const { isActive, speed } = await getState ()
 
-        percentage.innerHTML = isActive
+        percentage.innerText = isActive
             ? `${speedToPercentage (speed, 1)} %`
             : '%'
 
