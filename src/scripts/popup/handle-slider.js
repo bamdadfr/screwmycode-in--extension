@@ -1,13 +1,26 @@
-import { onNewState } from '../state/on-new-state'
 import { setState } from '../state/set-state'
+import { getBrowser } from '../browser/get-browser'
+import { getState } from '../state/get-state'
 
 /**
  * @description handle the `slider` element
- * todo: remove onNewState
  */
 export async function handleSlider () {
 
     const slider = document.getElementsByClassName ('smc-slider')[0]
+
+    const setSlider = async () => {
+
+        const { isActive, speed } = await getState ()
+
+        slider.value = speed
+
+        slider.disabled = !isActive
+
+    }
+
+    // on load
+    await setSlider ()
 
     // on input
     slider.addEventListener ('input', async (event) => {
@@ -19,25 +32,8 @@ export async function handleSlider () {
     })
 
     // on change
-    await onNewState (
-        ({ speed }) => {
+    const browser = await getBrowser ()
 
-            slider.value = speed
-
-            slider.classList.add ('smc-hoverable')
-
-            slider.disabled = false
-
-        },
-        () => {
-
-            slider.value = 1
-
-            slider.classList.remove ('smc-hoverable')
-
-            slider.disabled = true
-
-        },
-    )
+    browser.storage.onChanged.addListener (async () => await setSlider ())
 
 }

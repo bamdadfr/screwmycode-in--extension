@@ -1,66 +1,18 @@
-import { getState } from '../state/get-state'
-import { setState } from '../state/set-state'
+import { getCheckbox } from './get-checkbox'
+import { setCheckbox } from './set-checkbox'
+import { toggleCheckbox } from './toggle-checkbox'
 
 /**
  * @description handle the `checkbox` element
  */
 export async function handleCheckbox () {
 
-    const checkbox = document.getElementsByClassName ('smc-checkbox')[0]
+    const checkbox = getCheckbox ()
 
-    // enum
-    const value = {
-        'on': 'yes',
-        'off': 'no',
-    }
-
-    // dom modifiers
-    const disable = () => {
-
-        checkbox.innerText = value.off
-
-        checkbox.classList.remove ('smc-checkbox-active')
-
-    }
-
-    const enable = () => {
-
-        checkbox.innerText = value.on
-
-        checkbox.classList.add ('smc-checkbox-active')
-
-    }
-
-    // mount
-    const { isActive } = await getState ()
-
-    if (isActive) {
-
-        enable ()
-
-    } else {
-
-        disable ()
-
-    }
+    // on load
+    await setCheckbox ()
 
     // change
-    checkbox.addEventListener ('click', async () => {
-
-        if (checkbox.innerText === value.on) {
-
-            disable ()
-
-            await setState ('isActive', false)
-
-            return
-
-        }
-
-        enable ()
-
-        await setState ('isActive', true)
-
-    })
+    checkbox.addEventListener ('click', () => toggleCheckbox ())
 
 }

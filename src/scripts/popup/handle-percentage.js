@@ -1,24 +1,17 @@
-import speedToPercentage from 'speed-to-percentage'
-import { onNewState } from '../state/on-new-state'
+import { getBrowser } from '../browser/get-browser'
+import { setPercentage } from './set-percentage'
 
 /**
  * @description handle the `percentage` element
  */
 export async function handlePercentage () {
 
-    const percentage = document.getElementsByClassName ('smc-percentage')[0]
+    // on load
+    await setPercentage ()
 
-    await onNewState (
-        ({ speed }) => {
+    // on change
+    const browser = await getBrowser ()
 
-            percentage.innerText = `${speedToPercentage (speed)} %`
-
-        },
-        () => {
-
-            percentage.innerText = 'off'
-
-        },
-    )
+    browser.storage.onChanged.addListener (async () => await setPercentage ())
 
 }

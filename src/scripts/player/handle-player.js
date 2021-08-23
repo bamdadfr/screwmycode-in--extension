@@ -1,7 +1,9 @@
-import { getState } from '../state/get-state'
 import { getBrowser } from '../browser/get-browser'
-import { RETRY, SPEED } from '../constants'
+import { RETRY } from '../constants'
 import { createControls } from '../controls/create-controls'
+import { getPlayer } from './get-player'
+import { setSpeed } from './set-speed'
+import { setHistory } from '../history/set-history'
 
 /**
  * @description handle data stream from youtube player
@@ -9,7 +11,7 @@ import { createControls } from '../controls/create-controls'
  */
 export async function handlePlayer () {
 
-    const player = document.getElementsByClassName ('video-stream html5-main-video')[0]
+    const player = getPlayer ()
     const retry = () => setTimeout (() => handlePlayer (), RETRY)
 
     // retry if player not defined
@@ -17,16 +19,6 @@ export async function handlePlayer () {
 
     // retry if player not ready
     if (!player.readyState) return retry ()
-
-    const setSpeed = async () => {
-
-        const { isActive, speed } = await getState ()
-
-        player.mozPreservesPitch = !isActive
-
-        player.playbackRate = isActive ? speed : SPEED.default
-
-    }
 
     const browser = getBrowser ()
 
@@ -36,9 +28,19 @@ export async function handlePlayer () {
     await setSpeed ()
 
     // on play
-    player.addEventListener ('play', () => setSpeed ())
+    player.addEventListener ('play', async () => {
+
+        await setSpeed ()
+
+        setTimeout (async () => {
+
+            await setHistory ()
+
+        }, 2000)
+
+    })
 
     // on change
-    browser.storage.onChanged.addListener (() => setSpeed ())
+    browser.storage.onChanged.addListener (async () => await setSpeed ())
 
 }

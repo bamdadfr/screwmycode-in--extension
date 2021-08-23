@@ -1,24 +1,17 @@
-import speedToSemitones from 'speed-to-semitones'
-import { onNewState } from '../state/on-new-state'
+import { getBrowser } from '../browser/get-browser'
+import { setSemitones } from './set-semitones'
 
 /**
  * @description handle the `semitones` element
  */
 export async function handleSemitones () {
 
-    const semitones = document.getElementsByClassName ('smc-semitones')[0]
+    // on load
+    await setSemitones ()
 
-    await onNewState (
-        ({ speed }) => {
+    // on change
+    const browser = await getBrowser ()
 
-            semitones.innerText = `${speedToSemitones (speed, 1)} st`
-
-        },
-        () => {
-
-            semitones.innerText = 'off'
-
-        },
-    )
+    browser.storage.onChanged.addListener (async () => await setSemitones ())
 
 }
