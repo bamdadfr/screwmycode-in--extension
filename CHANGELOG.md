@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.4.3...v1.5.0) (2021-08-23)
+
+
+### Features
+
+* add `handleHistory` for speed query parameter + various cleaning ([dfc2f5d](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/dfc2f5d0c0601c40be7df82c749e78d148f573cc))
+
 ## [1.4.3](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.4.2...v1.4.3) (2021-08-23)
 
 
