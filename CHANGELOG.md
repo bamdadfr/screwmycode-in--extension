@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.0...v1.5.1) (2021-08-24)
+
+
+### Bug Fixes
+
+* **history:** remove query string if speed is default or extension non-active ([67e50c9](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/67e50c97f4ba27f4c0201ca9764cee76532bd867))
+
 # [1.5.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.4.3...v1.5.0) (2021-08-23)
 
 
