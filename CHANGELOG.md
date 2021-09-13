@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.3...v1.5.4) (2021-09-13)
+
+
+### Performance Improvements
+
+* **asfalte:** ⚙️yarn-upgrade--onMondays-1000 ([2f87ca8](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/2f87ca839e56b3e54fac089ce2bccf7d8e0b36f6))
+
 ## [1.5.3](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.2...v1.5.3) (2021-09-06)
 
 
