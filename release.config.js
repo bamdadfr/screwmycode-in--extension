@@ -13,8 +13,7 @@ module.exports = {
             'extensionId': '{872c65ed-a9cf-4f58-871b-71f787a4f436}',
             'targetXpi': 'screwmycode-in--extension-${nextRelease.version}.xpi',
             'artifactsDir': 'packages',
-            'channel': 'listed',
-            'sourceDir': 'src',
+            'channel': 'unlisted',
         }],
         ['@semantic-release/github', {
             'assets': [
