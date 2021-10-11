@@ -1,3 +1,10 @@
+## [1.5.10](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.9...v1.5.10) (2021-10-11)
+
+
+### Bug Fixes
+
+* **ci:** removing `sourceDir` from release + switch to 'unlisted' `channel` for manual source code upload to firefox AMO ([72a7d81](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/72a7d81c4f28e1906e564b3e6ccc3eb974f2e6ca))
+
 ## [1.5.9](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.8...v1.5.9) (2021-10-11)
 
 
