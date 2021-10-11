@@ -1,3 +1,10 @@
+## [1.5.9](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.8...v1.5.9) (2021-10-11)
+
+
+### Bug Fixes
+
+* **ci:** adding `sourceDir` to automatic firefox release (test) ([b2461e3](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/b2461e35b7ae4471a06080488e7837118f493f2f))
+
 ## [1.5.8](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.7...v1.5.8) (2021-10-11)
 
 
