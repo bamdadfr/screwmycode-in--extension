@@ -7,7 +7,6 @@ module.exports = {
             'changelogFile': 'CHANGELOG.md',
         }],
         ['@semantic-release/exec', {
-
             'prepareCmd': 'yarn build:prepare ${nextRelease.version} && yarn build',
         }],
         ['semantic-release-firefox-add-on', {
