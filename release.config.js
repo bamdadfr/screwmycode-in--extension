@@ -14,6 +14,7 @@ module.exports = {
             'targetXpi': 'screwmycode-in--extension-${nextRelease.version}.xpi',
             'artifactsDir': 'packages',
             'channel': 'listed',
+            'sourceDir': 'src',
         }],
         ['@semantic-release/github', {
             'assets': [
