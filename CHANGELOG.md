@@ -1,3 +1,10 @@
+## [1.5.11](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.10...v1.5.11) (2021-10-12)
+
+
+### Bug Fixes
+
+* **ci:** back to `listed` channel as the semantic firefox addon hangs on signing with `unlisted` channel ([1bafe1a](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/1bafe1a4df9937737f51e9ab8624f0ef10a2b696))
+
 ## [1.5.10](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.9...v1.5.10) (2021-10-11)
 
 
