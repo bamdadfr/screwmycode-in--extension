@@ -1,25 +1,12 @@
-import { getState } from '../../state/get-state'
-import { setState } from '../../state/set-state'
+import { createChange } from './create-change'
 
 /**
- * @returns {HTMLSpanElement} controls decrease button
+ * @returns {HTMLSpanElement} decrease button
  */
 export function createDecreaseButton () {
 
-    const decrease = document.createElement ('span')
+    const text = 'down'
 
-    decrease.innerText = 'down'
-
-    decrease.style = 'cursor: pointer;'
-
-    decrease.addEventListener ('click', async () => {
-
-        const { isActive, speed, step } = await getState ()
-
-        if (isActive) await setState ('speed', speed - step)
-
-    })
-
-    return decrease
+    return createChange ({ text, 'increase': false })
 
 }

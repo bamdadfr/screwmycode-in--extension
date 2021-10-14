@@ -1,25 +1,12 @@
-import { getState } from '../../state/get-state'
-import { setState } from '../../state/set-state'
+import { createChange } from './create-change'
 
 /**
- * @returns {HTMLSpanElement} controls increase button
+ * @returns {HTMLSpanElement} increase button
  */
 export function createIncreaseButton () {
 
-    const increase = document.createElement ('span')
+    const text = 'up'
 
-    increase.innerText = 'up'
-
-    increase.style = 'cursor: pointer;'
-
-    increase.addEventListener ('click', async () => {
-
-        const { isActive, speed, step } = await getState ()
-
-        if (isActive) await setState ('speed', speed + step)
-
-    })
-
-    return increase
+    return createChange ({ text, 'increase': true })
 
 }
