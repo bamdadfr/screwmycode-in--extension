@@ -1,44 +1,25 @@
 import speedToSemitones from 'speed-to-semitones'
-import { setState } from '../../state/set-state'
 import { getState } from '../../state/get-state'
-import { SPEED } from '../../constants'
-import { getBrowser } from '../../browser/get-browser'
+import { createIndicator } from './create-indicator'
+import { INDICATOR_SEMITONES_ID } from '../../constants'
 
 /**
  * @returns {Promise<HTMLSpanElement>} controls semitones value
  */
 export async function createSemitones () {
 
-    const tone = document.createElement ('span')
+    const id = INDICATOR_SEMITONES_ID
 
-    tone.id = 'screwmycode-ext__tone'
-
-    tone.style = 'cursor: pointer;'
-
-    const setValue = async () => {
+    const getValue = async () => {
 
         const { isActive, speed } = await getState ()
 
-        tone.innerText = isActive
+        return isActive
             ? `${speedToSemitones (speed, 1)} st`
             : 'st'
     
     }
 
-    // on load
-    await setValue ()
-
-    // on click, reset value
-    tone.addEventListener (
-        'click',
-        async () => await setState ('speed', SPEED.default),
-    )
-
-    const browser = getBrowser ()
-
-    // on change
-    browser.storage.onChanged.addListener (() => setValue ())
-
-    return tone
+    return createIndicator ({ id, getValue })
 
 }

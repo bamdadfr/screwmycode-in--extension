@@ -1,44 +1,25 @@
 import speedToPercentage from 'speed-to-percentage'
-import { setState } from '../../state/set-state'
 import { getState } from '../../state/get-state'
-import { SPEED } from '../../constants'
-import { getBrowser } from '../../browser/get-browser'
+import { createIndicator } from './create-indicator'
+import { INDICATOR_PERCENTAGE_ID } from '../../constants'
 
 /**
  * @returns {Promise<HTMLSpanElement>} controls percentage value
  */
 export async function createPercentage () {
 
-    const percentage = document.createElement ('span')
+    const id = INDICATOR_PERCENTAGE_ID
 
-    percentage.id = 'screwmycode-ext__percent'
-
-    percentage.style = 'cursor: pointer;'
-
-    const setValue = async () => {
+    const getValue = async () => {
 
         const { isActive, speed } = await getState ()
 
-        percentage.innerText = isActive
+        return isActive
             ? `${speedToPercentage (speed, 1)} %`
             : '%'
 
     }
 
-    // on load
-    await setValue ()
-
-    // on click, reset value
-    percentage.addEventListener (
-        'click',
-        async () => await setState ('speed', SPEED.default),
-    )
-
-    const browser = getBrowser ()
-
-    // on change
-    browser.storage.onChanged.addListener (() => setValue ())
-
-    return percentage
+    return createIndicator ({ id, getValue })
 
 }

@@ -15,3 +15,7 @@ export const STEP = {
 export const INTERVAL = 500
 
 export const RETRY = 500
+
+export const INDICATOR_PERCENTAGE_ID = 'screwmycode-ext__percent'
+
+export const INDICATOR_SEMITONES_ID = 'screwmycode-ext__tone'
