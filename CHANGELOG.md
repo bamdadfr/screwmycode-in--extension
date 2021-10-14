@@ -1,3 +1,12 @@
+## [1.5.12](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.11...v1.5.12) (2021-10-14)
+
+
+### Performance Improvements
+
+* **controls/change:** extract duplicated code ([5627cc4](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/5627cc41a8ac656c543041666c6117134572770e))
+* **controls/indicator:** extract duplicated code + extract hard coded constants ([72357b7](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/72357b7598e4ae50fb9869528e204107e08b9fec))
+* **popup/indicator:** extract duplicate code (I shouldn't do this...) ([d8d9e28](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/d8d9e28f38166d5d5287313ea795c77f8407acf3))
+
 ## [1.5.11](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.10...v1.5.11) (2021-10-12)
 
 
