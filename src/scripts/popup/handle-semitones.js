@@ -1,17 +1,11 @@
-import { getBrowser } from '../browser/get-browser'
 import { setSemitones } from './set-semitones'
+import { handleIndicator } from './handle-indicator'
 
 /**
  * @description handle the `semitones` element
  */
 export async function handleSemitones () {
 
-    // on load
-    await setSemitones ()
-
-    // on change
-    const browser = await getBrowser ()
-
-    browser.storage.onChanged.addListener (async () => await setSemitones ())
+    await handleIndicator (setSemitones)
 
 }
