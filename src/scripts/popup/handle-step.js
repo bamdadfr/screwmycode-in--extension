@@ -1,48 +1,42 @@
-import { STEP } from '../constants'
-import { setState } from '../state/set-state'
-import { getState } from '../state/get-state'
+import {STEP} from '../constants';
+import {setState} from '../state/set-state';
+import {getState} from '../state/get-state';
 
 /**
  * @description handle the 'step' element
  */
-export async function handleStep () {
+export async function handleStep() {
+  const step = document.getElementsByClassName('smc-step')[0];
+  const state = await getState();
 
-    const step = document.getElementsByClassName ('smc-step')[0]
-    const state = await getState ()
+  step.value = state.step;
 
-    step.value = state.step
+  step.step = STEP.default;
 
-    step.step = STEP.default
+  step.min = STEP.min;
 
-    step.min = STEP.min
+  step.max = STEP.max;
 
-    step.max = STEP.max
+  step.onchange = async (e) => {
+    const inputValue = e.target.value;
+    let finalValue = inputValue;
 
-    step.onchange = async (e) => {
+    switch (inputValue) {
+      case inputValue < step.min:
+        finalValue = step.min;
 
-        const inputValue = e.target.value
-        let finalValue = inputValue
+        break;
 
-        switch (inputValue) {
+      case inputValue > step.max:
+        finalValue = step.max;
 
-            case inputValue < step.min:
-                finalValue = step.min
+        break;
 
-                break
-
-            case inputValue > step.max:
-                finalValue = step.max
-
-                break
-
-            default:
-
-        }
-
-        step.value = finalValue
-
-        await setState ('step', finalValue)
-
+      default:
     }
 
+    step.value = finalValue;
+
+    await setState('step', finalValue);
+  };
 }

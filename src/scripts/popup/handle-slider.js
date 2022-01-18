@@ -1,39 +1,33 @@
-import { setState } from '../state/set-state'
-import { getBrowser } from '../browser/get-browser'
-import { getState } from '../state/get-state'
+import {setState} from '../state/set-state';
+import {getBrowser} from '../browser/get-browser';
+import {getState} from '../state/get-state';
 
 /**
  * @description handle the `slider` element
  */
-export async function handleSlider () {
+export async function handleSlider() {
+  const slider = document.getElementsByClassName('smc-slider')[0];
 
-    const slider = document.getElementsByClassName ('smc-slider')[0]
+  const setSlider = async () => {
+    const {isActive, speed} = await getState();
 
-    const setSlider = async () => {
+    slider.value = speed;
 
-        const { isActive, speed } = await getState ()
+    slider.disabled = !isActive;
+  };
 
-        slider.value = speed
+  // on load
+  await setSlider();
 
-        slider.disabled = !isActive
+  // on input
+  slider.addEventListener('input', async (event) => {
+    const value = parseFloat(event.target.value);
 
-    }
+    await setState('speed', value);
+  });
 
-    // on load
-    await setSlider ()
+  // on change
+  const browser = await getBrowser();
 
-    // on input
-    slider.addEventListener ('input', async (event) => {
-
-        const value = parseFloat (event.target.value)
-
-        await setState ('speed', value)
-    
-    })
-
-    // on change
-    const browser = await getBrowser ()
-
-    browser.storage.onChanged.addListener (async () => await setSlider ())
-
+  browser.storage.onChanged.addListener(async () => await setSlider());
 }

@@ -1,8 +1,6 @@
 /**
  * @returns {HTMLInputElement} checkbox
  */
-export function getCheckbox () {
-
-    return document.getElementsByClassName ('smc-checkbox')[0]
-
+export function getCheckbox() {
+  return document.getElementsByClassName('smc-checkbox')[0];
 }

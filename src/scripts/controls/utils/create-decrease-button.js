@@ -1,12 +1,10 @@
-import { createChange } from './create-change'
+import {createChange} from './create-change';
 
 /**
  * @returns {HTMLSpanElement} decrease button
  */
-export function createDecreaseButton () {
+export function createDecreaseButton() {
+  const text = 'down';
 
-    const text = 'down'
-
-    return createChange ({ text, 'increase': false })
-
+  return createChange({text, 'increase': false});
 }

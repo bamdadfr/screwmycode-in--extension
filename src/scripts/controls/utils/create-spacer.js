@@ -1,12 +1,10 @@
 /**
  * @returns {HTMLSpanElement} controls spacer span
  */
-export function createSpacer () {
+export function createSpacer() {
+  const spacer = document.createElement('span');
 
-    const spacer = document.createElement ('span')
+  spacer.style = 'margin-right: 5px;';
 
-    spacer.style = 'margin-right: 5px;'
-
-    return spacer
-
+  return spacer;
 }

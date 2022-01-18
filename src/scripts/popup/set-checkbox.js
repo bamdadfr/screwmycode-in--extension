@@ -1,20 +1,20 @@
-import { getState } from '../state/get-state'
-import { getCheckbox } from './get-checkbox'
+import {getState} from '../state/get-state';
+import {getCheckbox} from './get-checkbox';
 
 /**
  *
  */
-export async function setCheckbox () {
+export async function setCheckbox() {
+  const checkbox = getCheckbox();
+  const {isActive} = await getState();
 
-    const checkbox = getCheckbox ()
-    const { isActive } = await getState ()
+  checkbox.innerText = isActive ? 'yes' : 'no';
 
-    checkbox.innerText = isActive ? 'yes' : 'no'
+  const className = 'smc-checkbox-active';
 
-    const className = 'smc-checkbox-active'
-
-    if (isActive) checkbox.classList.add (className)
-
-    else if (!isActive) checkbox.classList.remove (className)
-
+  if (isActive) {
+    checkbox.classList.add(className);
+  } else if (!isActive) {
+    checkbox.classList.remove(className);
+  }
 }

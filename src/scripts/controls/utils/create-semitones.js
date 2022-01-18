@@ -1,25 +1,21 @@
-import speedToSemitones from 'speed-to-semitones'
-import { getState } from '../../state/get-state'
-import { createIndicator } from './create-indicator'
-import { INDICATOR_SEMITONES_ID } from '../../constants'
+import speedToSemitones from 'speed-to-semitones';
+import {getState} from '../../state/get-state';
+import {createIndicator} from './create-indicator';
+import {INDICATOR_SEMITONES_ID} from '../../constants';
 
 /**
  * @returns {Promise<HTMLSpanElement>} controls semitones value
  */
-export async function createSemitones () {
+export async function createSemitones() {
+  const id = INDICATOR_SEMITONES_ID;
 
-    const id = INDICATOR_SEMITONES_ID
+  const getValue = async () => {
+    const {isActive, speed} = await getState();
 
-    const getValue = async () => {
+    return isActive
+      ? `${speedToSemitones(speed, 1)} st`
+      : 'st';
+  };
 
-        const { isActive, speed } = await getState ()
-
-        return isActive
-            ? `${speedToSemitones (speed, 1)} st`
-            : 'st'
-    
-    }
-
-    return createIndicator ({ id, getValue })
-
+  return createIndicator({id, getValue});
 }

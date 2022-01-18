@@ -6,34 +6,48 @@
  * @param {number} params.def default value
  * @returns {number} clamped value
  */
-export function clampValue (
-    v, {
-        min,
-        max,
-        def,
-    },
+export function clampValue(
+  v, {
+    min,
+    max,
+    def,
+  },
 ) {
+  if (!v) {
+    throw new Error('v is not defined');
+  }
 
-    if (!v) throw new Error ('v is not defined')
+  if (!min) {
+    throw new Error('min is not defined');
+  }
 
-    if (!min) throw new Error ('min is not defined')
+  if (!max) {
+    throw new Error('max is not defined');
+  }
 
-    if (!max) throw new Error ('max is not defined')
+  if (!def) {
+    throw new Error('def is not defined');
+  }
 
-    if (!def) throw new Error ('def is not defined')
+  let value = v;
 
-    let value = v
+  if (typeof value === 'string') {
+    value = parseFloat(v);
+  }
 
-    if (typeof value === 'string') value = parseFloat (v)
+  if (value < min) {
+    value = min;
+  }
 
-    if (value < min) value = min
+  if (value > max) {
+    value = max;
+  }
 
-    if (value > max) value = max
+  value = value.toFixed(3);
 
-    value = value.toFixed (3)
+  if (Number.isNaN(value)) {
+    value = def;
+  }
 
-    if (Number.isNaN (value)) value = def
-
-    return parseFloat (value)
-
+  return parseFloat(value);
 }

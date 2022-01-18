@@ -1,6 +1,6 @@
-import { setState } from '../../state/set-state'
-import { SPEED } from '../../constants'
-import { getBrowser } from '../../browser/get-browser'
+import {setState} from '../../state/set-state';
+import {SPEED} from '../../constants';
+import {getBrowser} from '../../browser/get-browser';
 
 /**
  * @param {object} options options
@@ -9,40 +9,34 @@ import { getBrowser } from '../../browser/get-browser'
  * @description indicator blueprint for semitones and percentage
  * @returns {HTMLSpanElement} indicator
  */
-export async function createIndicator ({
-    id,
-    getValue,
+export async function createIndicator({
+  id,
+  getValue,
 }) {
+  // declaration
+  const indicator = document.createElement('span');
 
-    // declaration
-    const indicator = document.createElement ('span')
+  indicator.id = id;
 
-    indicator.id = id
+  indicator.style.cursor = 'pointer';
 
-    indicator.style.cursor = 'pointer'
+  // setter
+  const setValue = (value) => {
+    indicator.innerText = value.toString();
+  };
 
-    // setter
-    const setValue = (value) => {
+  // on load
+  setValue(await getValue());
 
-        indicator.innerText = value.toString ()
-    
-    }
+  // on click, reset value
+  indicator.addEventListener('click', async () => {
+    await setState('speed', SPEED.default);
+  });
 
-    // on load
-    setValue (await getValue ())
+  // on change
+  const browser = await getBrowser();
 
-    // on click, reset value
-    indicator.addEventListener ('click', async () => {
+  browser.storage.onChanged.addListener(async () => setValue(await getValue()));
 
-        await setState ('speed', SPEED.default)
-    
-    })
-
-    // on change
-    const browser = await getBrowser ()
-
-    browser.storage.onChanged.addListener (async () => setValue (await getValue ()))
-
-    return indicator
-
+  return indicator;
 }

@@ -1,18 +1,16 @@
-import { getCheckbox } from './get-checkbox'
-import { setCheckbox } from './set-checkbox'
-import { toggleCheckbox } from './toggle-checkbox'
+import {getCheckbox} from './get-checkbox';
+import {setCheckbox} from './set-checkbox';
+import {toggleCheckbox} from './toggle-checkbox';
 
 /**
  * @description handle the `checkbox` element
  */
-export async function handleCheckbox () {
+export async function handleCheckbox() {
+  const checkbox = getCheckbox();
 
-    const checkbox = getCheckbox ()
+  // on load
+  await setCheckbox();
 
-    // on load
-    await setCheckbox ()
-
-    // change
-    checkbox.addEventListener ('click', () => toggleCheckbox ())
-
+  // change
+  checkbox.addEventListener('click', () => toggleCheckbox());
 }

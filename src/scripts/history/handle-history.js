@@ -1,15 +1,13 @@
-import { getBrowser } from '../browser/get-browser'
-import { setHistory } from './set-history'
+import {getBrowser} from '../browser/get-browser';
+import {setHistory} from './set-history';
 
 /**
  *
  */
-export async function handleHistory () {
+export async function handleHistory() {
+  const browser = getBrowser();
 
-    const browser = getBrowser ()
+  await setHistory();
 
-    await setHistory ()
-
-    browser.storage.onChanged.addListener (async () => await setHistory ())
-
+  browser.storage.onChanged.addListener(async () => await setHistory());
 }

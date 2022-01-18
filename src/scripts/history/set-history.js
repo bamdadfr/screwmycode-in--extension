@@ -1,31 +1,29 @@
-import { getState } from '../state/get-state'
+import {getState} from '../state/get-state';
 
 /**
  * @description update `speed` query parameter with state value
  */
-export async function setHistory () {
+export async function setHistory() {
+  const {speed, isActive} = await getState();
+  const url = new URL(window.location);
 
-    const { speed, isActive } = await getState ()
-    const url = new URL (window.location)
+  // stateless
+  if (!isActive || speed === 1) {
+    url.searchParams.delete('speed');
 
-    // stateless
-    if (!isActive || speed === 1) {
+    window.history.replaceState({}, '', url.toString());
 
-        url.searchParams.delete ('speed')
+    return;
+  }
 
-        window.history.replaceState ({}, '', url.toString ())
+  // stateful
+  const querySpeed = url.searchParams.get('speed');
 
-        return
+  if (parseFloat(speed) === parseFloat(querySpeed)) {
+    return;
+  }
 
-    }
+  url.searchParams.set('speed', speed);
 
-    // stateful
-    const querySpeed = url.searchParams.get ('speed')
-
-    if (parseFloat (speed) === parseFloat (querySpeed)) return
-
-    url.searchParams.set ('speed', speed)
-
-    window.history.replaceState ({}, '', url.toString ())
-
+  window.history.replaceState({}, '', url.toString());
 }

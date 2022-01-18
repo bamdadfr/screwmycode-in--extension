@@ -1,5 +1,5 @@
-import { getState } from '../../state/get-state'
-import { setState } from '../../state/set-state'
+import {getState} from '../../state/get-state';
+import {setState} from '../../state/set-state';
 
 /**
  * @description blueprint for change buttons increase/decrease
@@ -8,34 +8,28 @@ import { setState } from '../../state/set-state'
  * @param {boolean} options.increase set to false for decrease
  * @returns {HTMLSpanElement} change button
  */
-export function createChange ({
-    text,
-    increase,
+export function createChange({
+  text,
+  increase,
 }) {
+  const change = document.createElement('span');
 
-    const change = document.createElement ('span')
+  change.innerText = text;
 
-    change.innerText = text
+  change.style.cursor = 'pointer';
 
-    change.style.cursor = 'pointer'
+  change.addEventListener('click', async () => {
+    const {isActive, speed, step} = await getState();
 
-    change.addEventListener ('click', async () => {
+    if (isActive) {
+      await setState(
+        'speed',
+        increase
+          ? speed + step
+          : speed - step,
+      );
+    }
+  });
 
-        const { isActive, speed, step } = await getState ()
-
-        if (isActive) {
-
-            await setState (
-                'speed',
-                increase
-                    ? speed + step
-                    : speed - step,
-            )
-
-        }
-    
-    })
-
-    return change
-
+  return change;
 }

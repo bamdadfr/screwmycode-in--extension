@@ -1,11 +1,9 @@
-import { setSemitones } from './set-semitones'
-import { handleIndicator } from './handle-indicator'
+import {setSemitones} from './set-semitones';
+import {handleIndicator} from './handle-indicator';
 
 /**
  * @description handle the `semitones` element
  */
-export async function handleSemitones () {
-
-    await handleIndicator (setSemitones)
-
+export async function handleSemitones() {
+  await handleIndicator(setSemitones);
 }
