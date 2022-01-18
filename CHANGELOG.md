@@ -1,3 +1,11 @@
+## [1.5.13](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.12...v1.5.13) (2022-01-18)
+
+
+### Performance Improvements
+
+* apply latest eslint rules ([cc2e5e9](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/cc2e5e911a55eff844fcea99741ecd29486fb7e2))
+* update deps ([c4efe8b](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/c4efe8b7ccccb1b7d84f17b7cd9e155788523374))
+
 ## [1.5.12](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.11...v1.5.12) (2021-10-14)
 
 
