@@ -50,7 +50,7 @@ Variable speed pitch control for YouTube
 
 ## 🚀 Download
 
-[<img height=30 src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Internet-firefox-icon.png"> **Firefox**](https://addons.mozilla.org/en-US/firefox/addon/screwmycode-in/)
+[<img height=30 src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Internet-firefox-icon.png"> **Firefox**](https://addons.mozilla.org/firefox/addon/screwmycode-in/)
 
 ## 🖊 Contribute
 
