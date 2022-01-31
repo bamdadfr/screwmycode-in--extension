@@ -24,17 +24,11 @@ export async function createControls() {
 
   // rendering
   container.appendChild(decrease);
-
   container.appendChild(spacer);
-
   container.appendChild(increase);
-
   container.appendChild(spacer.cloneNode());
-
   container.appendChild(percentage);
-
   container.appendChild(spacer.cloneNode());
-
   container.appendChild(semitones);
 
   if (parent) {

@@ -7,14 +7,9 @@ import {handleStep} from './popup/handle-step';
 
 window.addEventListener('load', async () => {
   await handleCheckbox();
-
   await handleSlider();
-
   await handlePercentage();
-
   await handleSemitones();
-
   await handleShare();
-
   await handleStep();
 });

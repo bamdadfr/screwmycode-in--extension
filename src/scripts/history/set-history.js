@@ -10,20 +10,16 @@ export async function setHistory() {
   // stateless
   if (!isActive || speed === 1) {
     url.searchParams.delete('speed');
-
     window.history.replaceState({}, '', url.toString());
-
     return;
   }
 
   // stateful
   const querySpeed = url.searchParams.get('speed');
-
   if (parseFloat(speed) === parseFloat(querySpeed)) {
     return;
   }
 
   url.searchParams.set('speed', speed);
-
   window.history.replaceState({}, '', url.toString());
 }

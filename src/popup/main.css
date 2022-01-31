@@ -43,7 +43,6 @@ html, body {
     padding-bottom: 0.25em;
 
     color: var(--color-blue);
-    text-transform: lowercase;
 
     font-weight: 300;
     font-size: 1.3em;

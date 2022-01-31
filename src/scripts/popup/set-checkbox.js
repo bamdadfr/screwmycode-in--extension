@@ -7,7 +7,6 @@ import {getCheckbox} from './get-checkbox';
 export async function setCheckbox() {
   const checkbox = getCheckbox();
   const {isActive} = await getState();
-
   checkbox.innerText = isActive ? 'yes' : 'no';
 
   const className = 'smc-checkbox-active';

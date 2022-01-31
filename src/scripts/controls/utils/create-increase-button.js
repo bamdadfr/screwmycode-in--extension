@@ -5,6 +5,5 @@ import {createChange} from './create-change';
  */
 export function createIncreaseButton() {
   const text = 'up';
-
   return createChange({text, 'increase': true});
 }
