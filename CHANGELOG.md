@@ -1,3 +1,11 @@
+# [1.6.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.13...v1.6.0) (2022-01-31)
+
+
+### Features
+
+* Add new icon ([6c9da79](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/6c9da79b920ed22319b350c99407be45d51c5e7e))
+* Capitalize app name ([15e0bef](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/15e0bef7bef01c8ea2bdbfc3b98c85718e98551a))
+
 ## [1.5.13](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.12...v1.5.13) (2022-01-18)
 
 
