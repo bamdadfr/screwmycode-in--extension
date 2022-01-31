@@ -27,7 +27,6 @@ export async function handlePlayer() {
 
   // on load
   await createControls();
-
   await setSpeed();
 
   // on play

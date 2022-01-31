@@ -13,20 +13,15 @@ export function createChange({
   increase,
 }) {
   const change = document.createElement('span');
-
   change.innerText = text;
-
   change.style.cursor = 'pointer';
 
   change.addEventListener('click', async () => {
     const {isActive, speed, step} = await getState();
-
     if (isActive) {
       await setState(
         'speed',
-        increase
-          ? speed + step
-          : speed - step,
+        increase ? speed + step : speed - step,
       );
     }
   });

@@ -8,13 +8,9 @@ import {getState} from '../state/get-state';
 export async function handleStep() {
   const step = document.getElementsByClassName('smc-step')[0];
   const state = await getState();
-
   step.value = state.step;
-
   step.step = STEP.default;
-
   step.min = STEP.min;
-
   step.max = STEP.max;
 
   step.onchange = async (e) => {
@@ -22,21 +18,20 @@ export async function handleStep() {
     let finalValue = inputValue;
 
     switch (inputValue) {
-      case inputValue < step.min:
+      case inputValue < step.min: {
         finalValue = step.min;
-
         break;
+      }
 
-      case inputValue > step.max:
+      case inputValue > step.max: {
         finalValue = step.max;
-
         break;
+      }
 
       default:
     }
 
     step.value = finalValue;
-
     await setState('step', finalValue);
   };
 }

@@ -15,9 +15,7 @@ export async function createIndicator({
 }) {
   // declaration
   const indicator = document.createElement('span');
-
   indicator.id = id;
-
   indicator.style.cursor = 'pointer';
 
   // setter
@@ -35,7 +33,6 @@ export async function createIndicator({
 
   // on change
   const browser = await getBrowser();
-
   browser.storage.onChanged.addListener(async () => setValue(await getValue()));
 
   return indicator;
