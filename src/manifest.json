@@ -5,11 +5,11 @@
   "version": "1.5.13",
   "manifest_version": 2,
   "icons": {
-    "108": "assets/icon.jpg"
+    "260": "assets/screw-icon.png"
   },
   "browser_action": {
     "default_icon": {
-      "108": "assets/icon.jpg"
+      "260": "assets/screw-icon.png"
     },
     "default_title": "screwmycode.in for YouTube",
     "default_popup": "popup/index.html"
