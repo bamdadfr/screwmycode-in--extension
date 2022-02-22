@@ -1,3 +1,21 @@
+# [2.0.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.6.0...v2.0.0) (2022-02-22)
+
+
+### Features
+
+* Add `typescript` and `jest` + Move codebase under `app/` folder ([284a2f8](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/284a2f89ea0325a3a83b2b790ff1754fcbfd65e4))
+* Move files to typescript + Add `State` class + Add styles for Chrome + Various improvements ([b4a950e](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/b4a950e51749c056694a68366af4f18fd094a953))
+
+
+### Performance Improvements
+
+* **Dependencies:** Upgrade to latest ([1429d46](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/1429d467c9f7b47f517f2eebfea12669691375d7))
+
+
+### BREAKING CHANGES
+
+* Moving folder structure + Use typescript
+
 # [1.6.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.5.13...v1.6.0) (2022-01-31)
 
 
