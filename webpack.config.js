@@ -12,9 +12,15 @@ module.exports = {
   mode: isProduction ? 'production' : 'development',
   devtool: isProduction ? false : 'inline-source-map',
   entry: {
-    'scripts/background': './src/app/background.js',
-    'scripts/content': './src/app/content.js',
-    'scripts/popup': './src/app/popup.js',
+    'scripts/background': './src/app/background.ts',
+    'scripts/content': './src/app/content.ts',
+    'scripts/popup': './src/app/popup.ts',
+  },
+  output: {
+    publicPath: '',
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   node: false,
   plugins: [
@@ -43,6 +49,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        'test': /\.ts$/,
+        'exclude': /node_modules/,
+        'use': 'ts-loader',
       },
     ],
   },

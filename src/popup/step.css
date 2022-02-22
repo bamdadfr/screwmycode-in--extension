@@ -1,5 +1,13 @@
 .smc-step {
-    width: 5em;
-    border: 0;
-    line-height: 2rem;
+  border: 1px solid var(--color-blue);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.smc-step[type=number] {
+  -moz-appearance: textfield;
 }

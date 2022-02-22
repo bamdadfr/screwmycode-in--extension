@@ -4,86 +4,87 @@ https://codepen.io/carolineartz/pen/ogVXZj?editors=1010
 */
 
 html, body {
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
-    overflow: hidden;
-    user-select: none;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+  overflow: hidden;
+  user-select: none;
+  font-size: 1.2em;
 }
 
 .smc-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 20em;
+  width: 20em;
 
-    margin: 0;
-    padding: 0;
-    border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 
-    font: inherit;
+  font: inherit;
 }
 
 .smc-container > fieldset {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
+  width: 100%;
 
-    border: 1px solid var(--color-border);
-    padding: 0.5em 0.5em;
-    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border);
+  padding: 0.5em 0.5em;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .smc-title {
-    padding-inline-start: 0.2em;
-    padding-inline-end: 0.2em;
-    padding-bottom: 0.25em;
+  padding-inline-start: 0.2em;
+  padding-inline-end: 0.2em;
+  padding-bottom: 0.25em;
 
-    color: var(--color-blue);
+  color: var(--color-blue);
 
-    font-weight: 300;
-    font-size: 1.3em;
+  font-weight: 300;
+  font-size: 1.3em;
 }
 
 .smc-content {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 
-    width: calc(100% - 0.8em);
-    height: 100%;
+  width: calc(100% - 0.8em);
+  height: 100%;
 }
 
 .smc-col {
-    width: 100%;
+  width: 100%;
 }
 
 .smc-spacer {
-    padding-top: 0.5em;
+  padding-top: 0.5em;
 }
 
 .smc-row-1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .smc-row-2 {
-    height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .smc-row-3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .smc-hoverable {
-    cursor: pointer;
+  cursor: pointer;
 }
