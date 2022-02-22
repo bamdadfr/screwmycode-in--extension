@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.1.0...v2.1.1) (2022-02-22)
+
+
+### Performance Improvements
+
+* Dummy commit to trigger semver ([69606b5](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/69606b56aa32a091c418ca8be98e370dfee89ec6))
+
 # [2.1.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.0.0...v2.1.0) (2022-02-22)
 
 

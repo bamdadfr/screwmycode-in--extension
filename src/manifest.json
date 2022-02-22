@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "2.1.0",
+  "version": "2.1.1",
   "name": "ScrewMyCode.in: Pitch control for YouTube",
   "short_name": "ScrewMyCode.in",
   "description": "Slow down and speed up videos directly on YouTube like you would on a turntable.",
