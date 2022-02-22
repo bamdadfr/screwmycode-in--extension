@@ -12,7 +12,6 @@ module.exports = {
   mode: isProduction ? 'production' : 'development',
   devtool: isProduction ? false : 'inline-source-map',
   entry: {
-    'scripts/background': './src/app/background.ts',
     'scripts/content': './src/app/content.ts',
     'scripts/popup': './src/app/popup.ts',
   },
