@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.0.0...v2.1.0) (2022-02-22)
+
+
+### Features
+
+* Upgrade to manifest v3 + Add smaller icon + Remove unused background script ([159eee5](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/159eee5ee970749c20ce65ccdc7f315a4fb348db))
+
 # [2.0.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v1.6.0...v2.0.0) (2022-02-22)
 
 
