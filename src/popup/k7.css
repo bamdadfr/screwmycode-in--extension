@@ -1,11 +1,11 @@
 .smc-k7 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 8em;
+  width: 8em;
 }
 
 .smc-k7 > img {
-    width: 3em;
+  width: 3em;
 }

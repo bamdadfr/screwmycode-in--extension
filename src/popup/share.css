@@ -1,16 +1,16 @@
 .smc-share {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .smc-share:hover {
-    color: var(--color-blue);
-    transition: color 200ms ease-in-out;
+  color: var(--color-blue);
+  transition: color 200ms ease-in-out;
 }
 
 .smc-share__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 8em;
+  width: 8em;
 }
