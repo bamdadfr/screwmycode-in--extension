@@ -10,7 +10,9 @@
 
 <img alt="logo" width="80px" src="https://raw.githubusercontent.com/bamdadsabbagh/screwmycode-in--www/master/public/icons/SCRW_KSET.svg">
 
-Pitch control for <a href="https://www.youtube.com/">YouTube</a>
+[ScrewMyCode.in](https://www.screwmycode.in/): Pitch control for <a href="https://www.youtube.com/">YouTube</a>
+
+![](assets/screenshots/screenshot-01.png)
 
 ## 🚀 Download
 
@@ -18,7 +20,17 @@ Pitch control for <a href="https://www.youtube.com/">YouTube</a>
 
 ## 📖 Description
 
-Slow down and speed up YouTube videos.
+Slow down and speed up videos directly on YouTube like you would on a turntable.
+
+### ⚙️ Use either
+
+- Popup settings
+- Embedded controls
+
+### 📣 Share to
+
+- Users of the extension with the dynamic YouTube URL
+- Other users through the dedicated website [ScrewMyCode.in](https://www.screwmycode.in/)
 
 ## 🖊 Contribute
 
