@@ -10,11 +10,11 @@ console.log('Production mode is: ', isProduction);
 module.exports = {
   watch: !isProduction,
   mode: isProduction ? 'production' : 'development',
-  devtool: isProduction ? false : 'cheap-source-map',
+  devtool: isProduction ? false : 'inline-source-map',
   entry: {
-    'scripts/background': './src/scripts/background.js',
-    'scripts/content': './src/scripts/content.js',
-    'scripts/popup': './src/scripts/popup.js',
+    'scripts/background': './src/app/background.js',
+    'scripts/content': './src/app/content.js',
+    'scripts/popup': './src/app/popup.js',
   },
   node: false,
   plugins: [

@@ -1,93 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScrewMyCode.in for YouTube</title>
-    <link rel="stylesheet" href="colors.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="share.css">
-    <link rel="stylesheet" href="indicators.css">
-    <link rel="stylesheet" href="slider.css">
-    <link rel="stylesheet" href="k7.css">
-    <link rel="stylesheet" href="checkbox.css">
-    <link rel="stylesheet" href="step.css">
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>ScrewMyCode.in for YouTube</title>
+  <link href="colors.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+  <link href="share.css" rel="stylesheet">
+  <link href="indicators.css" rel="stylesheet">
+  <link href="slider.css" rel="stylesheet">
+  <link href="k7.css" rel="stylesheet">
+  <link href="checkbox.css" rel="stylesheet">
+  <link href="step.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="smc-container">
-    <fieldset>
-        <legend class="smc-title">
-          ScrewMyCode.in
-        </legend>
+  <fieldset>
+    <legend class="smc-title">
+      ScrewMyCode.in
+    </legend>
 
-        <div class="smc-content">
+    <div class="smc-content">
 
-            <div class="smc-col">
+      <div class="smc-col">
 
-                <div class="smc-row-1">
+        <div class="smc-row-1">
 
-                    <div>
+          <div>
 
-                        <div class="smc-indicator">
-                            <span class="smc-indicator__value smc-checkbox smc-hoverable"></span>
-                            <span class="smc-indicator__title">active</span>
-                        </div>
-
-                        <div class="smc-indicator">
-                            <label about="step">
-                                <input class="smc-indicator__value smc-step" type="number"/>
-                            </label>
-                            <span class="smc-indicator__title">step</span>
-                        </div>
-
-                    </div>
-
-                    <div class="smc-share__container">
-                        <span class="smc-share">share</span>
-                    </div>
-
-                </div>
-
-                <div class="smc-spacer"></div>
-
-                <div class="smc-row-2">
-                    <input
-                            class="smc-slider smc-hoverable"
-                            type="range"
-                            min="0.5"
-                            max="1.5"
-                            step="0.005"
-                            value="1"
-                            aria-label="slider"
-                    />
-                </div>
-
-                <div class="smc-spacer"></div>
-
-                <div class="smc-row-3">
-                    <div>
-                        <div class="smc-indicator">
-                            <span class="smc-indicator__value smc-percentage"></span>
-                            <span class="smc-indicator__title">percentage</span>
-                        </div>
-
-                        <div class="smc-indicator">
-                            <span class="smc-indicator__value smc-semitones"></span>
-                            <span class="smc-indicator__title">semitones</span>
-                        </div>
-                    </div>
-
-                    <div class="smc-k7">
-                        <img alt="k7" src="../assets/k7.svg"/>
-                    </div>
-                </div>
-
+            <div class="smc-indicator">
+              <span class="smc-indicator__value smc-checkbox smc-hoverable"></span>
+              <span class="smc-indicator__title">active</span>
             </div>
+
+            <div class="smc-indicator">
+              <label about="step">
+                <input class="smc-indicator__value smc-step" type="number" />
+              </label>
+              <span class="smc-indicator__title">step</span>
+            </div>
+
+          </div>
+
+          <div class="smc-share__container">
+            <span class="smc-share">share</span>
+          </div>
+
         </div>
-    </fieldset>
+
+        <div class="smc-spacer"></div>
+
+        <div class="smc-row-2">
+          <input
+            aria-label="slider"
+            class="smc-slider smc-hoverable"
+            max="1.5"
+            min="0.5"
+            step="0.005"
+            type="range"
+            value="1"
+          />
+        </div>
+
+        <div class="smc-spacer"></div>
+
+        <div class="smc-row-3">
+          <div>
+            <div class="smc-indicator">
+              <span class="smc-indicator__value smc-percentage"></span>
+              <span class="smc-indicator__title">percentage</span>
+            </div>
+
+            <div class="smc-indicator">
+              <span class="smc-indicator__value smc-semitones"></span>
+              <span class="smc-indicator__title">semitones</span>
+            </div>
+          </div>
+
+          <div class="smc-k7">
+            <img alt="k7" src="../assets/k7.svg" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
 </div>
 
+<!--suppress HtmlUnknownTarget -->
 <script src="../scripts/popup.js"></script>
 </body>
 </html>
