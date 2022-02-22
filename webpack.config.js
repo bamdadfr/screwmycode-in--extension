@@ -8,47 +8,47 @@ const isProduction = process.env.NODE_ENV === 'production';
 console.log('Production mode is: ', isProduction);
 
 module.exports = {
-  'watch': !isProduction,
-  'mode': isProduction ? 'production' : 'development',
-  'devtool': isProduction ? false : 'cheap-source-map',
-  'entry': {
+  watch: !isProduction,
+  mode: isProduction ? 'production' : 'development',
+  devtool: isProduction ? false : 'cheap-source-map',
+  entry: {
     'scripts/background': './src/scripts/background.js',
     'scripts/content': './src/scripts/content.js',
     'scripts/popup': './src/scripts/popup.js',
   },
-  'node': false,
-  'plugins': [
+  node: false,
+  plugins: [
     new CopyPlugin({
-      'patterns': [
+      patterns: [
         {
-          'from': './src/manifest.json',
-          'to': 'manifest.json',
+          from: './src/manifest.json',
+          to: 'manifest.json',
         },
         {
-          'from': './src/assets',
-          'to': 'assets',
+          from: './src/assets',
+          to: 'assets',
         },
         {
-          'from': './src/popup',
-          'to': 'popup',
+          from: './src/popup',
+          to: 'popup',
         },
       ],
     }),
   ],
-  'module': {
-    'rules': [
+  module: {
+    rules: [
       {
-        'test': /\.js$/,
-        'exclude': /node_modules/,
-        'use': {
-          'loader': 'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
         },
       },
     ],
   },
-  'optimization': {
-    'minimize': true,
-    'minimizer': [
+  optimization: {
+    minimize: true,
+    minimizer: [
       new TerserPlugin(),
       new HtmlMinimizerPlugin(),
       new CssMinimizerPlugin(),
