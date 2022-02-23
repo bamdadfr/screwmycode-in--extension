@@ -6,13 +6,13 @@ import {State, StateKeys} from './common/state';
 
 (async () => {
   const params = new URLSearchParams(document.location.search.substring(1));
-  const speed = parseFloat(params.get('speed'));
+  const speedParameter = params.get('speed');
 
-  if (typeof speed === 'undefined') {
+  if (!speedParameter) {
     return;
   }
 
-  await State.set(StateKeys.speed, speed);
+  await State.set(StateKeys.speed, parseFloat(speedParameter));
 })();
 
 window.addEventListener('load', async () => {
