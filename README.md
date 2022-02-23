@@ -4,6 +4,10 @@
 ![coverage](https://img.shields.io/codeclimate/coverage/bamdadsabbagh/screwmycode-in--extension)
 ![snyk](https://img.shields.io/snyk/vulnerabilities/github/bamdadsabbagh/screwmycode-in--extension)
 
+![chrome version](https://img.shields.io/chrome-web-store/v/lnoedjelpkmhegefhhjljmggjdicnbaa?label=chrome)
+![chrome users](https://img.shields.io/chrome-web-store/users/lnoedjelpkmhegefhhjljmggjdicnbaa)
+![chrome rating](https://img.shields.io/chrome-web-store/stars/lnoedjelpkmhegefhhjljmggjdicnbaa)
+
 ![firefox version](https://img.shields.io/amo/v/screwmycode-in?label=firefox)
 ![firefox users](https://img.shields.io/amo/users/screwmycode-in)
 ![firefox rating](https://img.shields.io/amo/stars/screwmycode-in?label=rating)

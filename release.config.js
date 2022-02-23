@@ -7,13 +7,19 @@ module.exports = {
       changelogFile: 'CHANGELOG.md',
     }],
     ['@semantic-release/exec', {
-      prepareCmd: 'yarn build:prepare ${nextRelease.version} && yarn build',
+      prepareCmd: 'yarn build:increment ${nextRelease.version} && yarn build',
     }],
     ['semantic-release-firefox-add-on', {
       extensionId: '{872c65ed-a9cf-4f58-871b-71f787a4f436}',
       targetXpi: 'screwmycode-in--extension-${nextRelease.version}.xpi',
+      sourceDir: 'dist/firefox',
       artifactsDir: 'packages',
       channel: 'listed',
+    }],
+    ['semantic-release-chrome', {
+      extensionId: 'lnoedjelpkmhegefhhjljmggjdicnbaa',
+      asset: 'bandcamp-plus--extension-${nextRelease.version}.zip',
+      distFolder: 'dist/chrome',
     }],
     ['@semantic-release/github', {
       assets: [

@@ -11,6 +11,10 @@ path='package.json'
 
 update_json
 
-path='src/manifest.json'
+path='src/manifest-chrome.json'
+
+update_json
+
+path='src/manifest-firefox.json'
 
 update_json

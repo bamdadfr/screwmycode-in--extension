@@ -9,24 +9,32 @@
     "email": "hi@bamdad.fr"
   },
   "scripts": {
-    "build": "yarn clean && yarn build:webpack && yarn build:ext",
+    "build": "yarn dev:clean && yarn build:clean && yarn build:chrome && yarn build:firefox",
     "build:clean": "rimraf packages",
-    "build:ext": "web-ext build --source-dir dist",
-    "build:prepare": "./bin/prepare.sh",
-    "build:webpack": "NODE_ENV=production webpack",
-    "clean": "yarn dev:clean && yarn build:clean",
+    "build:increment": "build/increment.sh",
+    "build:chrome": "yarn build:chrome:webpack && yarn build:chrome:package",
+    "build:chrome:package": "web-ext build --source-dir dist/chrome --filename chrome.zip",
+    "build:chrome:webpack": "NODE_ENV=production yarn webpack:chrome",
+    "build:firefox": "yarn build:firefox:webpack && yarn build:firefox:package",
+    "build:firefox:package": "web-ext build --source-dir dist/firefox --filename firefox.zip",
+    "build:firefox:webpack": "NODE_ENV=production yarn webpack:firefox",
     "dev": "yarn dev:chrome",
+    "dev:android": "yarn dev:clean && yarn dev:android:watch",
+    "dev:android:run": "web-ext run -t firefox-android --adb-device 2de7bd13 --firefox-apk org.mozilla.fenix",
+    "dev:android:watch": "concurrently 'yarn webpack:android' 'wait-on dist/android/manifest.json && yarn dev:android:run'",
     "dev:clean": "rimraf dist",
-    "dev:webpack": "webpack",
-    "dev:chrome": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:chrome'",
-    "dev:firefox": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:firefox'",
-    "dev:android": "yarn dev:clean && concurrently 'yarn dev:webpack' 'wait-on dist/manifest.json && yarn dev:ext:android'",
-    "dev:ext:chrome": "web-ext run -t chromium",
-    "dev:ext:firefox": "web-ext run",
-    "dev:ext:android": "web-ext run -t firefox-android --adb-device 2de7bd13 --firefox-apk org.mozilla.fenix",
+    "dev:chrome": "yarn dev:clean && yarn dev:chrome:watch",
+    "dev:chrome:run": "web-ext run --source-dir dist/chrome -t chromium",
+    "dev:chrome:watch": "concurrently 'yarn webpack:chrome' 'wait-on dist/chrome/manifest.json && yarn dev:chrome:run'",
+    "dev:firefox": "yarn dev:clean && yarn dev:firefox:watch",
+    "dev:firefox:run": "web-ext run --source-dir dist/firefox",
+    "dev:firefox:watch": "concurrently 'yarn webpack:firefox' 'wait-on dist/firefox/manifest.json && yarn dev:firefox:run'",
     "lint": "eslint src --ext .js --fix",
     "package:reinstall": "rimraf node_modules && yarn",
-    "package:sort": "npx sort-package-json"
+    "package:sort": "npx sort-package-json",
+    "webpack:android": "webpack",
+    "webpack:chrome": "webpack --env chrome",
+    "webpack:firefox": "webpack --env firefox"
   },
   "dependencies": {
     "speed-to-percentage": "^1.2.1",
@@ -60,7 +68,6 @@
     "webpack-cli": "^4.9.2"
   },
   "webExt": {
-    "sourceDir": "dist",
     "artifactsDir": "packages"
   }
 }

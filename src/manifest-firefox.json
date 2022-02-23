@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "version": "2.1.1",
+  "name": "ScrewMyCode.in: Pitch control for YouTube",
+  "short_name": "ScrewMyCode.in",
+  "description": "Slow down and speed up videos directly on YouTube like you would on a turntable.",
+  "icons": {
+    "128": "assets/icon-128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "assets/icon-128.png"
+    },
+    "default_title": "ScrewMyCode.in",
+    "default_popup": "popup/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "scripts/content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "permissions": [
+    "storage",
+    "tabs"
+  ]
+}
