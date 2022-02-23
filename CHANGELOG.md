@@ -1,3 +1,15 @@
+# [2.2.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.1.1...v2.2.0) (2022-02-23)
+
+
+### Features
+
+* Add manifest v2 back + Separate builds for `chrome` (using v3) and firefox (using v2) + Enrich package.json scripts + Add temporary `dry-run` to semantic-release ([b20e32f](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/b20e32fbf33a1956f26f58df4feab9a253a04944))
+
+
+### Performance Improvements
+
+* Remove `dry-run` from release pipeline + Add chrome download link to readme ([49d282d](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/49d282d77917ec8e2f67a4004981cfbec8aea075))
+
 ## [2.1.1](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.1.0...v2.1.1) (2022-02-22)
 
 
