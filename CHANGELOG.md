@@ -1,3 +1,17 @@
+# [2.3.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.2.0...v2.3.0) (2022-02-24)
+
+
+### Bug Fixes
+
+* assign orphan `new` to dummy variable ([ab5603e](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/ab5603ec1552af8a5cc15dcbe56aff830f8e724b))
+* **CI:** Set correct name for chrome package ([4e32e58](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/4e32e5840cb4951648938a9d550b6352f87cca08))
+* **Content:** Verify sanity of `speed` string parameter before parsing to float ([70e8bfd](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/70e8bfd81c1de09bafa0104d278d4d84ff5d5714))
+
+
+### Features
+
+* Rewrite in OOP style ([d322c02](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/d322c02755e09580d9af33b842ae10593d03ad7c))
+
 # [2.2.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.1.1...v2.2.0) (2022-02-23)
 
 
