@@ -1,15 +1,13 @@
-import {handleCheckbox} from './popup/handle-checkbox';
-import {handleSlider} from './popup/handle-slider';
-import {handlePercentage} from './popup/handle-percentage';
-import {handleSemitones} from './popup/handle-semitones';
-import {handleShare} from './popup/handle-share';
-import {handleStep} from './popup/handle-step';
+import {PopupController} from './controllers/popup.controller';
+import {State} from './common/state';
+import {PopupView} from './views/popup.view';
 
 window.addEventListener('load', async () => {
-  await handleCheckbox();
-  await handleSlider();
-  await handlePercentage();
-  await handleSemitones();
-  await handleShare();
-  await handleStep();
+  const state = new State();
+  await state.isReady;
+
+  const popup = new PopupView(state);
+  state.attach(popup);
+  // eslint-disable-next-line no-new
+  new PopupController(state, popup);
 });
