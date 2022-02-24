@@ -12,10 +12,10 @@ window.addEventListener('load', async () => {
   await player.isReady;
   state.attach(player);
 
-  const controls = new ControlsView(state);
-  // eslint-disable-next-line no-new
-  new ControlsController(state, controls);
-  state.attach(controls);
+  const controlsView = new ControlsView(state);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const controlsController = new ControlsController(state, controlsView);
+  state.attach(controlsView);
 
   const history = new HistoryController(state);
   await history.isReady;

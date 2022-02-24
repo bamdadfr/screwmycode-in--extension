@@ -6,8 +6,8 @@ window.addEventListener('load', async () => {
   const state = new State();
   await state.isReady;
 
-  const popup = new PopupView(state);
-  state.attach(popup);
-  // eslint-disable-next-line no-new
-  new PopupController(state, popup);
+  const popupView = new PopupView(state);
+  state.attach(popupView);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const popupController = new PopupController(state, popupView);
 });
