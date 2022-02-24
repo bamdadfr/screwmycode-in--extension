@@ -18,7 +18,7 @@ module.exports = {
     }],
     ['semantic-release-chrome', {
       extensionId: 'lnoedjelpkmhegefhhjljmggjdicnbaa',
-      asset: 'bandcamp-plus--extension-${nextRelease.version}.zip',
+      asset: 'screwmycode-in--extension-${nextRelease.version}.zip',
       distFolder: 'dist/chrome',
     }],
     ['@semantic-release/github', {

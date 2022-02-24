@@ -1,37 +1,23 @@
-import {handlePlayer} from './player/handle-player';
-import {isPageWatch} from './utils/is-page-watch';
-import {INTERVAL} from './constants';
-import {handleHistory} from './history/handle-history';
-import {State, StateKeys} from './common/state';
-
-(async () => {
-  const params = new URLSearchParams(document.location.search.substring(1));
-  const speed = parseFloat(params.get('speed'));
-
-  if (typeof speed === 'undefined') {
-    return;
-  }
-
-  await State.set(StateKeys.speed, speed);
-})();
+import {HistoryController} from './controllers/history.controller';
+import {State} from './common/state';
+import {PlayerController} from './controllers/player.controller';
+import {ControlsController} from './controllers/controls.controller';
+import {ControlsView} from './views/controls.view';
 
 window.addEventListener('load', async () => {
-  let isLoaded = false;
+  const state = new State();
+  await state.isReady;
 
-  await State.initialize();
+  const player = new PlayerController(state);
+  await player.isReady;
+  state.attach(player);
 
-  // repeat loader until player is handled
-  const interval: NodeJS.Timer = setInterval(async () => {
-    if (!isPageWatch()) {
-      return;
-    }
+  const controlsView = new ControlsView(state);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const controlsController = new ControlsController(state, controlsView);
+  state.attach(controlsView);
 
-    if (isLoaded) {
-      return clearInterval(interval);
-    }
-
-    isLoaded = true;
-    await handleHistory();
-    await handlePlayer();
-  }, INTERVAL);
-}, {once: true});
+  const history = new HistoryController(state);
+  await history.isReady;
+  state.attach(history);
+});
