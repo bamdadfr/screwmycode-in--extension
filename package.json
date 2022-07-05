@@ -45,7 +45,7 @@
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@bamdadsabbagh/eslint-config": "^2.0.16",
-    "@types/chrome": "^0.0.178",
+    "@types/chrome": "^0.0.193",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.19",
     "babel-loader": "^8.2.3",
