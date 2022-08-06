@@ -42,7 +42,7 @@ export class PopupController {
   private handleShare() {
     this.view.share.addEventListener('click', async () => {
       const id = await Browser.getVideoId();
-      const url = `https://screwmycode.in/youtube/${id}/${this.state.speed}`;
+      const url = `https://www.screwmycode.in/youtube/${id}/${this.state.speed}`;
       await Browser.createTab(url);
     });
   }
