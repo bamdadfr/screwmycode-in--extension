@@ -1,3 +1,16 @@
+# [2.4.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.3.0...v2.4.0) (2022-08-06)
+
+
+### Bug Fixes
+
+* **Controls:** Add better text values, Improve styling, Improve code quality ([55b007d](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/55b007dd4c853ab00046857c9c395f436f20814b))
+* **Popup:** Share to prefixed version of screwmycodein website ([d7ad990](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/d7ad990f5d8936eeb8a4859b8a4d7342e559d300))
+
+
+### Features
+
+* Update all dependencies to latest ([ae36c0f](https://github.com/bamdadsabbagh/screwmycode-in--extension/commit/ae36c0f2bc5d5e9b2113656ba8748589bc005d81))
+
 # [2.3.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.2.0...v2.3.0) (2022-02-24)
 
 
