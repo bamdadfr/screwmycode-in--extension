@@ -2,6 +2,13 @@ import speedToPercentage from 'speed-to-percentage';
 import speedToSemitones from 'speed-to-semitones';
 import {State, StateObserver} from '../common/state';
 
+enum ControlsViewValues {
+  up = '⬆',
+  down = '⬇',
+  percentage = '%',
+  semitones = 'st'
+}
+
 export class ControlsView implements StateObserver {
   public readonly percentage: HTMLSpanElement;
 
@@ -17,18 +24,14 @@ export class ControlsView implements StateObserver {
 
   private readonly node: HTMLDivElement;
 
-  private readonly percentageDefaultText = '%';
-
-  private readonly semitonesDefaultText = 'st';
-
   constructor(state: State) {
     this.state = state;
 
     this.node = ControlsView.createContainer();
-    this.increase = ControlsView.createSpan('up');
-    this.decrease = ControlsView.createSpan('down');
-    this.percentage = ControlsView.createSpan(this.percentageDefaultText);
-    this.semitones = ControlsView.createSpan(this.semitonesDefaultText);
+    this.increase = ControlsView.createSpan(ControlsViewValues.up);
+    this.decrease = ControlsView.createSpan(ControlsViewValues.down);
+    this.percentage = ControlsView.createSpan(ControlsViewValues.percentage);
+    this.semitones = ControlsView.createSpan(ControlsViewValues.semitones);
 
     this.node.appendChild(this.decrease);
     this.node.appendChild(ControlsView.createSpacer());
@@ -40,6 +43,7 @@ export class ControlsView implements StateObserver {
 
     this.renderPercentage();
     this.renderSemitones();
+    this.renderFirst();
     this.renderNode();
 
     this.parent.appendChild(this.node);
@@ -75,24 +79,37 @@ export class ControlsView implements StateObserver {
     this.renderSemitones();
   }
 
+  private renderFirst() {
+    this.percentage.style.display = 'inline';
+    this.percentage.style.fontSize = '0.9em';
+    this.percentage.style.verticalAlign = 'middle';
+
+    this.semitones.style.display = 'inline';
+    this.semitones.style.fontSize = '0.9em';
+    this.semitones.style.verticalAlign = 'middle';
+  }
+
   private renderNode() {
     this.node.style.display = this.state.isActive ? 'inline' : 'none';
   }
 
   private renderPercentage() {
-    if (this.state.isActive === true) {
-      this.percentage.textContent = `${speedToPercentage(this.state.speed, 1)} %`;
-      this.percentage.style.display = 'inline';
-    } else {
+    if (this.state.isActive !== true) {
       this.percentage.style.display = 'none';
+      return;
     }
+
+    this.percentage.textContent =
+      `${speedToPercentage(this.state.speed, 1)} ${ControlsViewValues.percentage}`;
   }
 
   private renderSemitones() {
-    if (this.state.isActive === true) {
-      this.semitones.textContent = `${speedToSemitones(this.state.speed, 1)} st`;
-    } else {
-      this.semitones.textContent = this.semitonesDefaultText;
+    if (this.state.isActive !== true) {
+      this.semitones.textContent = ControlsViewValues.semitones;
+      return;
     }
+
+    this.semitones.textContent =
+      `${speedToSemitones(this.state.speed, 1)} ${ControlsViewValues.semitones}`;
   }
 }
