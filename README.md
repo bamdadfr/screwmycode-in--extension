@@ -1,8 +1,8 @@
-![release](https://img.shields.io/github/v/release/bamdadsabbagh/screwmycode-in--extension)
-![license](https://img.shields.io/github/license/bamdadsabbagh/screwmycode-in--extension)
-![maintainability](https://img.shields.io/codeclimate/maintainability/bamdadsabbagh/screwmycode-in--extension)
-![coverage](https://img.shields.io/codeclimate/coverage/bamdadsabbagh/screwmycode-in--extension)
-![snyk](https://img.shields.io/snyk/vulnerabilities/github/bamdadsabbagh/screwmycode-in--extension)
+![release](https://img.shields.io/github/v/release/bamdadfr/screwmycode-in--extension)
+![license](https://img.shields.io/github/license/bamdadfr/screwmycode-in--extension)
+![maintainability](https://img.shields.io/codeclimate/maintainability/bamdadfr/screwmycode-in--extension)
+![coverage](https://img.shields.io/codeclimate/coverage/bamdadfr/screwmycode-in--extension)
+![snyk](https://img.shields.io/snyk/vulnerabilities/github/bamdadfr/screwmycode-in--extension)
 
 ![chrome version](https://img.shields.io/chrome-web-store/v/lnoedjelpkmhegefhhjljmggjdicnbaa?label=chrome)
 ![chrome users](https://img.shields.io/chrome-web-store/users/lnoedjelpkmhegefhhjljmggjdicnbaa)
@@ -12,7 +12,7 @@
 ![firefox users](https://img.shields.io/amo/users/screwmycode-in)
 ![firefox rating](https://img.shields.io/amo/stars/screwmycode-in?label=rating)
 
-<img alt="logo" width="80px" src="https://raw.githubusercontent.com/bamdadsabbagh/screwmycode-in--www/master/public/icons/SCRW_KSET.svg">
+<img alt="logo" width="80px" src="https://raw.githubusercontent.com/bamdadfr/screwmycode-in--www/master/public/icons/SCRW_KSET.svg">
 
 [ScrewMyCode.in](https://www.screwmycode.in/): Pitch control for <a href="https://www.youtube.com/">YouTube</a>
 
@@ -41,7 +41,7 @@ Slow down and speed up videos directly on YouTube like you would on a turntable.
 ## 🖊 Contribute
 
 ```bash
-git clone https://github.com/bamdadsabbagh/screwmycode-in--extension.git
+git clone https://github.com/bamdadfr/screwmycode-in--extension.git
 cd screwmycode-in--extension
 yarn
 
