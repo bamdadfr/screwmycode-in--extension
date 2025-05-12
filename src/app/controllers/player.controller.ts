@@ -1,5 +1,5 @@
-import {resolveOrRetry} from '../utils/resolve-or-retry';
 import {State, StateObserver} from '../common/state';
+import {resolveOrRetry} from '../utils/resolve-or-retry';
 
 export class PlayerController implements StateObserver {
   public isReady: Promise<void>;

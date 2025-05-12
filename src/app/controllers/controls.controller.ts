@@ -1,6 +1,6 @@
 import {State} from '../common/state';
-import {ControlsView} from '../views/controls.view';
 import {SPEED_DEFAULT} from '../constants';
+import {ControlsView} from '../views/controls.view';
 
 export class ControlsController {
   private state: State;

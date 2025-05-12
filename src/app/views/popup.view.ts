@@ -1,7 +1,8 @@
 import speedToPercentage from 'speed-to-percentage';
 import speedToSemitones from 'speed-to-semitones';
-import {STEP_DEFAULT, STEP_MAX, STEP_MIN} from '../constants';
+
 import {State, StateObserver} from '../common/state';
+import {STEP_DEFAULT, STEP_MAX, STEP_MIN} from '../constants';
 
 export class PopupView implements StateObserver {
   public checkbox = document.getElementsByClassName('smc-checkbox')[0] as HTMLInputElement;

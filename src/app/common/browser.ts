@@ -7,6 +7,7 @@ export interface State {
 /**
  * Interface for the browser object.
  */
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export class Browser {
   private static readonly browser = chrome;
 
@@ -26,13 +27,13 @@ export class Browser {
     await this.browser.storage.local.set({[key]: value});
   }
 
-  public static addStorageListener(callback: (changes: {[p: string]: chrome.storage.StorageChange;}) => void): void {
+  public static addStorageListener(callback: (changes: Record<string, chrome.storage.StorageChange>) => void): void {
     this.browser.storage.onChanged.addListener((changes) => {
       callback(changes);
     });
   }
 
-  public static getVideoId(): Promise<string | void> {
+  public static getVideoId(): Promise<string | null> {
     return new Promise((resolve) => {
       const queryOptions = {
         active: true,
@@ -49,7 +50,7 @@ export class Browser {
           return;
         }
 
-        resolve();
+        resolve(null);
       });
     });
   }

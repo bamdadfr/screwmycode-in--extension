@@ -1,5 +1,5 @@
-import {PopupController} from './controllers/popup.controller';
 import {State} from './common/state';
+import {PopupController} from './controllers/popup.controller';
 import {PopupView} from './views/popup.view';
 
 window.addEventListener('load', async () => {

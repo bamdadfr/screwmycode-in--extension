@@ -1,6 +1,6 @@
+import {Browser} from '../common/browser';
 import {State} from '../common/state';
 import {PopupView} from '../views/popup.view';
-import {Browser} from '../common/browser';
 
 export class PopupController {
   private state: State;
@@ -42,6 +42,11 @@ export class PopupController {
   private handleShare() {
     this.view.share.addEventListener('click', async () => {
       const id = await Browser.getVideoId();
+
+      if (id === null) {
+        return;
+      }
+
       const url = `https://www.screwmycode.in/youtube/${id}/${this.state.speed}`;
       await Browser.createTab(url);
     });

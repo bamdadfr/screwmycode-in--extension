@@ -1,5 +1,5 @@
-import {SPEED_PARAMETER} from '../constants';
 import {State, StateObserver} from '../common/state';
+import {SPEED_PARAMETER} from '../constants';
 
 export class HistoryController implements StateObserver {
   public isReady: Promise<void>;

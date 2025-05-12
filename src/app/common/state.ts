@@ -1,4 +1,3 @@
-import {Browser} from './browser';
 import {
   ACTIVE_DEFAULT,
   SPEED_DEFAULT,
@@ -9,6 +8,7 @@ import {
   STEP_MIN,
 } from '../constants';
 import {clampValue} from '../utils/clamp-value';
+import {Browser} from './browser';
 import StorageChange = chrome.storage.StorageChange;
 
 export interface StateInterface {
@@ -132,7 +132,7 @@ export class State {
     Browser.addStorageListener(this.onStorageChange.bind(this));
   }
 
-  private onStorageChange(changes: {[p: string]: StorageChange;}) {
+  private onStorageChange(changes: Record<string, StorageChange>) {
     const {isActive, speed, step} = changes;
 
     if (typeof isActive !== 'undefined') {
