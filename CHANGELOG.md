@@ -1,3 +1,11 @@
+## [2.4.1](https://github.com/bamdadfr/screwmycode-in--extension/compare/v2.4.0...v2.4.1) (2025-05-12)
+
+
+### Bug Fixes
+
+* append player controls at a better place ([e2ec0e1](https://github.com/bamdadfr/screwmycode-in--extension/commit/e2ec0e15e896a1ab925e623369215f37aa2540f9))
+* mirror player controls order ([b626a21](https://github.com/bamdadfr/screwmycode-in--extension/commit/b626a21ff6ad5cdf599d4ecd7ae996c775e9d185))
+
 # [2.4.0](https://github.com/bamdadsabbagh/screwmycode-in--extension/compare/v2.3.0...v2.4.0) (2022-08-06)
 
 
