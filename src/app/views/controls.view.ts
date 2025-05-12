@@ -6,7 +6,7 @@ enum ControlsViewValues {
   up = '⬆',
   down = '⬇',
   percentage = '%',
-  semitones = 'st'
+  semitones = 'st',
 }
 
 export class ControlsView implements StateObserver {
@@ -20,7 +20,9 @@ export class ControlsView implements StateObserver {
 
   private state: State;
 
-  private parent: HTMLDivElement = document.getElementsByClassName('ytp-time-display notranslate')[0] as HTMLDivElement;
+  private parent: HTMLDivElement = document.querySelector(
+    '.ytp-right-controls',
+  ) as HTMLDivElement;
 
   private readonly node: HTMLDivElement;
 
@@ -46,7 +48,7 @@ export class ControlsView implements StateObserver {
     this.renderFirst();
     this.renderNode();
 
-    this.parent.appendChild(this.node);
+    this.parent.insertBefore(this.node, this.parent.children[0]);
   }
 
   private static createSpacer() {
@@ -99,8 +101,7 @@ export class ControlsView implements StateObserver {
       return;
     }
 
-    this.percentage.textContent =
-      `${speedToPercentage(this.state.speed, 1)} ${ControlsViewValues.percentage}`;
+    this.percentage.textContent = `${speedToPercentage(this.state.speed, 1)} ${ControlsViewValues.percentage}`;
   }
 
   private renderSemitones() {
@@ -109,7 +110,6 @@ export class ControlsView implements StateObserver {
       return;
     }
 
-    this.semitones.textContent =
-      `${speedToSemitones(this.state.speed, 1)} ${ControlsViewValues.semitones}`;
+    this.semitones.textContent = `${speedToSemitones(this.state.speed, 1)} ${ControlsViewValues.semitones}`;
   }
 }
