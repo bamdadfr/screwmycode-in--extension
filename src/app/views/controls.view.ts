@@ -1,5 +1,6 @@
 import speedToPercentage from 'speed-to-percentage';
 import speedToSemitones from 'speed-to-semitones';
+
 import {State, StateObserver} from '../common/state';
 
 enum ControlsViewValues {
@@ -35,13 +36,13 @@ export class ControlsView implements StateObserver {
     this.percentage = ControlsView.createSpan(ControlsViewValues.percentage);
     this.semitones = ControlsView.createSpan(ControlsViewValues.semitones);
 
-    this.node.appendChild(this.decrease);
-    this.node.appendChild(ControlsView.createSpacer());
-    this.node.appendChild(this.increase);
-    this.node.appendChild(ControlsView.createSpacer());
     this.node.appendChild(this.percentage);
     this.node.appendChild(ControlsView.createSpacer());
     this.node.appendChild(this.semitones);
+    this.node.appendChild(ControlsView.createSpacer());
+    this.node.appendChild(this.decrease);
+    this.node.appendChild(ControlsView.createSpacer());
+    this.node.appendChild(this.increase);
 
     this.renderPercentage();
     this.renderSemitones();
