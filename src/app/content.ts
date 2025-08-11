@@ -4,7 +4,7 @@ import {HistoryController} from './controllers/history.controller';
 import {PlayerController} from './controllers/player.controller';
 import {ControlsView} from './views/controls.view';
 
-window.addEventListener('load', async () => {
+window.addEventListener('DOMContentLoaded', async () => {
   const state = new State();
   await state.isReady;
 
