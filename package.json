@@ -1,6 +1,6 @@
 {
   "name": "screwmycode-in--extension",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Variable speed pitch control for YouTube (Web Extension for Firefox)",
   "license": "MIT",
   "type": "module",

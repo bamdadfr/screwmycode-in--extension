@@ -1,3 +1,10 @@
+## [2.4.3](https://github.com/bamdadfr/screwmycode-in--extension/compare/v2.4.2...v2.4.3) (2025-08-11)
+
+
+### Bug Fixes
+
+* dummy for CI ([9297323](https://github.com/bamdadfr/screwmycode-in--extension/commit/92973239be92c62694716e4b97e74947daebbfc8))
+
 ## [2.4.2](https://github.com/bamdadfr/screwmycode-in--extension/compare/v2.4.1...v2.4.2) (2025-08-11)
 
 
