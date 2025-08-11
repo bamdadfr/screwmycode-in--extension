@@ -69,6 +69,8 @@ export class ControlsView implements StateObserver {
     const container = document.createElement('div');
     container.classList.add('ytp-time-display', 'notranslate');
     container.style.userSelect = 'none';
+    container.style.justifyContent = 'center';
+    container.style.alignItems = 'center';
     return container;
   }
 
@@ -93,7 +95,7 @@ export class ControlsView implements StateObserver {
   }
 
   private renderNode() {
-    this.node.style.display = this.state.isActive ? 'inline' : 'none';
+    this.node.style.display = this.state.isActive ? 'inline-flex' : 'none';
   }
 
   private renderPercentage() {
