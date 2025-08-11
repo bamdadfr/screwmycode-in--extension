@@ -1,3 +1,14 @@
+## [2.4.2](https://github.com/bamdadfr/screwmycode-in--extension/compare/v2.4.1...v2.4.2) (2025-08-11)
+
+
+### Bug Fixes
+
+* add new share button ([7860def](https://github.com/bamdadfr/screwmycode-in--extension/commit/7860defd86ac61baffc2b0c8bc1c2a8ac9a47424))
+* force controls align ([1a12599](https://github.com/bamdadfr/screwmycode-in--extension/commit/1a12599abbe788854a592c50ac66f319daf2716b))
+* load content script sooner ([12190bc](https://github.com/bamdadfr/screwmycode-in--extension/commit/12190bcbf1b23d87274a892e1ef3ee7969d0434b))
+* update dependencies ([723cf5c](https://github.com/bamdadfr/screwmycode-in--extension/commit/723cf5c291d3c94e91668814df3bd24f16410e17))
+* update eslint rule ([351d5ed](https://github.com/bamdadfr/screwmycode-in--extension/commit/351d5ed556c3f3c5353da16cdd3ddcca232b0172))
+
 ## [2.4.1](https://github.com/bamdadfr/screwmycode-in--extension/compare/v2.4.0...v2.4.1) (2025-05-12)
 
 
