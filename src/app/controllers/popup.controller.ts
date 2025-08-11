@@ -47,7 +47,11 @@ export class PopupController {
         return;
       }
 
-      const url = `https://www.screwmycode.in/youtube/${id}/${this.state.speed}`;
+      const baseUrl = 'https://www.screwmycode.in/';
+      const params = new URLSearchParams();
+      params.append('media', `https://www.youtube.com/watch?v=${id}`);
+      params.append('speed', this.state.speed.toString());
+      const url = `${baseUrl}?${params}`;
       await Browser.createTab(url);
     });
   }
